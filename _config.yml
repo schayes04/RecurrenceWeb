@@ -12,7 +12,7 @@ presskit_download_link                    :                                     
 app_icon                                  : assets/appicon.png                        # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
 app_name                                  : Recurrence                                # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
 app_price                                 : Free                                      # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_description                           : Recurrence is an app for iOS & macOS designed to help you track all the repeating tasks in your life. Perfect for tracking chores, bill payment, renewals, and so much more!
+app_description                           : Recurrence is an app for iOS & macOS designed to help you track all the repeating tasks in your life. Perfect for tracking chores, bill payment, renewals, and so much more! Recurrence puts tracking history at the forefront, allowing you to see when something was last done & any notes you jotted down at the time. 
 
 enable_smart_app_banner                   : true                                      # Set to true to show a smart app banner at top of page on mobile devices.
 
