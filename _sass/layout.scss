@@ -51,7 +51,7 @@
 	.container {
 		grid-column-gap: 0px;
 		grid-template-columns: 1;
-		grid-template-rows: 115px auto auto auto auto;
+		grid-template-rows: 25px auto auto auto auto;
 		grid-template-areas: 
 			"h h h h h h h h h h h h"
 			"i i i i i i i i i i i i"
@@ -278,6 +278,7 @@ nav > ul li a:active {
 @media only screen and (max-width: 992px) {
 
 	.appDescription {
+		margin-top: -20px;
 		text-align: center;
 	}
 	
