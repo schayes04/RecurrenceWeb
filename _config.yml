@@ -48,7 +48,7 @@ features                                  :
     fontawesome_icon_name                 : filter
 
   - title                                 : Multiple Device Support
-    description                           : Available for iOS & macOS device with seamless syncing
+    description                           : Available for iOS & macOS devices with seamless syncing
     fontawesome_icon_name                 : sync
 
 
