@@ -1,26 +1,25 @@
-#page title
 page_title                                : Recurrence
 
-# App Info
 ios_app_id                                : 1494977084
+ios_app_country                           : us
 
-appstore_link                             : https://apps.apple.com/app/apple-store/id1494977084?mt=8 
-presskit_download_link                    :                                           # Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file). 
-                                                                                      # Or upload your press kit file to assets and set path accordingly (e.g. "assets/your_press_kit.zip").
+appstore_link                             : https://apps.apple.com/app/apple-store/id1494977084?mt=8
+privacy_policy_link                       : https://shayesapps.com/policies
+presskit_download_link                    : assets/Recurrence_Press_Kit.zip
 
-app_icon                                  : assets/appicon.png                        # Automatically populates if not set and if iOS app ID is set.  Otherwise enter path to icon file manually.
-app_name                                  : Recurrence                                # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_price                                 : Free                                      # Automatically populates if not set and if iOS app ID is set.  Otherwise enter manually.
-app_description                           : Recurrence is an app for iOS & macOS designed to help you track all the repeating tasks in your life. Perfect for tracking chores, bill payment, renewals, and so much more! Recurrence puts tracking history at the forefront, allowing you to see when something was last done & any notes you jotted down at the time. 
+app_icon                                  : assets/appicon.png
+app_name                                  : Recurrence
+app_price                                 : Free
+app_description                           : Recurrence is an app for iOS & macOS to help you track the repeating tasks in your life. Perfect for tracking chores, bill payment, renewals, and much more! Recurrence puts tracking history at the forefront, allowing you to see when something was last done & accompanying notes.
 
-enable_smart_app_banner                   : true                                      # Set to true to show a smart app banner at top of page on mobile devices.
+enable_smart_app_banner                   : true
 
-your_name                                 : Shayes Apps LLC                             
-your_link                                 : https://www.shayesapps.com                                             
+your_name                                 : Shayes Apps LLC
+your_link                                 : https://www.shayesapps.com
 email_address                             : support@shayesapps.com
-facebook_username                         : shayesapps                                         
-twitter_username                          : shayesapps
+facebook_username                         : shayesapps
 instagram_username                        : shayesapps
+twitter_username                          : shayesapps
 
 features                                  :
 
@@ -44,6 +43,10 @@ features                                  :
     description                           : See a full list of your past completions for each item
     fontawesome_icon_name                 : history
 
+  - title                                 : Siri Shortcuts
+    description                           : Automate your task completions
+    fontawesome_icon_name                 : magic
+
   - title                                 : Categories
     description                           : Sort your items into lists with customizable tags
     fontawesome_icon_name                 : list
@@ -58,6 +61,8 @@ features                                  :
 
 
 # Theme Settings
+topbar_color                              : "#000000"
+topbar_transparency                       : 0.1
 topbar_title_color                        : "#ffffff"
 
 cover_image                               : assets/headerimage.png                    # Replace with alternative image path or image URL.
@@ -111,6 +116,10 @@ exclude:
   - README.md
   - CNAME
 
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
 # Markdown rendering
 markdown: kramdown
-theme: jekyll-theme-cayman

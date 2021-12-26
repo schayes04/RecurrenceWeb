@@ -18,6 +18,9 @@ $feature-title-color: {{ site.feature_title_color }};
 $feature-text-color: {{ site.feature_text_color }};
 $footer-text-color: {{ site.footer_text_color }};
 
+$header_color: {{ site.topbar_color }};
+$header_transparency: {{ site.topbar_transparency }};
+
 $image-overlay-color: {{ site.cover_overlay_color }};
 $image-overlay-transparency: {{ site.cover_overlay_transparency }};
 
