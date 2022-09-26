@@ -28,7 +28,7 @@ features                                  :
     fontawesome_icon_name                 : star
 
   - title                                 : Widgets
-    description                           : Widgets right on your home screen so you never miss another task
+    description                           : See items right on your Home Screen or Lock Screen
     fontawesome_icon_name                 : th-large
     
   - title                                 : Notifications
