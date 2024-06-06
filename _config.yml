@@ -26,6 +26,10 @@ features                                  :
     description                           : Track all of your recurring items & see what's upcoming with a quick glance
     fontawesome_icon_name                 : star
 
+  - title                                 : Sharing
+    description                           : Complete tasks with a spouse, friend, or family members
+    fontawesome_icon_name                 : users
+
   - title                                 : Widgets
     description                           : See items right on your Home Screen or Lock Screen
     fontawesome_icon_name                 : th-large
@@ -41,10 +45,6 @@ features                                  :
   - title                                 : Completion History
     description                           : See a full list of your past completions for each item
     fontawesome_icon_name                 : history
-
-  - title                                 : Siri Shortcuts
-    description                           : Automate your task completions
-    fontawesome_icon_name                 : magic
 
   - title                                 : Categories
     description                           : Sort your items into lists with customizable tags
