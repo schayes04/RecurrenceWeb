@@ -48,7 +48,7 @@ features                                  :
     fontawesome_icon_name                 : history
 
   - title                                 : Categories
-    description                           : Sort your items into lists with customizable tags
+    description                           : Sort your items into custom categories
     fontawesome_icon_name                 : list
 
   - title                                 : Advanced Filtering
