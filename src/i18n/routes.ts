@@ -11,18 +11,18 @@ export const COMPETITORS = ['apple-reminders', 'todoist', 'tody'] as const;
 export type CompetitorId = (typeof COMPETITORS)[number];
 
 export type PageKey =
-  | 'home' | 'features' | 'pricing' | 'support' | 'press' | 'privacy' | 'terms'
+  | 'home' | 'features' | 'support' | 'press' | 'privacy' | 'terms'
   | 'use-cases' | `use-case/${UseCaseId}`
   | 'compare' | `compare/${CompetitorId}`;
 
 export const PAGE_KEYS: PageKey[] = [
-  'home', 'features', 'pricing',
+  'home', 'features',
   'use-cases', ...USE_CASES.map((id) => `use-case/${id}` as PageKey),
   'compare', ...COMPETITORS.map((id) => `compare/${id}` as PageKey),
   'support', 'press', 'privacy', 'terms',
 ];
 
-type Section = 'features' | 'pricing' | 'use-cases' | 'compare' | 'support' | 'press' | 'privacy' | 'terms';
+type Section = 'features' | 'use-cases' | 'compare' | 'support' | 'press' | 'privacy' | 'terms';
 
 interface SlugSet {
   section: Record<Section, string>;
@@ -30,29 +30,29 @@ interface SlugSet {
 }
 
 const EN: SlugSet = {
-  section: { features: 'features', pricing: 'pricing', 'use-cases': 'use-cases', compare: 'compare', support: 'support', press: 'press', privacy: 'privacy', terms: 'terms' },
+  section: { features: 'features', 'use-cases': 'use-cases', compare: 'compare', support: 'support', press: 'press', privacy: 'privacy', terms: 'terms' },
   useCase: { chores: 'chores', bills: 'bills', pets: 'pet-care', 'home-maintenance': 'home-maintenance', 'car-maintenance': 'car-maintenance', plants: 'plants', 'self-care': 'self-care', family: 'family' },
 };
 
 const DE: SlugSet = {
-  section: { features: 'funktionen', pricing: 'preise', 'use-cases': 'anwendungsfaelle', compare: 'vergleich', support: 'support', press: 'presse', privacy: 'datenschutz', terms: 'nutzungsbedingungen' },
+  section: { features: 'funktionen', 'use-cases': 'anwendungsfaelle', compare: 'vergleich', support: 'support', press: 'presse', privacy: 'datenschutz', terms: 'nutzungsbedingungen' },
   useCase: { chores: 'haushalt', bills: 'rechnungen', pets: 'haustiere', 'home-maintenance': 'hauswartung', 'car-maintenance': 'autowartung', plants: 'pflanzen', 'self-care': 'selbstfuersorge', family: 'familie' },
 };
 
 const ES: SlugSet = {
-  section: { features: 'funciones', pricing: 'precios', 'use-cases': 'casos-de-uso', compare: 'comparar', support: 'soporte', press: 'prensa', privacy: 'privacidad', terms: 'terminos' },
+  section: { features: 'funciones', 'use-cases': 'casos-de-uso', compare: 'comparar', support: 'soporte', press: 'prensa', privacy: 'privacidad', terms: 'terminos' },
   useCase: { chores: 'tareas-del-hogar', bills: 'pagos', pets: 'mascotas', 'home-maintenance': 'mantenimiento-del-hogar', 'car-maintenance': 'mantenimiento-del-coche', plants: 'plantas', 'self-care': 'autocuidado', family: 'familia' },
 };
 
 const ES_MX: SlugSet = { ...ES, useCase: { ...ES.useCase, chores: 'quehaceres', 'car-maintenance': 'mantenimiento-del-auto' } };
 
 const FR: SlugSet = {
-  section: { features: 'fonctionnalites', pricing: 'tarifs', 'use-cases': 'utilisations', compare: 'comparer', support: 'assistance', press: 'presse', privacy: 'confidentialite', terms: 'conditions' },
+  section: { features: 'fonctionnalites', 'use-cases': 'utilisations', compare: 'comparer', support: 'assistance', press: 'presse', privacy: 'confidentialite', terms: 'conditions' },
   useCase: { chores: 'taches-menageres', bills: 'factures', pets: 'animaux', 'home-maintenance': 'entretien-maison', 'car-maintenance': 'entretien-voiture', plants: 'plantes', 'self-care': 'bien-etre', family: 'famille' },
 };
 
 const PT_BR: SlugSet = {
-  section: { features: 'recursos', pricing: 'precos', 'use-cases': 'casos-de-uso', compare: 'comparar', support: 'suporte', press: 'imprensa', privacy: 'privacidade', terms: 'termos' },
+  section: { features: 'recursos', 'use-cases': 'casos-de-uso', compare: 'comparar', support: 'suporte', press: 'imprensa', privacy: 'privacidade', terms: 'termos' },
   useCase: { chores: 'tarefas-domesticas', bills: 'contas', pets: 'pets', 'home-maintenance': 'manutencao-da-casa', 'car-maintenance': 'manutencao-do-carro', plants: 'plantas', 'self-care': 'autocuidado', family: 'familia' },
 };
 

@@ -2,7 +2,6 @@
 import Base from '../layouts/Base.astro';
 import Home from '../views/Home.astro';
 import Features from '../views/Features.astro';
-import Pricing from '../views/Pricing.astro';
 import UseCasesHub from '../views/UseCasesHub.astro';
 import UseCase from '../views/UseCase.astro';
 import CompareHub from '../views/CompareHub.astro';
@@ -31,12 +30,12 @@ const ui = UI[locale];
 
 const crumb = (key: PageKey, name: string) => ({ name, path: pathFor(key, locale) });
 const SECTION_NAMES: Partial<Record<PageKey, string>> = {
-  features: ui.nav.features, pricing: ui.nav.pricing, 'use-cases': ui.nav.useCases, compare: ui.nav.compare,
+  features: ui.nav.features, 'use-cases': ui.nav.useCases, compare: ui.nav.compare,
   support: ui.nav.support, press: ui.footer.press, privacy: ui.footer.privacy, terms: ui.footer.terms,
 };
 const jsonLd: object[] = [];
 if (pageKey === 'home') jsonLd.push(appJsonLd(locale, meta.description), organizationJsonLd());
-if (pageKey === 'features' || pageKey === 'pricing') jsonLd.push(appJsonLd(locale, meta.description));
+if (pageKey === 'features') jsonLd.push(appJsonLd(locale, meta.description));
 if (pageKey !== 'home') {
   const trail = [crumb('home', ui.breadcrumbHome)];
   if (pageKey.startsWith('use-case/')) trail.push(crumb('use-cases', ui.nav.useCases), crumb(pageKey, c.useCases[pageKey.slice(9) as UseCaseId].name));
@@ -48,7 +47,6 @@ if (pageKey !== 'home') {
 <Base locale={locale} pageKey={pageKey} title={meta.title} description={meta.description} jsonLd={jsonLd}>
   {pageKey === 'home' && <Home locale={locale} c={c} />}
   {pageKey === 'features' && <Features locale={locale} c={c} />}
-  {pageKey === 'pricing' && <Pricing locale={locale} c={c} />}
   {pageKey === 'use-cases' && <UseCasesHub locale={locale} c={c} />}
   {pageKey.startsWith('use-case/') && <UseCase locale={locale} c={c} id={pageKey.slice(9) as UseCaseId} />}
   {pageKey === 'compare' && <CompareHub locale={locale} c={c} />}

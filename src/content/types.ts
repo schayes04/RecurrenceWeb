@@ -41,15 +41,6 @@ export interface FeaturesContent {
   sections: { title: string; body: string; points: string[]; screen: ScreenKey }[];
 }
 
-export interface PricingContent {
-  meta: Meta;
-  h1: string;
-  intro: string;
-  free: { title: string; summary: string; items: string[] };
-  premium: { title: string; summary: string; items: string[]; plans: string };
-  faq: Faq[];
-}
-
 export interface HubContent { meta: Meta; h1: string; intro: string }
 
 export interface UseCaseContent {
@@ -98,7 +89,6 @@ export interface LegalContent { meta: Meta; h1: string; updated: string; section
 export interface SiteContent {
   home: HomeContent;
   features: FeaturesContent;
-  pricing: PricingContent;
   useCasesHub: HubContent;
   useCases: Record<UseCaseId, UseCaseContent>;
   compareHub: HubContent;

@@ -23,7 +23,6 @@ export const metaFor = (content: SiteContent, key: PageKey): Meta => {
   switch (key) {
     case 'home': return content.home.meta;
     case 'features': return content.features.meta;
-    case 'pricing': return content.pricing.meta;
     case 'use-cases': return content.useCasesHub.meta;
     case 'compare': return content.compareHub.meta;
     case 'support': return content.support.meta;

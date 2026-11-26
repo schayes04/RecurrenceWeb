@@ -10,7 +10,6 @@ interface Props { locale: Locale; pageKey?: PageKey }
 const { locale, pageKey } = Astro.props;
 const ui = UI[locale];
 const c = contentFor(locale);
-const year = new Date().getFullYear();
 const [madeByBefore, madeByAfter] = ui.footer.madeBy.split('Shayes Apps');
 // Comparison links appear once those pages are published in this locale.
 const social = [
@@ -29,6 +28,7 @@ const competitors = COMPETITORS.filter((id) => isPublished(locale, `compare/${id
         <ul class="social">
           {social.map((x) => <li><a href={x.href} target="_blank" rel="noopener me" aria-label={x.name}><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d={x.path} /></svg></a></li>)}
         </ul>
+        <p class="fine"><a href={pathFor('privacy', locale)}>{ui.footer.privacy}</a><a href={pathFor('terms', locale)}>{ui.footer.terms}</a></p>
       </div>
       <nav class="col" aria-labelledby="f-track">
         <h2 id="f-track"><a href={pathFor('use-cases', locale)}>{ui.nav.useCases}</a></h2>
@@ -40,16 +40,6 @@ const competitors = COMPETITORS.filter((id) => isPublished(locale, `compare/${id
           {competitors.map((id) => <a href={pathFor(`compare/${id}`, locale)}>{c.compare[id].name}</a>)}
         </nav>
       )}
-      <nav class="col" aria-labelledby="f-app">
-        <h2 id="f-app">Recurrence</h2>
-        <a href={pathFor('features', locale)}>{ui.nav.features}</a>
-        <a href={pathFor('pricing', locale)}>{ui.nav.pricing}</a>
-        <a href={pathFor('support', locale)}>{ui.footer.support}</a>
-        <a href={pathFor('press', locale)}>{ui.footer.press}</a>
-        <a href={pathFor('privacy', locale)}>{ui.footer.privacy}</a>
-        <a href={pathFor('terms', locale)}>{ui.footer.terms}</a>
-      </nav>
     </div>
-    <p class="legal">© {year} Shayes Apps</p>
   </div>
 </footer>

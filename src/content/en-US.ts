@@ -76,31 +76,6 @@ const en: SiteContent = {
     ],
   },
 
-  pricing: {
-    meta: {
-      title: 'Pricing: Free for 5 Tasks, Premium for Unlimited | Recurrence',
-      description: 'Recurrence is free for up to 5 recurring tasks. Recurrence Premium unlocks unlimited tasks as a monthly or yearly subscription or a lifetime purchase.',
-    },
-    h1: 'Free to start. Premium when you need more.',
-    intro: 'The free version includes reminders, widgets, history and sync. Premium removes the 5-task limit and adds shared tasks and bulk actions.',
-    free: {
-      title: 'Free',
-      summary: 'For getting started with your most important routines.',
-      items: ['Up to 5 tasks', 'Every repeat schedule', 'Full history and notes', 'Reminders and widgets', 'Sync across iPhone, iPad and Mac'],
-    },
-    premium: {
-      title: 'Premium',
-      summary: 'For keeping track of everything that repeats.',
-      items: ['Everything in Free', 'Unlimited tasks', 'Shared tasks with family and friends', 'Bulk actions to edit many tasks at once'],
-      plans: 'Monthly, yearly or lifetime. Prices are shown in the App Store in your local currency.',
-    },
-    faq: [
-      { q: 'Can I try Premium first?', a: 'Yes. Recurrence Premium includes a free trial, shown in the App Store before you subscribe.' },
-      { q: 'Does Premium work on all my devices?', a: 'Yes. One purchase unlocks Premium on iPhone, iPad and Mac, and it can be shared with your family through Family Sharing.' },
-      { q: 'How do I cancel?', a: 'Subscriptions are managed in your Apple account settings and can be canceled at any time, at least 24 hours before the next renewal.' },
-    ],
-  },
-
   useCasesHub: {
     meta: {
       title: 'Track Chores, Bills, Pet Care & More | Recurrence',
@@ -344,6 +319,9 @@ const en: SiteContent = {
       { q: 'How do I share tasks with someone?', a: '[Answer to write in phase 2.]' },
       { q: 'I’m not getting reminders.', a: '[Answer to write in phase 2.]' },
       { q: 'How do I restore my Premium purchase?', a: '[Answer to write in phase 2.]' },
+      { q: 'Can I try Premium first?', a: 'Yes. Recurrence Premium includes a free trial, shown in the App Store before you subscribe.' },
+      { q: 'Does Premium work on all my devices?', a: 'Yes. One purchase unlocks Premium on iPhone, iPad and Mac, and it can be shared with your family through Family Sharing.' },
+      { q: 'How do I cancel my subscription?', a: 'Subscriptions are managed in your Apple account settings and can be canceled at any time, at least 24 hours before the next renewal.' },
     ],
   },
 
