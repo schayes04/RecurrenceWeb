@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import icon from '../assets/brand/icon.png';
-import { LOCALES, type Locale } from '../i18n/locales';
+import type { Locale } from '../i18n/locales';
 import { USE_CASES, COMPETITORS, pathFor, type PageKey } from '../i18n/routes';
 import { UI } from '../i18n/ui';
 import { contentFor, isPublished } from '../content';
@@ -41,9 +41,6 @@ const competitors = COMPETITORS.filter((id) => isPublished(locale, `compare/${id
         <a href={pathFor('terms', locale)}>{ui.footer.terms}</a>
       </nav>
     </div>
-    <nav class="langs" aria-label={ui.language}>
-      {LOCALES.map((l) => <a href={pathFor(pageKey ?? 'home', l.code)} hreflang={l.hreflang[0]} lang={l.htmlLang}>{l.name}</a>)}
-    </nav>
     <p class="legal">© {year} · {ui.footer.madeBy}</p>
   </div>
 </footer>
