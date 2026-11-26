@@ -1,5 +1,4 @@
 ---
-import { Image } from 'astro:assets';
 import PageHead from '../components/PageHead.astro';
 import CtaBand from '../components/CtaBand.astro';
 import TaskList from '../components/TaskList.astro';
@@ -8,7 +7,7 @@ import { pathFor, type UseCaseId } from '../i18n/routes';
 import { UI } from '../i18n/ui';
 import type { Locale } from '../i18n/locales';
 import type { SiteContent } from '../content/types';
-import { screenFor, ALT } from '../lib/screens';
+import Phone from '../components/Phone.astro';
 
 interface Props { locale: Locale; c: SiteContent; id: UseCaseId }
 const { locale, c, id } = Astro.props;
@@ -20,7 +19,7 @@ const u = c.useCases[id];
 <section class="section">
   <div class="container split">
     <TaskList title={u.sampleTitle} tasks={u.sample} />
-    <div class="shot"><Image src={screenFor(u.screen, locale)} alt={ALT[u.screen]} widths={[300, 600]} sizes="300px" /></div>
+    <div class="shot"><Phone screen={u.screen} locale={locale} width={300} /></div>
   </div>
 </section>
 <section class="section soft">

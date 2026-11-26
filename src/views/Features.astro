@@ -1,12 +1,11 @@
 ---
-import { Image } from 'astro:assets';
 import PageHead from '../components/PageHead.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { pathFor } from '../i18n/routes';
 import { UI } from '../i18n/ui';
 import type { Locale } from '../i18n/locales';
 import type { SiteContent } from '../content/types';
-import { screenFor, ALT } from '../lib/screens';
+import Phone from '../components/Phone.astro';
 
 interface Props { locale: Locale; c: SiteContent }
 const { locale, c } = Astro.props;
@@ -16,7 +15,7 @@ const f = c.features;
 {f.sections.map((s, i) => (
   <section class:list={['section', { soft: i % 2 === 1 }]}>
     <div class:list={['container', 'split', { reverse: i % 2 === 1 }]}>
-      <div class="shot"><Image src={screenFor(s.screen, locale)} alt={ALT[s.screen]} widths={[300, 600]} sizes="300px" /></div>
+      <div class="shot"><Phone screen={s.screen} locale={locale} width={300} /></div>
       <div>
         <h2>{s.title}</h2>
         <p class="prose">{s.body}</p>

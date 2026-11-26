@@ -1,12 +1,11 @@
 ---
-import { Image } from 'astro:assets';
 import AppStoreButton from '../components/AppStoreButton.astro';
 import Faq from '../components/Faq.astro';
 import { USE_CASES, pathFor } from '../i18n/routes';
 import { UI } from '../i18n/ui';
 import type { Locale } from '../i18n/locales';
 import type { SiteContent } from '../content/types';
-import { screenFor, ALT } from '../lib/screens';
+import Phone from '../components/Phone.astro';
 
 interface Props { locale: Locale; c: SiteContent }
 const { locale, c } = Astro.props;
@@ -25,7 +24,7 @@ const ui = UI[locale];
       </div>
     </div>
     <div class="hero-shot">
-      <Image src={screenFor('home', locale)} alt={ALT.home} widths={[340, 680]} sizes="340px" loading="eager" fetchpriority="high" />
+      <Phone screen="home" locale={locale} width={340} eager />
     </div>
   </div>
 </section>
@@ -42,7 +41,7 @@ const ui = UI[locale];
 
 <section class="section">
   <div class="container split">
-    <div class="shot"><Image src={screenFor('history', locale)} alt={ALT.history} widths={[300, 600]} sizes="300px" /></div>
+    <div class="shot"><Phone screen="history" locale={locale} width={300} /></div>
     <div>
       <p class="kicker">{h.historyKicker}</p>
       <h2>{h.historyTitle}</h2>
