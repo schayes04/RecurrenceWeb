@@ -25,10 +25,6 @@ const competitors = COMPETITORS.filter((id) => isPublished(locale, `compare/${id
       <div class="col brand-col">
         <a class="brand" href={pathFor('home', locale)}><Image src={icon} alt="" width={48} height={48} />Recurrence</a>
         <p class="made-by">{madeByBefore}<a href="https://shayesapps.com/" target="_blank" rel="noopener">Shayes Apps</a>{madeByAfter}</p>
-        <ul class="social">
-          {social.map((x) => <li><a href={x.href} target="_blank" rel="noopener me" aria-label={x.name}><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d={x.path} /></svg></a></li>)}
-        </ul>
-        <p class="fine"><a href={pathFor('privacy', locale)}>{ui.footer.privacy}</a><a href={pathFor('terms', locale)}>{ui.footer.terms}</a></p>
       </div>
       <nav class="col" aria-labelledby="f-track">
         <h2 id="f-track"><a href={pathFor('use-cases', locale)}>{ui.nav.useCases}</a></h2>
@@ -40,6 +36,11 @@ const competitors = COMPETITORS.filter((id) => isPublished(locale, `compare/${id
           {competitors.map((id) => <a href={pathFor(`compare/${id}`, locale)}>{c.compare[id].name}</a>)}
         </nav>
       )}
+      <nav class="col" aria-labelledby="f-social">
+        <h2 id="f-social">{ui.footer.social}</h2>
+        <a href={pathFor('support', locale)}>{ui.nav.support}</a>
+        {social.map((x) => <a class="social-link" href={x.href} target="_blank" rel="noopener me"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d={x.path} /></svg>{x.name}</a>)}
+      </nav>
     </div>
   </div>
 </footer>

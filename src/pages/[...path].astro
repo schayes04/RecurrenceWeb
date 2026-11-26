@@ -31,7 +31,7 @@ const ui = UI[locale];
 const crumb = (key: PageKey, name: string) => ({ name, path: pathFor(key, locale) });
 const SECTION_NAMES: Partial<Record<PageKey, string>> = {
   features: ui.nav.features, 'use-cases': ui.nav.useCases, compare: ui.nav.compare,
-  support: ui.nav.support, press: ui.footer.press, privacy: ui.footer.privacy, terms: ui.footer.terms,
+  support: ui.nav.support, press: ui.nav.press, privacy: ui.footer.privacy, terms: ui.footer.terms,
 };
 const jsonLd: object[] = [];
 if (pageKey === 'home') jsonLd.push(appJsonLd(locale, meta.description), organizationJsonLd());

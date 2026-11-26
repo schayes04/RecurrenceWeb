@@ -18,11 +18,12 @@ const s = c.support;
       <Faq items={s.faq} />
     </div>
     <div style="flex-basis:320px">
-      <div class="plan">
+      <div class="contact-card">
         <h2 style="font-size:22px">{s.contactTitle}</h2>
         <p class="summary">{s.contactBody}</p>
         <p style="margin-top:16px"><a class="btn btn-dark" href="mailto:support@shayesapps.com">support@shayesapps.com</a></p>
       </div>
+      <p class="policy-links"><a href={pathFor('privacy', locale)}>{UI[locale].footer.privacy}</a><a href={pathFor('terms', locale)}>{UI[locale].footer.terms}</a></p>
     </div>
   </div>
 </section>
