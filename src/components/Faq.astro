@@ -2,7 +2,10 @@
 import type { Faq } from '../content/types';
 interface Props { items: Faq[] }
 const { items } = Astro.props;
+// Email addresses in answers become mailto links.
+const EMAIL = /([\w.+-]+@[\w-]+\.[\w.]+\w)/;
+const parts = (a: string) => a.split(EMAIL).map((text, i) => ({ text, email: i % 2 === 1 }));
 ---
 <div class="faq">
-  {items.map((f) => <details><summary>{f.q}</summary><p>{f.a}</p></details>)}
+  {items.map((f) => <details><summary>{f.q}</summary><p>{parts(f.a).map((p) => p.email ? <a href={`mailto:${p.text}`}>{p.text}</a> : p.text)}</p></details>)}
 </div>

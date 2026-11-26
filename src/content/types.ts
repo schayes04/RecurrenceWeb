@@ -70,7 +70,7 @@ export interface CompareContent {
   verdict: string;
 }
 
-export interface SupportContent { meta: Meta; h1: string; intro: string; contactTitle: string; contactBody: string; faqTitle: string; faq: Faq[] }
+export interface SupportContent { meta: Meta; h1: string; intro: string; faqTitle: string; faq: Faq[]; /** Last question, answered with the support email. */ contact: Faq }
 
 export interface PressContent {
   meta: Meta;

@@ -307,12 +307,11 @@ const en: SiteContent = {
   support: {
     meta: {
       title: 'Support & Help | Recurrence',
-      description: 'Get help with Recurrence: syncing, sharing, reminders, widgets and Premium. Answers to common questions and how to contact support.',
+      description: 'Get help with Recurrence: syncing, sharing, reminders, widgets and Premium. Answers to common questions, and how to reach us.',
     },
     h1: 'How can we help?',
-    intro: 'Answers to the most common questions about Recurrence. Still stuck? Email us and a real person will reply.',
-    contactTitle: 'Contact support',
-    contactBody: 'Email support@shayesapps.com, or use Contact Support in the app’s More tab so we get your app version.',
+    intro: 'Answers to the most common questions about Recurrence.',
+    contact: { q: 'Have another question?', a: 'Email us at support@shayesapps.com, or tap Contact Support in the app’s More tab so we know which version you’re using. A real person will reply.' },
     faqTitle: 'Common questions',
     faq: [
       { q: 'My tasks aren’t syncing between devices.', a: '[Answer to write in phase 2.]' },
