@@ -190,7 +190,7 @@ tbody tr:last-child td { border-bottom: 0; }
 .site-footer .col h2 a { color: inherit !important; text-decoration: none; }
 .site-footer .col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
 .site-footer .col li a { display: inline-block; padding-block: 7px; line-height: 21px; font-weight: 600; color: #fff !important; text-decoration: none; }
-.site-footer a:hover { opacity: .75; }
+.site-footer a:hover { color: #a3d8ff !important; text-decoration: underline; text-underline-offset: 4px; }
 @media (max-width: 860px) {
   .site-footer .cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .site-footer .brand-col { grid-column: 1 / -1; }
