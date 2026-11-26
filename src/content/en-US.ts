@@ -26,11 +26,11 @@ const en: SiteContent = {
       'Syncs across iPhone, iPad and Mac',
     ],
     reviewsTitle: 'Loved for keeping life on track',
-    // 5-star US App Store reviews, excerpts quoted as written. Picked 2026-11-26.
+    // 5-star US App Store reviews, excerpts quoted as written. Chosen by Stephen 2026-11-26.
     reviews: [
-      { quote: 'It is clean, customizable, and just simply so useful.', author: 'A619374' },
-      { quote: 'Finally! What I needed is exactly what this app does.', author: 'AndreaBGReviews' },
       { quote: 'Everything about this is well thought out and carefully designed by the developer.', author: 'Manic Bobo' },
+      { quote: 'I can look at my history on a task to see how often I’m actually doing it.', author: 'kaltrey' },
+      { quote: 'Absolutely love the fact that it keeps track of task completions!', author: '2grunge4u' },
     ],
     freeTitle: 'Free to start',
     freeBody: 'Track up to 5 tasks for free. Recurrence Premium unlocks unlimited tasks and shared tasks, as a monthly or yearly subscription or a one-time lifetime purchase.',
