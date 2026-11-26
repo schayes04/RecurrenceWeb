@@ -16,6 +16,7 @@ import ja from './ja';
 import ko from './ko';
 import ptBR from './pt-BR';
 import ptPT from './pt-PT';
+import ru from './ru';
 
 const CONTENT: Partial<Record<Locale, SiteContent>> = {
   'en-US': enUS,
@@ -31,6 +32,7 @@ const CONTENT: Partial<Record<Locale, SiteContent>> = {
   ko,
   'pt-BR': ptBR,
   'pt-PT': ptPT,
+  ru,
 };
 
 export const hasContent = (locale: Locale): boolean => Boolean(CONTENT[locale]);
