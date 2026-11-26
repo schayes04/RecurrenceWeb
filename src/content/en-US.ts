@@ -337,7 +337,7 @@ const en: SiteContent = {
       { label: 'Platforms', value: 'iPhone, iPad, Mac' },
       { label: 'Price', value: 'Free, with optional subscription' },
       { label: 'Languages', value: '16' },
-      { label: 'App Store rating', value: '4.7 out of 5' },
+      { label: 'App Store rating', value: '4.7+ stars' },
     ],
     kitTitle: 'Download the kit',
     kitBody: 'Screenshots, framed screenshots, the app icon and a banner.',
