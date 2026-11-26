@@ -311,7 +311,7 @@ const en: SiteContent = {
     },
     h1: 'How can we help?',
     intro: 'Answers to the most common questions about Recurrence.',
-    contact: { q: 'Have another question?', a: 'Email us at support@shayesapps.com, or tap Contact Support in the app’s More tab so we know which version you’re using. A real person will reply.' },
+    contact: { q: 'Have another question?', a: 'Email us at support@shayesapps.com and a real person will reply.' },
     faqTitle: 'Common questions',
     faq: [
       { q: 'My tasks aren’t syncing between devices.', a: '[Answer to write in phase 2.]' },
