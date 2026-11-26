@@ -13,6 +13,7 @@ import frCA from './fr-CA';
 import es from './es';
 import esES from './es-ES';
 import ja from './ja';
+import ko from './ko';
 
 const CONTENT: Partial<Record<Locale, SiteContent>> = {
   'en-US': enUS,
@@ -25,6 +26,7 @@ const CONTENT: Partial<Record<Locale, SiteContent>> = {
   es,
   'es-ES': esES,
   ja,
+  ko,
 };
 
 export const hasContent = (locale: Locale): boolean => Boolean(CONTENT[locale]);

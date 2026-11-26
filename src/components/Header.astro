@@ -14,7 +14,6 @@ const current = (key: PageKey) => (pageKey === key ? 'page' : undefined);
 const links: { key: PageKey; label: string }[] = [
   { key: 'features', label: ui.nav.features },
   { key: 'press', label: ui.nav.press },
-  { key: 'support', label: ui.nav.support },
 ];
 ---
 <header class:list={['site-header', variant === 'dark' ? 'dark' : 'light']}>
