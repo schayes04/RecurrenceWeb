@@ -38,14 +38,15 @@ export const appJsonLd = (locale: Locale, description: string) => ({
   url: absolute(pathFor('home', locale)),
   installUrl: appStoreUrl(locale),
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-  publisher: { '@type': 'Organization', name: 'Shayes Apps LLC', url: 'https://www.shayesapps.com' },
+  publisher: { '@type': 'Organization', name: 'Shayes Apps', url: 'https://shayesapps.com/' },
 });
 
 export const organizationJsonLd = () => ({
   '@context': 'https://schema.org',
   '@type': 'Organization',
-  name: 'Shayes Apps LLC',
-  url: 'https://www.shayesapps.com',
+  name: 'Shayes Apps',
+  legalName: 'Shayes Apps LLC',
+  url: 'https://shayesapps.com/',
   logo: absolute('/icon-512.png'),
   email: 'support@shayesapps.com',
 });

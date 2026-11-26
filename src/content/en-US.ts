@@ -355,7 +355,7 @@ const en: SiteContent = {
     h1: 'Press kit',
     intro: 'Recurrence is a recurring task tracker for iPhone, iPad and Mac by Shayes Apps, an independent developer. It reminds people when repeating tasks are due and keeps a history of every completion.',
     facts: [
-      { label: 'Developer', value: 'Shayes Apps LLC' },
+      { label: 'Developer', value: 'Shayes Apps' },
       { label: 'Platforms', value: 'iPhone, iPad, Mac' },
       { label: 'Price', value: 'Free, with Recurrence Premium in-app' },
       { label: 'Languages', value: '16' },
