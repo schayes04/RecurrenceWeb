@@ -335,7 +335,7 @@ const en: SiteContent = {
     facts: [
       { label: 'Developer', value: 'Shayes Apps' },
       { label: 'Platforms', value: 'iPhone, iPad, Mac' },
-      { label: 'Price', value: 'Free, with Recurrence Premium in-app' },
+      { label: 'Price', value: 'Free, with optional subscription' },
       { label: 'Languages', value: '16' },
       { label: 'App Store rating', value: '4.7 out of 5' },
     ],
