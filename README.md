@@ -29,5 +29,5 @@ A page is **published** in a locale when that locale has its own copy file and t
 
 ## Deploy (Cloudflare Pages)
 
-- Framework preset: Astro. Build command `npm run build`, output directory `dist`, Node 22.
+- Framework preset: Astro. Build command `npm run build`, output directory `dist`, Node 24 (set `NODE_VERSION=24`).
 - Every branch gets a preview URL. Production is `main`, on recurrence-app.com.
