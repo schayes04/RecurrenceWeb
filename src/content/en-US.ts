@@ -37,7 +37,7 @@ const en: SiteContent = {
     faqTitle: 'Questions',
     faq: [
       { q: 'How is Recurrence different from a to-do list?', a: 'A to-do list forgets a task once you check it off. Recurrence schedules the next time and keeps a record of every completion, with notes, so you always know when you last did something.' },
-      { q: 'Can I share tasks with my family?', a: 'Yes. Share a category over iCloud and everyone in it can complete its tasks. Each task’s history shows who completed it and when.' },
+      { q: 'Can I share tasks with my family?', a: 'Yes. Share any task over iCloud and the people you invite can check it off too. Each task’s history shows who completed it and when.' },
       { q: 'What happens if I miss a task?', a: 'It moves to Overdue and keeps reminding you. For tasks that should simply restart when you get to them, choose a schedule that repeats from your last completion, so missed weeks don’t pile up.' },
     ],
   },
@@ -102,7 +102,7 @@ const en: SiteContent = {
       ],
       points: [
         { title: 'Fixed days or flexible intervals', body: 'Trash goes out every Thursday. Sheets get washed a week after the last time, whenever that was.' },
-        { title: 'Share the load', body: 'Share a category with your household and see who took care of each chore.' },
+        { title: 'Share the load', body: 'Share chores with your household and see who took care of each one.' },
         { title: 'No pile-up after a busy week', body: 'Tasks that repeat from the last completion simply restart when you get to them.' },
       ],
       screen: 'home',
@@ -202,7 +202,7 @@ const en: SiteContent = {
       ],
       points: [
         { title: 'Timed from the last watering', body: 'Each plant’s next reminder starts when you actually watered it.' },
-        { title: 'See who watered', body: 'In a shared category, the history shows who watered and when.' },
+        { title: 'See who watered', body: 'When a plant task is shared, the history shows who watered and when.' },
         { title: 'Notes for each plant', body: 'Record feeding or repotting alongside the watering log.' },
       ],
       screen: 'history',
@@ -234,7 +234,7 @@ const en: SiteContent = {
       name: 'Shared family tasks',
       blurb: 'See who did it, and when',
       h1: 'Shared recurring tasks for the whole household',
-      intro: 'Share a category over iCloud and everyone in it can complete its tasks. The history shows who took care of each one, so there’s no “did you feed the dog?”',
+      intro: 'Share tasks over iCloud and everyone you invite can complete them. The history shows who took care of each one, so there’s no “did you feed the dog?”',
       sampleTitle: 'A shared household list',
       sample: [
         { name: 'Take Out Trash', schedule: 'Every Thursday' },
@@ -242,7 +242,7 @@ const en: SiteContent = {
         { name: 'Heartworm Meds', schedule: 'Monthly on the 1st' },
       ],
       points: [
-        { title: 'Shared over iCloud', body: 'Invite family members to a category with iCloud sharing.' },
+        { title: 'Shared over iCloud', body: 'Invite family members to any task with iCloud sharing. They just need Recurrence and an iCloud account.' },
         { title: 'See who did it', body: 'Each completion in a shared task shows who checked it off.' },
         { title: 'Everyone gets reminded', body: 'Each person sets the reminders that suit them.' },
       ],
@@ -315,10 +315,10 @@ const en: SiteContent = {
     contact: { q: 'Have another question?', a: 'Email us at support@shayesapps.com.' },
     faqTitle: 'Common questions',
     faq: [
-      { q: 'My tasks aren’t syncing between devices.', a: '[Answer to write in phase 2.]' },
-      { q: 'How do I share tasks with someone?', a: '[Answer to write in phase 2.]' },
-      { q: 'I’m not getting reminders.', a: '[Answer to write in phase 2.]' },
-      { q: 'How do I restore my Premium purchase?', a: '[Answer to write in phase 2.]' },
+      { q: 'My tasks aren’t syncing between devices.', a: 'Recurrence syncs through iCloud. On each device, make sure you’re signed in to iCloud with the same Apple Account, you’re online, and your iCloud storage isn’t full. Also check that Recurrence is allowed to use iCloud in the Settings app under your name > iCloud. In Recurrence, Settings > iCloud shows the sync status. If it still isn’t syncing, tap Share Sync Report on that screen and send the report to us.' },
+      { q: 'How do I share tasks with someone?', a: 'Long-press a task in your list and choose Share, or tap the share button at the top of the task. Choose who to invite and whether they can make changes or only view it. The people you invite need Recurrence and an iCloud account. To stop sharing, open the same menu, which now says Sharing. Deleting a shared task deletes it for everyone.' },
+      { q: 'I’m not getting reminders.', a: 'First check that notifications are allowed for Recurrence in the Settings app under Notifications, and that a Focus isn’t silencing them. In Recurrence, Settings > Notifications shows whether permission is on. Each task has its own reminders in the Notifications section when you edit it: before it’s due, on the day, or once it’s overdue. Settings > Defaults > Notifications sets the reminders new tasks start with. iOS limits how many reminders an app can schedule ahead, so open Recurrence now and then to keep them coming.' },
+      { q: 'How do I restore my Premium purchase?', a: 'In Recurrence, go to Settings, tap Explore on the Recurrence Premium banner, then tap Restore at the bottom of the screen. Make sure you’re signed in with the Apple Account you bought Premium with.' },
       { q: 'Can I try Premium first?', a: 'Yes. Recurrence Premium includes a free trial, shown in the App Store before you subscribe.' },
       { q: 'Does Premium work on all my devices?', a: 'Yes. One purchase unlocks Premium on iPhone, iPad and Mac, and it can be shared with your family through Family Sharing.' },
       { q: 'How do I cancel my subscription?', a: 'Subscriptions are managed in your Apple account settings and can be canceled at any time, at least 24 hours before the next renewal.' },
