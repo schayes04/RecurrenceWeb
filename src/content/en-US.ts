@@ -26,10 +26,11 @@ const en: SiteContent = {
       'Syncs across iPhone, iPad and Mac',
     ],
     reviewsTitle: 'Loved for keeping life on track',
+    // 5-star US App Store reviews, excerpts quoted as written. Picked 2026-11-26.
     reviews: [
-      { quote: '[Review to be chosen]' },
-      { quote: '[Review to be chosen]' },
-      { quote: '[Review to be chosen]' },
+      { quote: 'It is clean, customizable, and just simply so useful.', author: 'A619374' },
+      { quote: 'Finally! What I needed is exactly what this app does.', author: 'AndreaBGReviews' },
+      { quote: 'Everything about this is well thought out and carefully designed by the developer.', author: 'Manic Bobo' },
     ],
     freeTitle: 'Free to start',
     freeBody: 'Track up to 5 tasks for free. Recurrence Premium unlocks unlimited tasks and shared tasks, as a monthly or yearly subscription or a one-time lifetime purchase.',
@@ -345,18 +346,29 @@ const en: SiteContent = {
     contactBody: 'support@shayesapps.com',
   },
 
+  // Adapted from the shared Shayes Apps policies (shayesapps.com/policies) with
+  // minimal changes for Recurrence: app name, dates, no ads SDK, shared tasks.
   privacy: {
-    meta: { title: 'Privacy Policy | Recurrence', description: 'How Recurrence handles your data.', draft: true },
+    meta: { title: 'Privacy Policy | Recurrence', description: 'Recurrence doesn’t track or collect any personally identifiable information. Your tasks sync through iCloud and live on Apple’s infrastructure.' },
     h1: 'Privacy policy',
-    updated: '[Date]',
-    sections: [{ title: '[Recurrence-only policy to be written in phase 2]', body: ['[Placeholder]'] }],
+    updated: 'November 26, 2026',
+    sections: [
+      { title: 'Short and sweet', body: ['Our policy is short and sweet because we value your information and privacy. Recurrence doesn’t track or collect any personally identifiable information. We do our best to limit the number of third parties we rely on.'] },
+      { title: 'Payments', body: ['Payments for in-app purchases and subscriptions are made through the App Store, so we never have access to any of your credit card information. Recurrence contains the RevenueCat SDK. Please refer to their policies.'] },
+      { title: 'Sync and sharing', body: ['Data synchronization is done using iCloud (Apple’s CloudKit). CloudKit is fully encrypted and all data lives on Apple’s infrastructure. No one besides you has access to your data, except the people you choose to share tasks with.'] },
+      { title: 'Refund requests', body: ['By using Recurrence and making in-app purchases, you consent to our sharing of data regarding your usage and consumption of purchased content with Apple, as part of our efforts to resolve refund requests. This information may include details about how you have accessed and interacted with the purchased content. The purpose of sharing this data is to help Apple make an informed decision regarding refund requests. We ensure that such data sharing is done in compliance with Apple’s policies and only as necessary to process your requests.'] },
+      { title: 'Questions', body: ['If you have any questions or concerns about our privacy policy, please contact us at support@shayesapps.com.'] },
+    ],
   },
 
   terms: {
-    meta: { title: 'Terms of Use | Recurrence', description: 'Terms of use for Recurrence.', draft: true },
+    meta: { title: 'Terms of Use | Recurrence', description: 'Terms of use for Recurrence, including how Recurrence Premium subscriptions renew and how to cancel them.' },
     h1: 'Terms of use',
-    updated: '[Date]',
-    sections: [{ title: '[Recurrence-only terms to be written in phase 2]', body: ['[Placeholder]'] }],
+    updated: 'November 26, 2026',
+    sections: [
+      { title: 'Premium subscription terms', body: ['Subscriptions automatically renew unless canceled at least 24 hours before the end of the current period. You can cancel anytime in your Apple account settings. Any unused portion of a free trial will be forfeited if you purchase a subscription.'] },
+      { title: 'Questions', body: ['If you have any questions or concerns about our terms of use, please contact us at support@shayesapps.com.'] },
+    ],
   },
 
   labels: {

@@ -9,7 +9,8 @@ export interface Meta {
 }
 
 export interface Faq { q: string; a: string }
-export interface Review { quote: string }
+/** A short excerpt from a 5-star App Store review, quoted as written, with the reviewer's nickname. */
+export interface Review { quote: string; author: string }
 /** A task as it appears in the app's starter list. */
 export interface SampleTask { name: string; schedule: string }
 export type ScreenKey = 'home' | 'history' | 'widgets' | 'add';

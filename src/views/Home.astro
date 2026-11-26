@@ -57,7 +57,7 @@ const ui = UI[locale];
   <div class="container">
     <h2>{h.reviewsTitle}</h2>
     <div class="reviews">
-      {h.reviews.map((r) => <figure class="review"><div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“{r.quote}”</blockquote></figure>)}
+      {h.reviews.map((r) => <figure class="review"><div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“{r.quote}”</blockquote><figcaption>{r.author}</figcaption></figure>)}
     </div>
   </div>
 </section>

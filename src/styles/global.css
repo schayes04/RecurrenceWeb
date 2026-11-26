@@ -120,6 +120,7 @@ p { margin: 0; }
 .review { margin: 0; background: var(--ink); border-radius: 18px; padding: 24px; }
 .review .stars { color: var(--gold); letter-spacing: 2px; }
 .review blockquote { margin: 12px 0 0; font-size: 17px; line-height: 1.5; }
+.review figcaption { margin-top: 14px; font-size: 14px; color: var(--on-dark-muted); }
 
 /* FAQ */
 .faq { display: grid; gap: 12px; margin-top: 24px; }
