@@ -99,6 +99,7 @@ p { margin: 0; }
 .section .sub { color: var(--muted); font-size: 18px; margin-top: 12px; max-width: 40em; }
 .kicker { color: var(--link); font-weight: 700; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 12px; }
 .split { display: flex; flex-wrap: wrap; align-items: center; gap: 40px 64px; }
+.split.top { align-items: flex-start; }
 .split > * { flex: 1 1 380px; min-width: 0; }
 .split .shot { display: flex; justify-content: center; }
 .split .shot .phone { width: min(var(--phone-w), 75vw); }
