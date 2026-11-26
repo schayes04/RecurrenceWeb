@@ -376,6 +376,13 @@ const en: SiteContent = {
     ],
   },
 
+  screenAlt: {
+    home: 'Recurrence task list on iPhone with overdue, today and upcoming tasks',
+    history: 'A task’s completion history with dates and notes',
+    widgets: 'Recurrence widgets on the iPhone Home Screen',
+    add: 'Editing a task set to repeat 4 weeks after the last completion',
+  },
+
   labels: {
     sampleList: 'Example list',
     whatYouGet: 'Why it works',

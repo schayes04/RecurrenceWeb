@@ -99,6 +99,8 @@ export interface SiteContent {
   support: SupportContent;
   press: PressContent;
   policies: PoliciesContent;
+  /** Alt text for each screenshot. */
+  screenAlt: Record<ScreenKey, string>;
   /** Labels used on templates. */
   labels: {
     sampleList: string;
