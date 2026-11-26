@@ -34,7 +34,9 @@ body.script-cjk { font-family: var(--font-cjk); }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--link); }
 a:hover { color: #084E9C; }
-h1, h2, h3 { line-height: 1.1; letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
+h1, h2, h3 { line-height: 1.1; letter-spacing: -0.02em; margin: 0; text-wrap: balance; hyphens: auto; overflow-wrap: break-word; }
+/* Keep Japanese headings from breaking mid-word (Chromium). */
+:lang(ja) :is(h1, h2, h3) { word-break: auto-phrase; }
 body.script-cjk h1, body.script-cjk h2, body.script-cjk h3 { letter-spacing: 0; line-height: 1.3; }
 p { margin: 0; }
 :focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; border-radius: 4px; }
