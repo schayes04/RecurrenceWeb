@@ -7,12 +7,14 @@ import type { PageKey, UseCaseId, CompetitorId } from '../i18n/routes';
 import type { Meta, SiteContent } from './types';
 import enUS from './en-US';
 import { enGB, enAU, enCA } from './en-variants';
+import de from './de';
 
 const CONTENT: Partial<Record<Locale, SiteContent>> = {
   'en-US': enUS,
   'en-GB': enGB,
   'en-AU': enAU,
   'en-CA': enCA,
+  de,
 };
 
 export const hasContent = (locale: Locale): boolean => Boolean(CONTENT[locale]);

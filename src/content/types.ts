@@ -28,6 +28,7 @@ export interface HomeContent {
   historyBody: string;
   bullets: string[];
   reviewsTitle: string;
+  /** App Store reviews from this locale's storefront. Empty hides the section. */
   reviews: Review[];
   freeTitle: string;
   freeBody: string;
@@ -115,5 +116,6 @@ export interface SiteContent {
     lastUpdated: string;
     faqTitle: string;
     readMore: string;
+    fiveStars: string;
   };
 }

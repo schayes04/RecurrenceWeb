@@ -396,6 +396,7 @@ const en: SiteContent = {
     lastUpdated: 'Last updated',
     faqTitle: 'Questions',
     readMore: 'Learn more',
+    fiveStars: '5 out of 5 stars',
   },
 };
 

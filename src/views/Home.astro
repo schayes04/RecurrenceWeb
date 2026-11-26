@@ -52,14 +52,16 @@ const ui = UI[locale];
   </div>
 </section>
 
+{h.reviews.length > 0 && (
 <section class="section navy">
   <div class="container">
     <h2>{h.reviewsTitle}</h2>
     <div class="reviews">
-      {h.reviews.map((r) => <figure class="review"><div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div><blockquote>“{r.quote}”</blockquote><figcaption>{r.author}</figcaption></figure>)}
+      {h.reviews.map((r) => <figure class="review"><div class="stars" role="img" aria-label={c.labels.fiveStars}>★★★★★</div><blockquote>“{r.quote}”</blockquote><figcaption>{r.author}</figcaption></figure>)}
     </div>
   </div>
 </section>
+)}
 
 <section class="section">
   <div class="container split top">

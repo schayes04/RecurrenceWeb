@@ -34,7 +34,7 @@ const en: UiStrings = {
 
 const de: UiStrings = {
   skipToContent: 'Zum Inhalt springen',
-  nav: { features: 'Funktionen', useCases: 'Anwendungsfälle', compare: 'Vergleich', press: 'Presse', support: 'Support' },
+  nav: { features: 'Funktionen', useCases: 'Was du im Blick behältst', compare: 'Vergleich', press: 'Presse', support: 'Support' },
   download: 'Laden im App Store',
   downloadShort: 'Laden',
   platforms: 'Für iPhone, iPad und Mac',
@@ -48,7 +48,7 @@ const de: UiStrings = {
 
 const esMX: UiStrings = {
   skipToContent: 'Ir al contenido',
-  nav: { features: 'Funciones', useCases: 'Casos de uso', compare: 'Comparar', press: 'Prensa', support: 'Soporte' },
+  nav: { features: 'Funciones', useCases: 'Qué puedes registrar', compare: 'Comparar', press: 'Prensa', support: 'Soporte' },
   download: 'Descargar en el App Store',
   downloadShort: 'Descargar',
   platforms: 'Para iPhone, iPad y Mac',
@@ -64,7 +64,7 @@ const esES: UiStrings = { ...esMX, langBanner: { ...esMX.langBanner, prompt: 'Es
 
 const fr: UiStrings = {
   skipToContent: 'Aller au contenu',
-  nav: { features: 'Fonctionnalités', useCases: 'Utilisations', compare: 'Comparer', press: 'Presse', support: 'Assistance' },
+  nav: { features: 'Fonctionnalités', useCases: 'Ce que vous pouvez suivre', compare: 'Comparer', press: 'Presse', support: 'Assistance' },
   download: 'Télécharger dans l’App Store',
   downloadShort: 'Télécharger',
   platforms: 'Pour iPhone, iPad et Mac',
@@ -78,7 +78,7 @@ const fr: UiStrings = {
 
 const ja: UiStrings = {
   skipToContent: '本文へスキップ',
-  nav: { features: '機能', useCases: '使い方', compare: '比較', press: 'プレス', support: 'サポート' },
+  nav: { features: '機能', useCases: '管理できること', compare: '比較', press: 'プレス', support: 'サポート' },
   download: 'App Storeからダウンロード',
   downloadShort: 'ダウンロード',
   platforms: 'iPhone、iPad、Mac対応',
@@ -92,7 +92,7 @@ const ja: UiStrings = {
 
 const ko: UiStrings = {
   skipToContent: '본문으로 건너뛰기',
-  nav: { features: '기능', useCases: '활용 사례', compare: '비교', press: '보도 자료', support: '지원' },
+  nav: { features: '기능', useCases: '관리할 수 있는 것', compare: '비교', press: '보도 자료', support: '지원' },
   download: 'App Store에서 다운로드',
   downloadShort: '다운로드',
   platforms: 'iPhone, iPad 및 Mac용',
@@ -106,7 +106,7 @@ const ko: UiStrings = {
 
 const ptBR: UiStrings = {
   skipToContent: 'Pular para o conteúdo',
-  nav: { features: 'Recursos', useCases: 'Casos de uso', compare: 'Comparar', press: 'Imprensa', support: 'Suporte' },
+  nav: { features: 'Recursos', useCases: 'O que você pode acompanhar', compare: 'Comparar', press: 'Imprensa', support: 'Suporte' },
   download: 'Baixar na App Store',
   downloadShort: 'Baixar',
   platforms: 'Para iPhone, iPad e Mac',
@@ -120,7 +120,7 @@ const ptBR: UiStrings = {
 
 const ptPT: UiStrings = {
   ...ptBR,
-  nav: { ...ptBR.nav, features: 'Funcionalidades', support: 'Apoio' },
+  nav: { ...ptBR.nav, features: 'Funcionalidades', useCases: 'O que pode acompanhar', support: 'Apoio' },
   download: 'Descarregar na App Store',
   downloadShort: 'Descarregar',
   footer: { ...ptBR.footer, support: 'Apoio' },
@@ -130,7 +130,7 @@ const ptPT: UiStrings = {
 
 const ru: UiStrings = {
   skipToContent: 'Перейти к содержанию',
-  nav: { features: 'Возможности', useCases: 'Сценарии', compare: 'Сравнение', press: 'Пресса', support: 'Поддержка' },
+  nav: { features: 'Возможности', useCases: 'Что можно отслеживать', compare: 'Сравнение', press: 'Пресса', support: 'Поддержка' },
   download: 'Загрузите в App Store',
   downloadShort: 'Загрузить',
   platforms: 'Для iPhone, iPad и Mac',
@@ -144,7 +144,7 @@ const ru: UiStrings = {
 
 const zhHans: UiStrings = {
   skipToContent: '跳到正文',
-  nav: { features: '功能', useCases: '使用场景', compare: '对比', press: '媒体', support: '支持' },
+  nav: { features: '功能', useCases: '可以追踪什么', compare: '对比', press: '媒体', support: '支持' },
   download: '在 App Store 下载',
   downloadShort: '下载',
   platforms: '适用于 iPhone、iPad 和 Mac',
@@ -158,7 +158,7 @@ const zhHans: UiStrings = {
 
 const zhHant: UiStrings = {
   skipToContent: '跳至主要內容',
-  nav: { features: '功能', useCases: '使用情境', compare: '比較', press: '媒體', support: '支援' },
+  nav: { features: '功能', useCases: '可以追蹤什麼', compare: '比較', press: '媒體', support: '支援' },
   download: '在 App Store 下載',
   downloadShort: '下載',
   platforms: '適用於 iPhone、iPad 和 Mac',
