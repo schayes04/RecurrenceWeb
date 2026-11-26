@@ -331,8 +331,8 @@ const fr: SiteContent = {
   labels: {
     sampleList: 'Exemple de liste',
     whatYouGet: 'Pourquoi ça marche',
-    relatedUseCases: 'À suivre aussi',
-    allUseCases: 'Tout ce que vous pouvez suivre',
+    relatedUseCases: 'Autres idées',
+    allUseCases: 'Toutes les idées',
     comparedOn: 'Points comparés',
     feature: 'Fonctionnalité',
     whenOtherTitle: 'Quand l’autre app peut mieux vous convenir',

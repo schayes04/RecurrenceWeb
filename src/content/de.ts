@@ -330,8 +330,8 @@ const de: SiteContent = {
   labels: {
     sampleList: 'Beispielliste',
     whatYouGet: 'Warum es funktioniert',
-    relatedUseCases: 'Passt auch dazu',
-    allUseCases: 'Alle Einsatzbereiche',
+    relatedUseCases: 'Weitere Ideen',
+    allUseCases: 'Alle Ideen',
     comparedOn: 'Verglichen nach',
     feature: 'Funktion',
     whenOtherTitle: 'Wann die andere App besser passt',

@@ -30,29 +30,29 @@ interface SlugSet {
 }
 
 const EN: SlugSet = {
-  section: { features: 'features', 'use-cases': 'use-cases', compare: 'compare', support: 'support', press: 'press', policies: 'policies' },
+  section: { features: 'features', 'use-cases': 'ideas', compare: 'compare', support: 'support', press: 'press', policies: 'policies' },
   useCase: { chores: 'chores', bills: 'bills', pets: 'pet-care', 'home-maintenance': 'home-maintenance', 'car-maintenance': 'car-maintenance', plants: 'plants', 'self-care': 'self-care', family: 'family' },
 };
 
 const DE: SlugSet = {
-  section: { features: 'funktionen', 'use-cases': 'anwendungsfaelle', compare: 'vergleich', support: 'support', press: 'presse', policies: 'richtlinien' },
+  section: { features: 'funktionen', 'use-cases': 'ideen', compare: 'vergleich', support: 'support', press: 'presse', policies: 'richtlinien' },
   useCase: { chores: 'haushalt', bills: 'rechnungen', pets: 'haustiere', 'home-maintenance': 'hauswartung', 'car-maintenance': 'autowartung', plants: 'pflanzen', 'self-care': 'selbstfuersorge', family: 'familie' },
 };
 
 const ES: SlugSet = {
-  section: { features: 'funciones', 'use-cases': 'casos-de-uso', compare: 'comparar', support: 'soporte', press: 'prensa', policies: 'politicas' },
+  section: { features: 'funciones', 'use-cases': 'ideas', compare: 'comparar', support: 'soporte', press: 'prensa', policies: 'politicas' },
   useCase: { chores: 'tareas-del-hogar', bills: 'pagos', pets: 'mascotas', 'home-maintenance': 'mantenimiento-del-hogar', 'car-maintenance': 'mantenimiento-del-coche', plants: 'plantas', 'self-care': 'autocuidado', family: 'familia' },
 };
 
 const ES_MX: SlugSet = { ...ES, useCase: { ...ES.useCase, chores: 'quehaceres', 'car-maintenance': 'mantenimiento-del-auto' } };
 
 const FR: SlugSet = {
-  section: { features: 'fonctionnalites', 'use-cases': 'utilisations', compare: 'comparer', support: 'assistance', press: 'presse', policies: 'politiques' },
+  section: { features: 'fonctionnalites', 'use-cases': 'idees', compare: 'comparer', support: 'assistance', press: 'presse', policies: 'politiques' },
   useCase: { chores: 'taches-menageres', bills: 'factures', pets: 'animaux', 'home-maintenance': 'entretien-maison', 'car-maintenance': 'entretien-voiture', plants: 'plantes', 'self-care': 'bien-etre', family: 'famille' },
 };
 
 const PT_BR: SlugSet = {
-  section: { features: 'recursos', 'use-cases': 'casos-de-uso', compare: 'comparar', support: 'suporte', press: 'imprensa', policies: 'politicas' },
+  section: { features: 'recursos', 'use-cases': 'ideias', compare: 'comparar', support: 'suporte', press: 'imprensa', policies: 'politicas' },
   useCase: { chores: 'tarefas-domesticas', bills: 'contas', pets: 'pets', 'home-maintenance': 'manutencao-da-casa', 'car-maintenance': 'manutencao-do-carro', plants: 'plantas', 'self-care': 'autocuidado', family: 'familia' },
 };
 

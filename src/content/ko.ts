@@ -331,8 +331,8 @@ const ko: SiteContent = {
   labels: {
     sampleList: '예시 목록',
     whatYouGet: '이래서 편해요',
-    relatedUseCases: '이런 것도 관리해 보세요',
-    allUseCases: '관리할 수 있는 모든 것 보기',
+    relatedUseCases: '다른 아이디어',
+    allUseCases: '모든 아이디어 보기',
     comparedOn: '비교 항목',
     feature: '기능',
     whenOtherTitle: '다른 앱이 더 맞을 수 있는 경우',

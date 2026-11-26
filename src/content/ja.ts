@@ -330,8 +330,8 @@ const ja: SiteContent = {
   labels: {
     sampleList: 'リストの例',
     whatYouGet: '便利なポイント',
-    relatedUseCases: 'こんな管理にも',
-    allUseCases: '管理できることをすべて見る',
+    relatedUseCases: 'ほかのアイデア',
+    allUseCases: 'すべてのアイデア',
     comparedOn: '比較項目',
     feature: '機能',
     whenOtherTitle: 'ほかのアプリが向いている場合',

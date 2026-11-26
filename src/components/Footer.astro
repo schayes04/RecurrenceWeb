@@ -27,7 +27,7 @@ const competitors = COMPETITORS.filter((id) => isPublished(locale, `compare/${id
         <p class="made-by">{madeByBefore}<a href="https://shayesapps.com/" target="_blank" rel="noopener">Shayes Apps</a>{madeByAfter}</p>
       </div>
       <nav class="col" aria-labelledby="f-track">
-        <h2 id="f-track"><a href={pathFor('use-cases', locale)}>{ui.nav.useCases}</a></h2>
+        <h2 id="f-track"><a href={pathFor('use-cases', locale)}>{ui.footer.track}</a></h2>
         <ul>{USE_CASES.map((id) => <li><a href={pathFor(`use-case/${id}`, locale)}>{c.useCases[id].name}</a></li>)}</ul>
       </nav>
       {competitors.length > 0 && (

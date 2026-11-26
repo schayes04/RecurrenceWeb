@@ -9,10 +9,11 @@ interface Props { locale: Locale; pageKey?: PageKey; variant: 'dark' | 'light' }
 const { locale, pageKey, variant } = Astro.props;
 const ui = UI[locale];
 const current = (key: PageKey) => (pageKey === key ? 'page' : undefined);
-// Kept to what a first-time visitor looks for. Use-case and comparison pages are
-// search landing pages, reached from the home page, the footer and search results.
+// Kept to what a first-time visitor looks for, like the Countdowns site. Ideas is the
+// use-case hub; comparison pages are search landing pages, reached from the footer.
 const links: { key: PageKey; label: string }[] = [
   { key: 'features', label: ui.nav.features },
+  { key: 'use-cases', label: ui.nav.useCases },
   { key: 'press', label: ui.nav.press },
 ];
 ---

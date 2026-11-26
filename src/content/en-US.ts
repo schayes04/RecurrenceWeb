@@ -386,8 +386,8 @@ const en: SiteContent = {
   labels: {
     sampleList: 'Example list',
     whatYouGet: 'Why it works',
-    relatedUseCases: 'Related use cases',
-    allUseCases: 'All use cases',
+    relatedUseCases: 'More ideas',
+    allUseCases: 'All ideas',
     comparedOn: 'Compared on',
     feature: 'Feature',
     whenOtherTitle: 'When the other app may suit you better',
