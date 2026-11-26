@@ -11,7 +11,7 @@ const { locale, pageKey } = Astro.props;
 const ui = UI[locale];
 const c = contentFor(locale);
 const year = new Date().getFullYear();
-const [madeByBefore, madeByAfter] = ui.footer.madeBy.split('Shayes Apps LLC');
+const [madeByBefore, madeByAfter] = ui.footer.madeBy.split('Shayes Apps');
 // Comparison links appear once those pages are published in this locale.
 const competitors = COMPETITORS.filter((id) => isPublished(locale, `compare/${id}`));
 ---
@@ -42,6 +42,6 @@ const competitors = COMPETITORS.filter((id) => isPublished(locale, `compare/${id
         <a href={pathFor('terms', locale)}>{ui.footer.terms}</a>
       </nav>
     </div>
-    <p class="legal">© {year} · {madeByBefore}<a href="https://shayesapps.com/">Shayes Apps LLC</a>{madeByAfter}</p>
+    <p class="legal">© {year} · {madeByBefore}<a href="https://shayesapps.com/" target="_blank" rel="noopener">Shayes Apps</a>{madeByAfter}</p>
   </div>
 </footer>
