@@ -22,7 +22,7 @@ const en: SiteContent = {
       'Repeat on a calendar schedule, or a set time after you last did it',
       'Reminders before a task is due, on the day, and when it is overdue',
       'Home Screen and Lock Screen widgets',
-      'Share tasks with family over iCloud and see who did what (Premium)',
+      'Share tasks with family over iCloud and see who did what',
       'Syncs across iPhone, iPad and Mac',
     ],
     reviewsTitle: 'Loved for keeping life on track',
@@ -36,7 +36,7 @@ const en: SiteContent = {
     faqTitle: 'Questions',
     faq: [
       { q: 'How is Recurrence different from a to-do list?', a: 'A to-do list forgets a task once you check it off. Recurrence schedules the next time and keeps a record of every completion, with notes, so you always know when you last did something.' },
-      { q: 'Can I share tasks with my family?', a: 'Yes, with Recurrence Premium. Share a category over iCloud and everyone in it can complete its tasks. Each task’s history shows who completed it and when.' },
+      { q: 'Can I share tasks with my family?', a: 'Yes. Share a category over iCloud and everyone in it can complete its tasks. Each task’s history shows who completed it and when.' },
       { q: 'What happens if I miss a task?', a: 'It moves to Overdue and keeps reminding you. For tasks that should simply restart when you get to them, choose a schedule that repeats from your last completion, so missed weeks don’t pile up.' },
     ],
   },
@@ -126,7 +126,7 @@ const en: SiteContent = {
       ],
       points: [
         { title: 'Fixed days or flexible intervals', body: 'Trash goes out every Thursday. Sheets get washed a week after the last time, whenever that was.' },
-        { title: 'Share the load', body: 'With Premium, share a category with your household and see who took care of each chore.' },
+        { title: 'Share the load', body: 'Share a category with your household and see who took care of each chore.' },
         { title: 'No pile-up after a busy week', body: 'Tasks that repeat from the last completion simply restart when you get to them.' },
       ],
       screen: 'home',
@@ -258,7 +258,7 @@ const en: SiteContent = {
       name: 'Shared family tasks',
       blurb: 'See who did it, and when',
       h1: 'Shared recurring tasks for the whole household',
-      intro: 'With Recurrence Premium, share a category over iCloud and everyone in it can complete its tasks. The history shows who took care of each one, so there’s no “did you feed the dog?”',
+      intro: 'Share a category over iCloud and everyone in it can complete its tasks. The history shows who took care of each one, so there’s no “did you feed the dog?”',
       sampleTitle: 'A shared household list',
       sample: [
         { name: 'Take Out Trash', schedule: 'Every Thursday' },
