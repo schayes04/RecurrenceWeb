@@ -179,21 +179,23 @@ tbody tr:last-child td { border-bottom: 0; }
 .cta-band p { color: var(--on-dark-muted); margin-top: 8px; }
 
 /* Footer */
-.site-footer { padding-block: 48px; font-size: 14px; color: var(--on-dark-muted); }
-.site-footer .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 32px 24px; }
-.site-footer .col { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
-.site-footer .col h2 { margin: 0 0 4px; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--on-dark); }
-.site-footer .col h2 a { color: inherit !important; text-decoration: none; }
-.site-footer .col a { color: var(--on-dark-muted); text-decoration: none; }
-.site-footer .col a:hover { color: #fff; }
-.site-footer .brand-col p { margin: 0; }
-.site-footer .brand-col .brand { font-size: 20px; gap: 14px; color: #fff !important; }
-@media (max-width: 520px) { .site-footer .brand-col { grid-column: 1 / -1; } }
-.site-footer .brand img { width: 48px; height: 48px; border-radius: 11px; }
-.site-footer .made-by { font-size: 15px; color: var(--on-dark-muted); margin-top: 6px; }
+/* Footer: mirrors the Countdowns site footer (countdowns-app.com) */
+.site-footer { padding-block: 52px; font-size: 14px; }
+.site-footer .cols { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: 40px 64px; align-items: start; }
+.site-footer .cols.four { grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); }
+.site-footer .brand-col .brand { font-size: 16px; font-weight: 850; gap: 12px; color: #fff !important; }
+.site-footer .brand img { width: 40px; height: 40px; border-radius: 8px; }
+.site-footer .made-by { margin: 16px 0 0; font-size: 14px; color: rgba(255, 255, 255, .62); }
 .site-footer .made-by a { color: #fff !important; font-weight: 600; text-decoration: none; }
-.site-footer .social-link { display: inline-flex; align-items: center; gap: 8px; }
-.site-footer .made-by a:hover { text-decoration: underline; }
+.site-footer .col h2 { margin: 8px 0 16px; font-size: 12px; font-weight: 650; letter-spacing: .06em; text-transform: uppercase; color: rgba(255, 255, 255, .62); }
+.site-footer .col h2 a { color: inherit !important; text-decoration: none; }
+.site-footer .col ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.site-footer .col li a { display: inline-block; padding-block: 7px; line-height: 21px; font-weight: 600; color: #fff !important; text-decoration: none; }
+.site-footer a:hover { opacity: .75; }
+@media (max-width: 860px) {
+  .site-footer .cols { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .site-footer .brand-col { grid-column: 1 / -1; }
+}
 
 /* Language suggestion bar */
 .lang-bar { display: none; background: var(--gold); color: var(--ink); font-size: 15px; }

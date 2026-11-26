@@ -11,35 +11,37 @@ const { locale, pageKey } = Astro.props;
 const ui = UI[locale];
 const c = contentFor(locale);
 const [madeByBefore, madeByAfter] = ui.footer.madeBy.split('Shayes Apps');
-// Comparison links appear once those pages are published in this locale.
 const social = [
-  { name: 'Instagram', href: 'https://www.instagram.com/shayesapps/', path: 'M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 4.7a5.1 5.1 0 1 0 0 10.2 5.1 5.1 0 0 0 0-10.2zm0 8.4a3.3 3.3 0 1 1 0-6.6 3.3 3.3 0 0 1 0 6.6zm5.3-9.8a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z' },
-  { name: 'Facebook', href: 'https://www.facebook.com/shayesapps', path: 'M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z' },
-  { name: 'Mastodon', href: 'https://indieapps.space/@shayesapps', path: 'M21.3 7.9c0-4.3-2.8-5.6-2.8-5.6C17.1 1.6 14.6 1.3 12 1.3h-.1c-2.6 0-5.1.3-6.5 1-0 0-2.8 1.3-2.8 5.6v3.4c.1 4.2.8 8.3 4.7 9.4 1.8.5 3.3.6 4.6.5 2.2-.1 3.4-.8 3.4-.8l-.1-1.6s-1.6.5-3.3.4c-1.7-.1-3.6-.2-3.9-2.3v-.6s1.7.4 3.8.5c1.3.1 2.5-.1 3.7-.2 2.4-.3 4.4-1.7 4.7-3 .4-2.1.4-5.1.4-5.1zm-3.2 5.3h-2V8.4c0-1-.4-1.6-1.3-1.6-1 0-1.5.6-1.5 1.9v2.7h-2V8.7c0-1.3-.5-1.9-1.5-1.9-.9 0-1.3.5-1.3 1.6v4.8h-2V8.2c0-1 .3-1.8.8-2.4.5-.6 1.2-.9 2.1-.9 1 0 1.8.4 2.3 1.2l.5.8.5-.8c.5-.8 1.3-1.2 2.3-1.2.9 0 1.6.3 2.1.9.5.6.8 1.4.8 2.4v5z' },
+  { name: 'Facebook', href: 'https://www.facebook.com/shayesapps' },
+  { name: 'Instagram', href: 'https://www.instagram.com/shayesapps/' },
+  { name: 'Mastodon', href: 'https://indieapps.space/@shayesapps' },
 ];
+// Comparison links appear once those pages are published in this locale.
 const competitors = COMPETITORS.filter((id) => isPublished(locale, `compare/${id}`));
 ---
 <footer class="site-footer dark">
   <div class="container">
-    <div class="cols">
+    <div class:list={['cols', competitors.length > 0 && 'four']}>
       <div class="col brand-col">
-        <a class="brand" href={pathFor('home', locale)}><Image src={icon} alt="" width={48} height={48} />Recurrence</a>
+        <a class="brand" href={pathFor('home', locale)}><Image src={icon} alt="" width={40} height={40} />Recurrence</a>
         <p class="made-by">{madeByBefore}<a href="https://shayesapps.com/" target="_blank" rel="noopener">Shayes Apps</a>{madeByAfter}</p>
       </div>
       <nav class="col" aria-labelledby="f-track">
         <h2 id="f-track"><a href={pathFor('use-cases', locale)}>{ui.nav.useCases}</a></h2>
-        {USE_CASES.map((id) => <a href={pathFor(`use-case/${id}`, locale)}>{c.useCases[id].name}</a>)}
+        <ul>{USE_CASES.map((id) => <li><a href={pathFor(`use-case/${id}`, locale)}>{c.useCases[id].name}</a></li>)}</ul>
       </nav>
       {competitors.length > 0 && (
         <nav class="col" aria-labelledby="f-compare">
           <h2 id="f-compare"><a href={pathFor('compare', locale)}>{ui.nav.compare}</a></h2>
-          {competitors.map((id) => <a href={pathFor(`compare/${id}`, locale)}>{c.compare[id].name}</a>)}
+          <ul>{competitors.map((id) => <li><a href={pathFor(`compare/${id}`, locale)}>{c.compare[id].name}</a></li>)}</ul>
         </nav>
       )}
       <nav class="col" aria-labelledby="f-social">
         <h2 id="f-social">{ui.footer.social}</h2>
-        <a href={pathFor('support', locale)}>{ui.nav.support}</a>
-        {social.map((x) => <a class="social-link" href={x.href} target="_blank" rel="noopener me"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d={x.path} /></svg>{x.name}</a>)}
+        <ul>
+          <li><a href={pathFor('support', locale)}>{ui.nav.support}</a></li>
+          {social.map((x) => <li><a href={x.href} target="_blank" rel="noopener me">{x.name}</a></li>)}
+        </ul>
       </nav>
     </div>
   </div>
