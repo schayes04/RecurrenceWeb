@@ -16,6 +16,8 @@ export interface UiStrings {
   langBanner: { prompt: string; switchTo: string; dismiss: string };
   notFound: { title: string; body: string; home: string };
   breadcrumbHome: string;
+  /** Shown on /open/ while the app launches. */
+  opening: string;
 }
 
 const en: UiStrings = {
@@ -30,6 +32,7 @@ const en: UiStrings = {
   langBanner: { prompt: 'This page is also available in', switchTo: 'Switch', dismiss: 'Dismiss' },
   notFound: { title: 'Page not found', body: 'The page you were looking for has moved or never existed.', home: 'Go to the home page' },
   breadcrumbHome: 'Home',
+  opening: 'Opening Recurrence…',
 };
 
 const de: UiStrings = {
@@ -44,6 +47,7 @@ const de: UiStrings = {
   langBanner: { prompt: 'Diese Seite gibt es auch auf', switchTo: 'Wechseln', dismiss: 'Schließen' },
   notFound: { title: 'Seite nicht gefunden', body: 'Die gesuchte Seite wurde verschoben oder existiert nicht.', home: 'Zur Startseite' },
   breadcrumbHome: 'Start',
+  opening: 'Recurrence wird geöffnet …',
 };
 
 const esMX: UiStrings = {
@@ -58,6 +62,7 @@ const esMX: UiStrings = {
   langBanner: { prompt: 'Esta página también está disponible en', switchTo: 'Cambiar', dismiss: 'Cerrar' },
   notFound: { title: 'Página no encontrada', body: 'La página que buscas se movió o no existe.', home: 'Ir a la página de inicio' },
   breadcrumbHome: 'Inicio',
+  opening: 'Abriendo Recurrence…',
 };
 
 const esES: UiStrings = { ...esMX, langBanner: { ...esMX.langBanner, prompt: 'Esta página también está disponible en' } };
@@ -74,6 +79,7 @@ const fr: UiStrings = {
   langBanner: { prompt: 'Cette page existe aussi en', switchTo: 'Changer', dismiss: 'Fermer' },
   notFound: { title: 'Page introuvable', body: 'La page que vous cherchez a été déplacée ou n’existe pas.', home: 'Retour à l’accueil' },
   breadcrumbHome: 'Accueil',
+  opening: 'Ouverture de Recurrence…',
 };
 
 const ja: UiStrings = {
@@ -88,6 +94,7 @@ const ja: UiStrings = {
   langBanner: { prompt: 'このページは次の言語でもご覧いただけます：', switchTo: '切り替える', dismiss: '閉じる' },
   notFound: { title: 'ページが見つかりません', body: 'お探しのページは移動したか、存在しません。', home: 'ホームへ戻る' },
   breadcrumbHome: 'ホーム',
+  opening: 'Recurrenceを開いています…',
 };
 
 const ko: UiStrings = {
@@ -102,6 +109,7 @@ const ko: UiStrings = {
   langBanner: { prompt: '이 페이지는 다음 언어로도 볼 수 있습니다:', switchTo: '전환', dismiss: '닫기' },
   notFound: { title: '페이지를 찾을 수 없습니다', body: '찾으시는 페이지가 이동되었거나 존재하지 않습니다.', home: '홈으로 이동' },
   breadcrumbHome: '홈',
+  opening: 'Recurrence 여는 중…',
 };
 
 const ptBR: UiStrings = {
@@ -116,6 +124,7 @@ const ptBR: UiStrings = {
   langBanner: { prompt: 'Esta página também está disponível em', switchTo: 'Mudar', dismiss: 'Fechar' },
   notFound: { title: 'Página não encontrada', body: 'A página que você procura mudou de lugar ou não existe.', home: 'Ir para a página inicial' },
   breadcrumbHome: 'Início',
+  opening: 'Abrindo o Recurrence…',
 };
 
 const ptPT: UiStrings = {
@@ -126,6 +135,7 @@ const ptPT: UiStrings = {
   footer: { ...ptBR.footer, support: 'Apoio', track: 'O que pode acompanhar' },
   langBanner: { prompt: 'Esta página também está disponível em', switchTo: 'Mudar', dismiss: 'Fechar' },
   notFound: { title: 'Página não encontrada', body: 'A página que procura mudou de sítio ou não existe.', home: 'Ir para a página inicial' },
+  opening: 'A abrir a Recurrence…',
 };
 
 const ru: UiStrings = {
@@ -140,6 +150,7 @@ const ru: UiStrings = {
   langBanner: { prompt: 'Эта страница доступна также на языке:', switchTo: 'Перейти', dismiss: 'Закрыть' },
   notFound: { title: 'Страница не найдена', body: 'Страница, которую вы ищете, перемещена или не существует.', home: 'На главную' },
   breadcrumbHome: 'Главная',
+  opening: 'Открываем Recurrence…',
 };
 
 const zhHans: UiStrings = {
@@ -154,6 +165,7 @@ const zhHans: UiStrings = {
   langBanner: { prompt: '此页面还提供以下语言版本：', switchTo: '切换', dismiss: '关闭' },
   notFound: { title: '找不到页面', body: '你要找的页面已移动或不存在。', home: '返回首页' },
   breadcrumbHome: '首页',
+  opening: '正在打开 Recurrence…',
 };
 
 const zhHant: UiStrings = {
@@ -168,6 +180,7 @@ const zhHant: UiStrings = {
   langBanner: { prompt: '此頁面也提供以下語言版本：', switchTo: '切換', dismiss: '關閉' },
   notFound: { title: '找不到頁面', body: '你要找的頁面已移動或不存在。', home: '返回首頁' },
   breadcrumbHome: '首頁',
+  opening: '正在開啟 Recurrence…',
 };
 
 export const UI: Record<Locale, UiStrings> = {
