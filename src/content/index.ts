@@ -27,8 +27,7 @@ export const metaFor = (content: SiteContent, key: PageKey): Meta => {
     case 'compare': return content.compareHub.meta;
     case 'support': return content.support.meta;
     case 'press': return content.press.meta;
-    case 'privacy': return content.privacy.meta;
-    case 'terms': return content.terms.meta;
+    case 'policies': return content.policies.meta;
   }
   throw new Error(`No meta for ${key}`);
 };

@@ -85,7 +85,9 @@ export interface PressContent {
   contactBody: string;
 }
 
-export interface LegalContent { meta: Meta; h1: string; updated: string; sections: { title: string; body: string[] }[] }
+export interface LegalDoc { id: string; title: string; updated: string; sections: { title: string; body: string[] }[] }
+/** Privacy policy and terms of use on one page, like shayesapps.com/policies. */
+export interface PoliciesContent { meta: Meta; h1: string; docs: LegalDoc[] }
 
 export interface SiteContent {
   home: HomeContent;
@@ -96,8 +98,7 @@ export interface SiteContent {
   compare: Record<CompetitorId, CompareContent>;
   support: SupportContent;
   press: PressContent;
-  privacy: LegalContent;
-  terms: LegalContent;
+  policies: PoliciesContent;
   /** Labels used on templates. */
   labels: {
     sampleList: string;

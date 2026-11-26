@@ -8,7 +8,7 @@ import CompareHub from '../views/CompareHub.astro';
 import Compare from '../views/Compare.astro';
 import Support from '../views/Support.astro';
 import Press from '../views/Press.astro';
-import Legal from '../views/Legal.astro';
+import Policies from '../views/Policies.astro';
 import { allRoutes, pathFor, type PageKey, type UseCaseId, type CompetitorId } from '../i18n/routes';
 import type { Locale } from '../i18n/locales';
 import { UI } from '../i18n/ui';
@@ -31,7 +31,7 @@ const ui = UI[locale];
 const crumb = (key: PageKey, name: string) => ({ name, path: pathFor(key, locale) });
 const SECTION_NAMES: Partial<Record<PageKey, string>> = {
   features: ui.nav.features, 'use-cases': ui.nav.useCases, compare: ui.nav.compare,
-  support: ui.nav.support, press: ui.nav.press, privacy: ui.footer.privacy, terms: ui.footer.terms,
+  support: ui.nav.support, press: ui.nav.press, policies: ui.footer.policies,
 };
 const jsonLd: object[] = [];
 if (pageKey === 'home') jsonLd.push(appJsonLd(locale, meta.description), organizationJsonLd());
@@ -53,6 +53,5 @@ if (pageKey !== 'home') {
   {pageKey.startsWith('compare/') && <Compare locale={locale} c={c} id={pageKey.slice(8) as CompetitorId} />}
   {pageKey === 'support' && <Support locale={locale} c={c} />}
   {pageKey === 'press' && <Press locale={locale} c={c} />}
-  {pageKey === 'privacy' && <Legal locale={locale} c={c} doc={c.privacy} pageKey={pageKey} />}
-  {pageKey === 'terms' && <Legal locale={locale} c={c} doc={c.terms} pageKey={pageKey} />}
+  {pageKey === 'policies' && <Policies locale={locale} c={c} />}
 </Base>

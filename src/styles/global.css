@@ -28,6 +28,8 @@
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body { margin: 0; font-family: var(--font); color: var(--text); background: var(--bg); line-height: 1.55; font-size: 17px; text-rendering: optimizeLegibility; }
+body { display: flex; flex-direction: column; min-height: 100vh; }
+body > main { flex: 1; }
 body.script-cjk { font-family: var(--font-cjk); }
 img { max-width: 100%; height: auto; display: block; }
 a { color: var(--link); }
@@ -178,8 +180,11 @@ tbody tr:last-child td { border-bottom: 0; }
 
 /* Legal */
 .legal { max-width: 46em; }
-.legal h2 { font-size: 24px; margin-top: 36px; }
-.legal p { margin-top: 12px; color: var(--muted); }
+.legal article + article { margin-top: 64px; padding-top: 48px; border-top: 1px solid var(--line); }
+.legal h2 { font-size: 30px; }
+.legal .updated { margin-top: 6px; font-size: 15px; }
+.legal h3 { font-size: 19px; margin-top: 28px; }
+.legal p { margin-top: 10px; color: var(--muted); }
 
 /* CTA band */
 .cta-band { border-radius: 28px; padding: clamp(32px, 5vw, 56px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }

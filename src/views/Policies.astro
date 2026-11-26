@@ -1,0 +1,24 @@
+---
+import PageHead from '../components/PageHead.astro';
+import EmailText from '../components/EmailText.astro';
+import type { Locale } from '../i18n/locales';
+import type { SiteContent } from '../content/types';
+import { pathFor } from '../i18n/routes';
+import { UI } from '../i18n/ui';
+
+interface Props { locale: Locale; c: SiteContent }
+const { locale, c } = Astro.props;
+const p = c.policies;
+---
+<PageHead locale={locale} title={p.h1} crumbs={[{ name: UI[locale].footer.policies, path: pathFor('policies', locale) }]} />
+<section class="section">
+  <div class="container legal">
+    {p.docs.map((d) => (
+      <article id={d.id}>
+        <h2>{d.title}</h2>
+        <p class="updated">{c.labels.lastUpdated}: {d.updated}</p>
+        {d.sections.map((s) => <><h3>{s.title}</h3>{s.body.map((t) => <p><EmailText text={t} /></p>)}</>)}
+      </article>
+    ))}
+  </div>
+</section>
