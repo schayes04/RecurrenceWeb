@@ -103,8 +103,8 @@ const en: SiteContent = {
 
   useCasesHub: {
     meta: {
-      title: 'Use Cases: Chores, Bills, Pet Care & More | Recurrence',
-      description: 'See how people use Recurrence to keep up with household chores, bills, pet medication, home and car maintenance, plants, self-care and shared family tasks.',
+      title: 'Track Chores, Bills, Pet Care & More | Recurrence',
+      description: 'Ideas for what to track with Recurrence: household chores, bills, pet medication, home and car maintenance, plants, self-care and family tasks, with starter lists.',
     },
     h1: 'What will you keep up with?',
     intro: 'Recurrence works for anything that repeats. Here are the most popular ways people use it, each with a ready-made list to start from.',

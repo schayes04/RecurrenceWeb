@@ -20,7 +20,7 @@ export interface UiStrings {
 
 const en: UiStrings = {
   skipToContent: 'Skip to content',
-  nav: { features: 'Features', useCases: 'Use cases', compare: 'Compare', pricing: 'Pricing', support: 'Support' },
+  nav: { features: 'Features', useCases: 'What you can track', compare: 'Compare', pricing: 'Pricing', support: 'Support' },
   download: 'Download on the App Store',
   downloadShort: 'Download',
   platforms: 'For iPhone, iPad and Mac',

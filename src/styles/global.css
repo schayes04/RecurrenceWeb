@@ -57,6 +57,8 @@ p { margin: 0; }
 .site-header.light { border-bottom: 1px solid var(--line); }
 .site-header.light .nav a { color: var(--muted); }
 .site-header.light .nav a:hover, .site-header.light .nav a[aria-current='page'] { color: var(--ink); }
+.nav a.nav-cta { background: var(--gold); color: var(--ink); font-weight: 600; padding: 8px 16px; border-radius: 999px; min-height: 40px; display: inline-flex; align-items: center; }
+.nav a.nav-cta:hover, .site-header.light .nav a.nav-cta, .site-header.light .nav a.nav-cta:hover { color: var(--ink); }
 
 /* Language menu */
 .lang { position: relative; }
@@ -184,8 +186,14 @@ tbody tr:last-child td { border-bottom: 0; }
 
 /* Footer */
 .site-footer { padding-block: 48px; font-size: 14px; color: var(--on-dark-muted); }
-.site-footer .top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px; align-items: center; }
-.site-footer nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.site-footer .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 32px 24px; }
+.site-footer .col { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.site-footer .col h2 { margin: 0 0 4px; font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--on-dark); }
+.site-footer .col h2 a { color: inherit !important; text-decoration: none; }
+.site-footer .col a { color: var(--on-dark-muted); text-decoration: none; }
+.site-footer .col a:hover { color: #fff; }
+.site-footer .brand-col p { margin: 0; }
+.site-footer .legal { margin: 20px 0 0; color: var(--on-dark-quiet); }
 .site-footer .langs { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--navy-line); display: flex; flex-wrap: wrap; gap: 6px 16px; }
 .site-footer .langs a { color: var(--on-dark-quiet) !important; text-decoration: none; }
 .site-footer .langs a:hover { color: #fff !important; }
@@ -203,6 +211,7 @@ tbody tr:last-child td { border-bottom: 0; }
 @media (max-width: 640px) {
   body { font-size: 16px; }
   .nav { gap: 2px 16px; font-size: 14px; }
+  .nav a.nav-cta { display: none; }
   .btn { width: 100%; }
   .cta-row .rating { width: 100%; text-align: center; }
   .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }

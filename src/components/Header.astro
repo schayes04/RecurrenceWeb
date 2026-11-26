@@ -1,18 +1,18 @@
 ---
 import { Image } from 'astro:assets';
 import icon from '../assets/brand/icon.png';
-import { LOCALES, localeInfo, type Locale } from '../i18n/locales';
+import { LOCALES, localeInfo, appStoreUrl, type Locale } from '../i18n/locales';
 import { pathFor, type PageKey } from '../i18n/routes';
 import { UI } from '../i18n/ui';
 
 interface Props { locale: Locale; pageKey?: PageKey; variant: 'dark' | 'light' }
 const { locale, pageKey, variant } = Astro.props;
 const ui = UI[locale];
-const current = (key: PageKey) => (pageKey === key || (pageKey?.startsWith('use-case/') && key === 'use-cases') || (pageKey?.startsWith('compare/') && key === 'compare') ? 'page' : undefined);
+const current = (key: PageKey) => (pageKey === key ? 'page' : undefined);
+// Kept to what a first-time visitor looks for. Use-case and comparison pages are
+// search landing pages, reached from the home page, the footer and search results.
 const links: { key: PageKey; label: string }[] = [
   { key: 'features', label: ui.nav.features },
-  { key: 'use-cases', label: ui.nav.useCases },
-  { key: 'compare', label: ui.nav.compare },
   { key: 'pricing', label: ui.nav.pricing },
   { key: 'support', label: ui.nav.support },
 ];
@@ -35,6 +35,7 @@ const links: { key: PageKey; label: string }[] = [
           ))}
         </ul>
       </details>
+      <a class="nav-cta" href={appStoreUrl(locale)} rel="noopener">{ui.downloadShort}</a>
     </nav>
   </div>
 </header>
