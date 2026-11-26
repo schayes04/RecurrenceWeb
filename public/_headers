@@ -1,0 +1,13 @@
+# Cloudflare Pages headers (https://developers.cloudflare.com/pages/configuration/headers/)
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/press/*
+  Cache-Control: public, max-age=86400

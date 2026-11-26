@@ -1,0 +1,23 @@
+---
+import Base from '../layouts/Base.astro';
+import { DEFAULT_LOCALE, LOCALES } from '../i18n/locales';
+import { pathFor } from '../i18n/routes';
+import { UI } from '../i18n/ui';
+const ui = UI[DEFAULT_LOCALE];
+---
+<Base locale={DEFAULT_LOCALE} title={`${ui.notFound.title} | Recurrence`} description={ui.notFound.body} noindex>
+  <section class="dark page-head">
+    <div class="container">
+      <h1>{ui.notFound.title}</h1>
+      <p class="lead">{ui.notFound.body}</p>
+      <div class="cta-row"><a class="btn btn-light" href="/">{ui.notFound.home}</a></div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <ul class="cards" style="list-style:none;padding:0;margin:0">
+        {LOCALES.filter((l) => l.code !== DEFAULT_LOCALE).map((l) => <li><a class="card" href={pathFor('home', l.code)} lang={l.htmlLang}><strong>{l.name}</strong><span>{UI[l.code].notFound.home}</span></a></li>)}
+      </ul>
+    </div>
+  </section>
+</Base>

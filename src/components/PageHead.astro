@@ -1,0 +1,21 @@
+---
+import type { Locale } from '../i18n/locales';
+import { UI } from '../i18n/ui';
+import { pathFor } from '../i18n/routes';
+
+interface Props { locale: Locale; title: string; lead?: string; crumbs?: { name: string; path: string }[] }
+const { locale, title, lead, crumbs = [] } = Astro.props;
+const trail = [{ name: UI[locale].breadcrumbHome, path: pathFor('home', locale) }, ...crumbs];
+---
+<section class="dark page-head">
+  <div class="container">
+    {crumbs.length > 0 && (
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <ol>{trail.map((c, i) => <li>{i < trail.length - 1 ? <a href={c.path}>{c.name}</a> : <span aria-current="page">{c.name}</span>}</li>)}</ol>
+      </nav>
+    )}
+    <h1>{title}</h1>
+    {lead && <p class="lead">{lead}</p>}
+    <slot />
+  </div>
+</section>

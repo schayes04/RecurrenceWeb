@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+import icon from '../assets/brand/icon.png';
+import { LOCALES, type Locale } from '../i18n/locales';
+import { pathFor, type PageKey } from '../i18n/routes';
+import { UI } from '../i18n/ui';
+
+interface Props { locale: Locale; pageKey?: PageKey }
+const { locale, pageKey } = Astro.props;
+const ui = UI[locale];
+const year = new Date().getFullYear();
+---
+<footer class="site-footer dark">
+  <div class="container">
+    <div class="top">
+      <a class="brand" href={pathFor('home', locale)}><Image src={icon} alt="" width={28} height={28} />Recurrence</a>
+      <nav aria-label="Footer">
+        <a href={pathFor('support', locale)}>{ui.footer.support}</a>
+        <a href={pathFor('press', locale)}>{ui.footer.press}</a>
+        <a href={pathFor('privacy', locale)}>{ui.footer.privacy}</a>
+        <a href={pathFor('terms', locale)}>{ui.footer.terms}</a>
+      </nav>
+      <p>© {year} · {ui.footer.madeBy}</p>
+    </div>
+    <nav class="langs" aria-label={ui.language}>
+      {LOCALES.map((l) => <a href={pathFor(pageKey ?? 'home', l.code)} hreflang={l.hreflang[0]} lang={l.htmlLang}>{l.name}</a>)}
+    </nav>
+  </div>
+</footer>

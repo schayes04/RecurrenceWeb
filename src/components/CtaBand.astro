@@ -1,0 +1,14 @@
+---
+import AppStoreButton from './AppStoreButton.astro';
+import type { Locale } from '../i18n/locales';
+interface Props { locale: Locale; title: string; body?: string }
+const { locale, title, body } = Astro.props;
+---
+<section class="section">
+  <div class="container">
+    <div class="cta-band dark">
+      <div><h2>{title}</h2>{body && <p>{body}</p>}</div>
+      <AppStoreButton locale={locale} />
+    </div>
+  </div>
+</section>

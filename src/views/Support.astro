@@ -1,0 +1,28 @@
+---
+import PageHead from '../components/PageHead.astro';
+import Faq from '../components/Faq.astro';
+import { pathFor } from '../i18n/routes';
+import { UI } from '../i18n/ui';
+import type { Locale } from '../i18n/locales';
+import type { SiteContent } from '../content/types';
+
+interface Props { locale: Locale; c: SiteContent }
+const { locale, c } = Astro.props;
+const s = c.support;
+---
+<PageHead locale={locale} title={s.h1} lead={s.intro} crumbs={[{ name: UI[locale].nav.support, path: pathFor('support', locale) }]} />
+<section class="section">
+  <div class="container split" style="align-items:flex-start">
+    <div style="flex-basis:520px">
+      <h2>{s.faqTitle}</h2>
+      <Faq items={s.faq} />
+    </div>
+    <div style="flex-basis:320px">
+      <div class="plan">
+        <h2 style="font-size:22px">{s.contactTitle}</h2>
+        <p class="summary">{s.contactBody}</p>
+        <p style="margin-top:16px"><a class="btn btn-dark" href="mailto:support@shayesapps.com">support@shayesapps.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>

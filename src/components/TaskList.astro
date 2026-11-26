@@ -1,0 +1,11 @@
+---
+import type { SampleTask } from '../content/types';
+interface Props { title: string; tasks: SampleTask[] }
+const { title, tasks } = Astro.props;
+---
+<div class="tasklist">
+  <h3>{title}</h3>
+  <ul>
+    {tasks.map((t) => <li><span class="ring" aria-hidden="true"></span><div><div class="name">{t.name}</div><div class="when">{t.schedule}</div></div></li>)}
+  </ul>
+</div>

@@ -1,0 +1,32 @@
+---
+import PageHead from '../components/PageHead.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { pathFor, type CompetitorId } from '../i18n/routes';
+import { UI } from '../i18n/ui';
+import type { Locale } from '../i18n/locales';
+import { localeInfo } from '../i18n/locales';
+import type { SiteContent } from '../content/types';
+
+interface Props { locale: Locale; c: SiteContent; id: CompetitorId }
+const { locale, c, id } = Astro.props;
+const x = c.compare[id];
+const checked = new Intl.DateTimeFormat(localeInfo(locale).htmlLang, { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(x.lastChecked));
+---
+<PageHead locale={locale} title={x.h1} lead={x.intro} crumbs={[{ name: UI[locale].nav.compare, path: pathFor('compare', locale) }, { name: x.name, path: pathFor(`compare/${id}`, locale) }]} />
+<section class="section">
+  <div class="container" style="max-width:900px">
+    <h2>{c.labels.comparedOn}</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th scope="col">{c.labels.feature}</th><th scope="col">Recurrence</th><th scope="col">{x.name}</th></tr></thead>
+        <tbody>{x.rows.map((r) => <tr><th scope="row" style="font-weight:500">{r.feature}</th><td>{r.recurrence}</td><td>{r.other}</td></tr>)}</tbody>
+      </table>
+    </div>
+    <p class="sub" style="font-size:14px">{c.labels.lastChecked}: <time datetime={x.lastChecked}>{checked}</time></p>
+    <h2 style="margin-top:48px">{c.labels.whenOtherTitle}</h2>
+    <p class="prose">{x.whenOther}</p>
+    <h2 style="margin-top:48px">{c.labels.verdictTitle}</h2>
+    <p class="prose">{x.verdict}</p>
+  </div>
+</section>
+<CtaBand locale={locale} title={c.home.heroAccentBefore + c.home.heroAccent + c.home.heroAccentAfter} body={c.home.freeBody} />

@@ -1,0 +1,76 @@
+---
+import '@fontsource-variable/inter';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import LangBar from '../components/LangBar.astro';
+import { localeInfo, APP_STORE_ID, type Locale } from '../i18n/locales';
+import { pathFor, type PageKey } from '../i18n/routes';
+import { UI } from '../i18n/ui';
+import { absolute, alternatesFor } from '../lib/seo';
+import { isPublished } from '../content';
+
+interface Props {
+  locale: Locale;
+  pageKey?: PageKey;
+  title: string;
+  description: string;
+  /** Force noindex (404 page). Otherwise derived from publish state. */
+  noindex?: boolean;
+  jsonLd?: object[];
+  /** Header style: dark band (default) or light. */
+  header?: 'dark' | 'light';
+  ogImage?: string;
+}
+
+const { locale, pageKey, title, description, jsonLd = [], header = 'dark', ogImage = '/og-default.png' } = Astro.props;
+const info = localeInfo(locale);
+const ui = UI[locale];
+const published = pageKey ? isPublished(locale, pageKey) : false;
+const noindex = Astro.props.noindex ?? !published;
+const canonical = pageKey ? absolute(pathFor(pageKey, locale)) : undefined;
+const alternates = pageKey ? alternatesFor(pageKey, locale) : [];
+---
+<!doctype html>
+<html lang={info.htmlLang} dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  {noindex ? <meta name="robots" content="noindex, follow" /> : <meta name="robots" content="index, follow, max-image-preview:large" />}
+  {canonical && !noindex && <link rel="canonical" href={canonical} />}
+  {alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Recurrence" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  {canonical && <meta property="og:url" content={canonical} />}
+  <meta property="og:image" content={absolute(ogImage)} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content={info.ogLocale} />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={absolute(ogImage)} />
+
+  <meta name="apple-itunes-app" content={`app-id=${APP_STORE_ID}`} />
+  <meta name="theme-color" content="#14222D" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  {jsonLd.map((data) => <script type="application/ld+json" set:html={JSON.stringify(data)} />)}
+</head>
+<body class={`script-${info.script}`}>
+  <a class="skip" href="#main">{ui.skipToContent}</a>
+  {pageKey && <LangBar locale={locale} pageKey={pageKey} />}
+  {!published && pageKey && <div class="draft-note">Preview: this page is a draft or awaiting translation, so search engines are told not to index it.</div>}
+  <Header locale={locale} pageKey={pageKey} variant={header} />
+  <main id="main">
+    <slot />
+  </main>
+  <Footer locale={locale} pageKey={pageKey} />
+</body>
+</html>

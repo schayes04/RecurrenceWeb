@@ -1,0 +1,3 @@
+# Cloudflare Pages redirects (https://developers.cloudflare.com/pages/configuration/redirects/)
+/assets/Recurrence_Press_Kit.zip  /press/  301
+/index.html                       /        301

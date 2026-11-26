@@ -1,0 +1,18 @@
+---
+import PageHead from '../components/PageHead.astro';
+import { COMPETITORS, pathFor } from '../i18n/routes';
+import { UI } from '../i18n/ui';
+import type { Locale } from '../i18n/locales';
+import type { SiteContent } from '../content/types';
+
+interface Props { locale: Locale; c: SiteContent }
+const { locale, c } = Astro.props;
+---
+<PageHead locale={locale} title={c.compareHub.h1} lead={c.compareHub.intro} crumbs={[{ name: UI[locale].nav.compare, path: pathFor('compare', locale) }]} />
+<section class="section soft">
+  <div class="container">
+    <div class="cards" style="margin-top:0">
+      {COMPETITORS.map((id) => <a class="card" href={pathFor(`compare/${id}`, locale)}><strong>{c.compare[id].h1}</strong><span>{c.compare[id].meta.description}</span></a>)}
+    </div>
+  </div>
+</section>

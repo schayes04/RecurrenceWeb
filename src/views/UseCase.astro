@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import PageHead from '../components/PageHead.astro';
+import CtaBand from '../components/CtaBand.astro';
+import TaskList from '../components/TaskList.astro';
+import AppStoreButton from '../components/AppStoreButton.astro';
+import { pathFor, type UseCaseId } from '../i18n/routes';
+import { UI } from '../i18n/ui';
+import type { Locale } from '../i18n/locales';
+import type { SiteContent } from '../content/types';
+import { screenFor, ALT } from '../lib/screens';
+
+interface Props { locale: Locale; c: SiteContent; id: UseCaseId }
+const { locale, c, id } = Astro.props;
+const u = c.useCases[id];
+---
+<PageHead locale={locale} title={u.h1} lead={u.intro} crumbs={[{ name: UI[locale].nav.useCases, path: pathFor('use-cases', locale) }, { name: u.name, path: pathFor(`use-case/${id}`, locale) }]}>
+  <div class="cta-row"><AppStoreButton locale={locale} /></div>
+</PageHead>
+<section class="section">
+  <div class="container split">
+    <TaskList title={u.sampleTitle} tasks={u.sample} />
+    <div class="shot"><Image src={screenFor(u.screen, locale)} alt={ALT[u.screen]} widths={[300, 600]} sizes="300px" /></div>
+  </div>
+</section>
+<section class="section soft">
+  <div class="container">
+    <h2>{c.labels.whatYouGet}</h2>
+    <div class="points">{u.points.map((p) => <div><h3>{p.title}</h3><p>{p.body}</p></div>)}</div>
+  </div>
+</section>
+<section class="section">
+  <div class="container">
+    <h2>{c.labels.relatedUseCases}</h2>
+    <div class="cards">
+      {u.related.map((r) => <a class="card" href={pathFor(`use-case/${r}`, locale)}><strong>{c.useCases[r].name}</strong><span>{c.useCases[r].blurb}</span></a>)}
+    </div>
+    <p style="margin-top:20px"><a href={pathFor('use-cases', locale)}>{c.labels.allUseCases} →</a></p>
+  </div>
+</section>
+<CtaBand locale={locale} title={c.home.heroAccentBefore + c.home.heroAccent + c.home.heroAccentAfter} body={c.home.freeBody} />
