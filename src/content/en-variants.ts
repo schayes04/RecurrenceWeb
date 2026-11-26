@@ -17,6 +17,16 @@ const commonwealth: [string, string][] = [
   ['canceled', 'cancelled'],
   ['synchronization', 'synchronisation'],
   ['November 26, 2026', '26 November 2026'],
+  // Free tools
+  ['spring and fall', 'spring and autumn'],
+  ['in fall and winter', 'in autumn and winter'],
+  ['recognize', 'recognise'],
+  ['Fertilize', 'Fertilise'],
+  ['Get an eye exam', 'Have an eye test'],
+  ['January 31', '31 January'],
+  ['February 28', '28 February'],
+  ['February 29', '29 February'],
+  ['February 30', '30 February'],
 ];
 
 export const enGB: SiteContent = derive(enUS, [

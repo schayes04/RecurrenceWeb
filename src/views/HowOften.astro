@@ -1,0 +1,73 @@
+---
+// "How often should I…?": typical intervals grouped by area, each linking to
+// the calculator with its interval filled in. The search box only appears
+// when JavaScript runs; without it the full list is still there.
+import PageHead from '../components/PageHead.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { pathFor } from '../i18n/routes';
+import type { Locale } from '../i18n/locales';
+import type { ToolsContent } from '../content/types';
+import { AREAS, GUIDE } from '../content/guide';
+
+interface Props { locale: Locale; t: ToolsContent }
+const { locale, t } = Astro.props;
+const g = t.howOften;
+const calc = pathFor('tool/next-due', locale);
+const groups = AREAS.map((area) => ({ area, entries: GUIDE.filter((e) => e.area === area) }));
+---
+<PageHead locale={locale} title={g.h1} lead={g.intro} crumbs={[{ name: g.name, path: pathFor('tool/how-often', locale) }]}>
+  <div class="guide-search" hidden>
+    <label class="visually-hidden" for="guide-q">{g.searchLabel}</label>
+    <input id="guide-q" type="search" placeholder={g.searchPlaceholder} autocomplete="off" enterkeyhint="search" />
+  </div>
+</PageHead>
+<section class="section guide">
+  <div class="container">
+    <nav class="jump" aria-label={g.jumpTo}>
+      <span aria-hidden="true">{g.jumpTo}</span>
+      {groups.map(({ area }) => <a href={`#${area}`}>{g.areas[area]}</a>)}
+    </nav>
+    {groups.map(({ area, entries }) => (
+      <section class="guide-area" id={area} aria-labelledby={`h-${area}`}>
+        <h2 id={`h-${area}`}>{g.areas[area]}</h2>
+        <ul class="guide-list">
+          {entries.map((e) => {
+            const item = g.items[e.id];
+            return (
+              <li class="guide-item" id={e.id} data-search={[item.name, item.often, item.note, g.areas[area]].join(' ')}>
+                <h3>{item.name}</h3>
+                <p class="often">{item.often}</p>
+                <p class="note">{item.note}</p>
+                <a href={`${calc}?every=${e.every}&unit=${e.unit}&task=${e.id}`}>{g.nextDate} →</a>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    ))}
+    <p class="guide-empty" role="status" hidden>{g.noResults}</p>
+    <p class="disclaimer">{g.disclaimer}</p>
+  </div>
+</section>
+<CtaBand locale={locale} title={g.ctaTitle} body={g.ctaBody} />
+
+<script>
+  const box = document.querySelector<HTMLElement>('.guide-search');
+  const input = document.querySelector<HTMLInputElement>('#guide-q');
+  if (box && input) {
+    box.hidden = false;
+    // Case- and accent-insensitive, so "ecran" finds "écran".
+    const fold = (s: string) => s.toLocaleLowerCase().normalize('NFD').replace(/\p{M}/gu, '');
+    const items = [...document.querySelectorAll<HTMLElement>('.guide-item')].map((el) => ({ el, text: fold(el.dataset.search ?? '') }));
+    const areas = [...document.querySelectorAll<HTMLElement>('.guide-area')];
+    const jump = document.querySelector<HTMLElement>('.jump');
+    const empty = document.querySelector<HTMLElement>('.guide-empty');
+    input.addEventListener('input', () => {
+      const words = fold(input.value).split(/\s+/).filter(Boolean);
+      for (const { el, text } of items) el.hidden = !words.every((w) => text.includes(w));
+      for (const area of areas) area.hidden = !area.querySelector('.guide-item:not([hidden])');
+      if (jump) jump.hidden = words.length > 0;
+      if (empty) empty.hidden = areas.some((a) => !a.hidden);
+    });
+  }
+</script>

@@ -56,3 +56,19 @@ export const breadcrumbJsonLd = (items: { name: string; path: string }[]) => ({
   '@type': 'BreadcrumbList',
   itemListElement: items.map((item, i) => ({ '@type': 'ListItem', position: i + 1, name: item.name, item: absolute(item.path) })),
 });
+
+/** JSON-LD for a free web tool (the next due date calculator). */
+export const toolJsonLd = (locale: Locale, key: PageKey, name: string, description: string) => ({
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name,
+  description,
+  url: absolute(pathFor(key, locale)),
+  inLanguage: localeInfo(locale).htmlLang,
+  applicationCategory: 'UtilitiesApplication',
+  operatingSystem: 'Any',
+  browserRequirements: 'Requires JavaScript',
+  isAccessibleForFree: true,
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  publisher: { '@type': 'Organization', name: 'Shayes Apps', url: 'https://shayesapps.com/' },
+});

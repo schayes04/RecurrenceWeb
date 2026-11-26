@@ -10,15 +10,20 @@ export type UseCaseId = (typeof USE_CASES)[number];
 export const COMPETITORS = ['apple-reminders', 'todoist', 'tody'] as const;
 export type CompetitorId = (typeof COMPETITORS)[number];
 
+export const TOOLS = ['how-often', 'next-due'] as const;
+export type ToolId = (typeof TOOLS)[number];
+
 export type PageKey =
   | 'home' | 'features' | 'support' | 'press' | 'policies'
   | 'use-cases' | `use-case/${UseCaseId}`
-  | 'compare' | `compare/${CompetitorId}`;
+  | 'compare' | `compare/${CompetitorId}`
+  | `tool/${ToolId}`;
 
 export const PAGE_KEYS: PageKey[] = [
   'home', 'features',
   'use-cases', ...USE_CASES.map((id) => `use-case/${id}` as PageKey),
   'compare', ...COMPETITORS.map((id) => `compare/${id}` as PageKey),
+  ...TOOLS.map((id) => `tool/${id}` as PageKey),
   'support', 'press', 'policies',
 ];
 
@@ -27,21 +32,26 @@ type Section = 'features' | 'use-cases' | 'compare' | 'support' | 'press' | 'pol
 interface SlugSet {
   section: Record<Section, string>;
   useCase: Record<UseCaseId, string>;
+  /** Tools sit at the top level, e.g. /how-often/. */
+  tool: Record<ToolId, string>;
 }
 
 const EN: SlugSet = {
   section: { features: 'features', 'use-cases': 'ideas', compare: 'compare', support: 'support', press: 'press', policies: 'policies' },
   useCase: { chores: 'chores', bills: 'bills', pets: 'pet-care', 'home-maintenance': 'home-maintenance', 'car-maintenance': 'car-maintenance', plants: 'plants', 'self-care': 'self-care', family: 'family' },
+  tool: { 'how-often': 'how-often', 'next-due': 'next-due-date-calculator' },
 };
 
 const DE: SlugSet = {
   section: { features: 'funktionen', 'use-cases': 'ideen', compare: 'vergleich', support: 'support', press: 'presse', policies: 'richtlinien' },
   useCase: { chores: 'haushalt', bills: 'rechnungen', pets: 'haustiere', 'home-maintenance': 'hauswartung', 'car-maintenance': 'autowartung', plants: 'pflanzen', 'self-care': 'selbstfuersorge', family: 'familie' },
+  tool: { 'how-often': 'wie-oft', 'next-due': 'faelligkeitsrechner' },
 };
 
 const ES: SlugSet = {
   section: { features: 'funciones', 'use-cases': 'ideas', compare: 'comparar', support: 'soporte', press: 'prensa', policies: 'politicas' },
   useCase: { chores: 'tareas-del-hogar', bills: 'pagos', pets: 'mascotas', 'home-maintenance': 'mantenimiento-del-hogar', 'car-maintenance': 'mantenimiento-del-coche', plants: 'plantas', 'self-care': 'autocuidado', family: 'familia' },
+  tool: { 'how-often': 'cada-cuanto', 'next-due': 'calculadora-de-fechas' },
 };
 
 const ES_MX: SlugSet = { ...ES, useCase: { ...ES.useCase, chores: 'quehaceres', 'car-maintenance': 'mantenimiento-del-auto' } };
@@ -49,16 +59,19 @@ const ES_MX: SlugSet = { ...ES, useCase: { ...ES.useCase, chores: 'quehaceres', 
 const FR: SlugSet = {
   section: { features: 'fonctionnalites', 'use-cases': 'idees', compare: 'comparer', support: 'assistance', press: 'presse', policies: 'politiques' },
   useCase: { chores: 'taches-menageres', bills: 'factures', pets: 'animaux', 'home-maintenance': 'entretien-maison', 'car-maintenance': 'entretien-voiture', plants: 'plantes', 'self-care': 'bien-etre', family: 'famille' },
+  tool: { 'how-often': 'a-quelle-frequence', 'next-due': 'calculateur-de-date' },
 };
 
 const PT_BR: SlugSet = {
   section: { features: 'recursos', 'use-cases': 'ideias', compare: 'comparar', support: 'suporte', press: 'imprensa', policies: 'politicas' },
   useCase: { chores: 'tarefas-domesticas', bills: 'contas', pets: 'pets', 'home-maintenance': 'manutencao-da-casa', 'car-maintenance': 'manutencao-do-carro', plants: 'plantas', 'self-care': 'autocuidado', family: 'familia' },
+  tool: { 'how-often': 'com-que-frequencia', 'next-due': 'calculadora-de-datas' },
 };
 
 const PT_PT: SlugSet = {
   section: { ...PT_BR.section, features: 'funcionalidades', support: 'apoio' },
   useCase: { ...PT_BR.useCase, chores: 'lides-domesticas', pets: 'animais', 'home-maintenance': 'manutencao-de-casa', 'car-maintenance': 'manutencao-automovel' },
+  tool: PT_BR.tool,
 };
 
 const SLUGS: Record<Locale, SlugSet> = {
@@ -74,6 +87,7 @@ const segments = (key: PageKey, locale: Locale): string[] => {
   if (key === 'home') return [];
   if (key.startsWith('use-case/')) return [s.section['use-cases'], s.useCase[key.slice(9) as UseCaseId]];
   if (key.startsWith('compare/')) return [s.section.compare, key.slice(8)];
+  if (key.startsWith('tool/')) return [s.tool[key.slice(5) as ToolId]];
   return [s.section[key as Section]];
 };
 

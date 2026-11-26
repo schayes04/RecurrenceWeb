@@ -3,6 +3,7 @@
 
 import type { SiteContent } from './types';
 import enUS from './en-US';
+import tools from './tools/ja';
 
 const ja: SiteContent = {
   home: {
@@ -320,6 +321,7 @@ const ja: SiteContent = {
     ],
   },
 
+  tools,
   screenAlt: {
     home: 'iPhoneのRecurrenceのタスクリスト。期限切れ、今日、これからのタスクが表示されている',
     history: 'タスクの完了履歴。日付とメモが表示されている',

@@ -9,11 +9,13 @@ import Compare from '../views/Compare.astro';
 import Support from '../views/Support.astro';
 import Press from '../views/Press.astro';
 import Policies from '../views/Policies.astro';
+import HowOften from '../views/HowOften.astro';
+import NextDue from '../views/NextDue.astro';
 import { allRoutes, pathFor, type PageKey, type UseCaseId, type CompetitorId } from '../i18n/routes';
 import type { Locale } from '../i18n/locales';
 import { UI } from '../i18n/ui';
-import { contentFor, metaFor } from '../content';
-import { appJsonLd, organizationJsonLd, breadcrumbJsonLd } from '../lib/seo';
+import { contentFor, metaFor, toolsFor } from '../content';
+import { appJsonLd, organizationJsonLd, breadcrumbJsonLd, toolJsonLd } from '../lib/seo';
 
 export function getStaticPaths() {
   return allRoutes().map(({ locale, key, path }) => ({
@@ -27,15 +29,18 @@ const { locale, pageKey } = Astro.props;
 const c = contentFor(locale);
 const meta = metaFor(c, pageKey);
 const ui = UI[locale];
+const tools = toolsFor(c);
 
 const crumb = (key: PageKey, name: string) => ({ name, path: pathFor(key, locale) });
 const SECTION_NAMES: Partial<Record<PageKey, string>> = {
   features: ui.nav.features, 'use-cases': ui.nav.useCases, compare: ui.nav.compare,
   support: ui.nav.support, press: ui.nav.press, policies: ui.footer.policies,
+  'tool/how-often': tools.howOften.name, 'tool/next-due': tools.nextDue.name,
 };
 const jsonLd: object[] = [];
 if (pageKey === 'home') jsonLd.push(appJsonLd(locale, meta.description), organizationJsonLd());
 if (pageKey === 'features') jsonLd.push(appJsonLd(locale, meta.description));
+if (pageKey === 'tool/next-due') jsonLd.push(toolJsonLd(locale, pageKey, tools.nextDue.name, meta.description));
 if (pageKey !== 'home') {
   const trail = [crumb('home', ui.breadcrumbHome)];
   if (pageKey.startsWith('use-case/')) trail.push(crumb('use-cases', ui.nav.useCases), crumb(pageKey, c.useCases[pageKey.slice(9) as UseCaseId].name));
@@ -54,4 +59,6 @@ if (pageKey !== 'home') {
   {pageKey === 'support' && <Support locale={locale} c={c} />}
   {pageKey === 'press' && <Press locale={locale} c={c} />}
   {pageKey === 'policies' && <Policies locale={locale} c={c} />}
+  {pageKey === 'tool/how-often' && <HowOften locale={locale} t={tools} />}
+  {pageKey === 'tool/next-due' && <NextDue locale={locale} t={tools} />}
 </Base>

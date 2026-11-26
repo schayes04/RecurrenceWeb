@@ -3,6 +3,7 @@
 
 import type { SiteContent } from './types';
 import enUS from './en-US';
+import tools from './tools/ru';
 
 const ru: SiteContent = {
   home: {
@@ -320,6 +321,7 @@ const ru: SiteContent = {
     ],
   },
 
+  tools,
   screenAlt: {
     home: 'Список задач Recurrence на iPhone с просроченными, сегодняшними и предстоящими задачами',
     history: 'История выполнения задачи с датами и заметками',

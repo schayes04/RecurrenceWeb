@@ -4,6 +4,7 @@
 
 import type { SiteContent } from './types';
 import enUS from './en-US';
+import tools from './tools/ko';
 
 const ko: SiteContent = {
   home: {
@@ -321,6 +322,7 @@ const ko: SiteContent = {
     ],
   },
 
+  tools,
   screenAlt: {
     home: 'iPhone의 Recurrence 작업 목록(기한 지남, 오늘, 예정된 작업)',
     history: '날짜와 메모가 표시된 작업의 완료 기록',

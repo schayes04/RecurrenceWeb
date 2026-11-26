@@ -4,6 +4,7 @@
 
 import type { SiteContent } from './types';
 import enUS from './en-US';
+import tools from './tools/pt-BR';
 
 const ptBR: SiteContent = {
   home: {
@@ -321,6 +322,7 @@ const ptBR: SiteContent = {
     ],
   },
 
+  tools,
   screenAlt: {
     home: 'Lista de tarefas do Recurrence no iPhone com tarefas atrasadas, de hoje e próximas',
     history: 'O histórico de uma tarefa com datas e notas',

@@ -3,6 +3,7 @@
 
 import type { SiteContent } from './types';
 import enUS from './en-US';
+import tools from './tools/es';
 
 const es: SiteContent = {
   home: {
@@ -320,6 +321,7 @@ const es: SiteContent = {
     ],
   },
 
+  tools,
   screenAlt: {
     home: 'Lista de tareas de Recurrence en iPhone con tareas atrasadas, de hoy y próximas',
     history: 'El historial de una tarea con fechas y notas',

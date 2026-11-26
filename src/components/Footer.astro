@@ -2,9 +2,9 @@
 import { Image } from 'astro:assets';
 import icon from '../assets/brand/icon.png';
 import type { Locale } from '../i18n/locales';
-import { USE_CASES, COMPETITORS, pathFor, type PageKey } from '../i18n/routes';
+import { USE_CASES, COMPETITORS, TOOLS, pathFor, type PageKey } from '../i18n/routes';
 import { UI } from '../i18n/ui';
-import { contentFor, isPublished } from '../content';
+import { contentFor, isPublished, toolsFor } from '../content';
 
 interface Props { locale: Locale; pageKey?: PageKey }
 const { locale, pageKey } = Astro.props;
@@ -18,6 +18,11 @@ const social = [
 ];
 // Comparison links appear once those pages are published in this locale.
 const competitors = COMPETITORS.filter((id) => isPublished(locale, `compare/${id}`));
+// Free tools replace the "What you can track" list once they're translated for this locale.
+const tools = toolsFor(c);
+const toolLinks = TOOLS.every((id) => isPublished(locale, `tool/${id}`))
+  ? [{ key: 'tool/how-often' as const, name: tools.howOften.name }, { key: 'tool/next-due' as const, name: tools.nextDue.name }]
+  : null;
 ---
 <footer class="site-footer dark">
   <div class="container">
@@ -26,10 +31,17 @@ const competitors = COMPETITORS.filter((id) => isPublished(locale, `compare/${id
         <a class="brand" href={pathFor('home', locale)}><Image src={icon} alt="" width={40} height={40} />Recurrence</a>
         <p class="made-by">{madeByBefore}<a href="https://shayesapps.com/" target="_blank" rel="noopener">Shayes Apps</a>{madeByAfter}</p>
       </div>
-      <nav class="col" aria-labelledby="f-track">
-        <h2 id="f-track"><a href={pathFor('use-cases', locale)}>{ui.footer.track}</a></h2>
-        <ul>{USE_CASES.map((id) => <li><a href={pathFor(`use-case/${id}`, locale)}>{c.useCases[id].name}</a></li>)}</ul>
-      </nav>
+      {toolLinks ? (
+        <nav class="col" aria-labelledby="f-tools">
+          <h2 id="f-tools">{ui.footer.tools}</h2>
+          <ul>{toolLinks.map((x) => <li><a href={pathFor(x.key, locale)}>{x.name}</a></li>)}</ul>
+        </nav>
+      ) : (
+        <nav class="col" aria-labelledby="f-track">
+          <h2 id="f-track"><a href={pathFor('use-cases', locale)}>{ui.footer.track}</a></h2>
+          <ul>{USE_CASES.map((id) => <li><a href={pathFor(`use-case/${id}`, locale)}>{c.useCases[id].name}</a></li>)}</ul>
+        </nav>
+      )}
       {competitors.length > 0 && (
         <nav class="col" aria-labelledby="f-compare">
           <h2 id="f-compare"><a href={pathFor('compare', locale)}>{ui.nav.compare}</a></h2>

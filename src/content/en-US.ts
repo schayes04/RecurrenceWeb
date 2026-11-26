@@ -1,7 +1,7 @@
 // English (US) source copy. Every other locale is written from this file.
-// Draft status: phase 1 copy, awaiting Stephen's review (phase 2 gate).
 
 import type { SiteContent } from './types';
+import tools from './tools/en-US';
 
 const en: SiteContent = {
   home: {
@@ -376,6 +376,7 @@ const en: SiteContent = {
     ],
   },
 
+  tools,
   screenAlt: {
     home: 'Recurrence task list on iPhone with overdue, today and upcoming tasks',
     history: 'A task’s completion history with dates and notes',
