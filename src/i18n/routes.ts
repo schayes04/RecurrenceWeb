@@ -2,7 +2,7 @@
 // Latin-script locales get translated slugs; ja, ko, ru and zh use the English
 // slugs so links stay readable when shared (Google indexes either form).
 
-import { LOCALES, localeInfo, type Locale } from './locales';
+import { LOCALES, DEFAULT_LOCALE, localeInfo, type Locale } from './locales';
 
 export const USE_CASES = ['chores', 'bills', 'pets', 'home-maintenance', 'car-maintenance', 'plants', 'self-care', 'family'] as const;
 export type UseCaseId = (typeof USE_CASES)[number];
@@ -27,7 +27,7 @@ export const PAGE_KEYS: PageKey[] = [
   'support', 'press', 'policies',
 ];
 
-type Section = 'features' | 'use-cases' | 'compare' | 'support' | 'press' | 'policies';
+type Section = 'features' | 'use-cases' | 'compare' | 'support' | 'press';
 
 interface SlugSet {
   section: Record<Section, string>;
@@ -37,19 +37,19 @@ interface SlugSet {
 }
 
 const EN: SlugSet = {
-  section: { features: 'features', 'use-cases': 'ideas', compare: 'compare', support: 'support', press: 'press', policies: 'policies' },
+  section: { features: 'features', 'use-cases': 'ideas', compare: 'compare', support: 'support', press: 'press' },
   useCase: { chores: 'chores', bills: 'bills', pets: 'pet-care', 'home-maintenance': 'home-maintenance', 'car-maintenance': 'car-maintenance', plants: 'plants', 'self-care': 'self-care', family: 'family' },
   tool: { 'how-often': 'how-often', 'next-due': 'next-due-date-calculator' },
 };
 
 const DE: SlugSet = {
-  section: { features: 'funktionen', 'use-cases': 'ideen', compare: 'vergleich', support: 'support', press: 'presse', policies: 'richtlinien' },
+  section: { features: 'funktionen', 'use-cases': 'ideen', compare: 'vergleich', support: 'support', press: 'presse' },
   useCase: { chores: 'haushalt', bills: 'rechnungen', pets: 'haustiere', 'home-maintenance': 'hauswartung', 'car-maintenance': 'autowartung', plants: 'pflanzen', 'self-care': 'selbstfuersorge', family: 'familie' },
   tool: { 'how-often': 'wie-oft', 'next-due': 'faelligkeitsrechner' },
 };
 
 const ES: SlugSet = {
-  section: { features: 'funciones', 'use-cases': 'ideas', compare: 'comparar', support: 'soporte', press: 'prensa', policies: 'politicas' },
+  section: { features: 'funciones', 'use-cases': 'ideas', compare: 'comparar', support: 'soporte', press: 'prensa' },
   useCase: { chores: 'tareas-del-hogar', bills: 'pagos', pets: 'mascotas', 'home-maintenance': 'mantenimiento-del-hogar', 'car-maintenance': 'mantenimiento-del-coche', plants: 'plantas', 'self-care': 'autocuidado', family: 'familia' },
   tool: { 'how-often': 'cada-cuanto', 'next-due': 'calculadora-de-fechas' },
 };
@@ -57,13 +57,13 @@ const ES: SlugSet = {
 const ES_MX: SlugSet = { ...ES, useCase: { ...ES.useCase, chores: 'quehaceres', 'car-maintenance': 'mantenimiento-del-auto' } };
 
 const FR: SlugSet = {
-  section: { features: 'fonctionnalites', 'use-cases': 'idees', compare: 'comparer', support: 'assistance', press: 'presse', policies: 'politiques' },
+  section: { features: 'fonctionnalites', 'use-cases': 'idees', compare: 'comparer', support: 'assistance', press: 'presse' },
   useCase: { chores: 'taches-menageres', bills: 'factures', pets: 'animaux', 'home-maintenance': 'entretien-maison', 'car-maintenance': 'entretien-voiture', plants: 'plantes', 'self-care': 'bien-etre', family: 'famille' },
   tool: { 'how-often': 'a-quelle-frequence', 'next-due': 'calculateur-de-date' },
 };
 
 const PT_BR: SlugSet = {
-  section: { features: 'recursos', 'use-cases': 'ideias', compare: 'comparar', support: 'suporte', press: 'imprensa', policies: 'politicas' },
+  section: { features: 'recursos', 'use-cases': 'ideias', compare: 'comparar', support: 'suporte', press: 'imprensa' },
   useCase: { chores: 'tarefas-domesticas', bills: 'contas', pets: 'pets', 'home-maintenance': 'manutencao-da-casa', 'car-maintenance': 'manutencao-do-carro', plants: 'plantas', 'self-care': 'autocuidado', family: 'familia' },
   tool: { 'how-often': 'com-que-frequencia', 'next-due': 'calculadora-de-datas' },
 };
@@ -85,18 +85,28 @@ const SLUGS: Record<Locale, SlugSet> = {
 const segments = (key: PageKey, locale: Locale): string[] => {
   const s = SLUGS[locale];
   if (key === 'home') return [];
+  if (key === 'policies') return ['policies'];
   if (key.startsWith('use-case/')) return [s.section['use-cases'], s.useCase[key.slice(9) as UseCaseId]];
   if (key.startsWith('compare/')) return [s.section.compare, key.slice(8)];
   if (key.startsWith('tool/')) return [s.tool[key.slice(5) as ToolId]];
   return [s.section[key as Section]];
 };
 
+/** Pages built only in English. Every locale links to the English page. */
+const ENGLISH_ONLY: PageKey[] = ['policies'];
+
+/** Whether a page is built in a locale at all. */
+export const isBuilt = (key: PageKey, locale: Locale): boolean =>
+  !ENGLISH_ONLY.includes(key) || locale === DEFAULT_LOCALE;
+
 /** Site-relative URL with leading and trailing slash, e.g. /de/preise/. */
 export const pathFor = (key: PageKey, locale: Locale): string => {
+  if (!isBuilt(key, locale)) return pathFor(key, DEFAULT_LOCALE);
   const parts = [localeInfo(locale).prefix, ...segments(key, locale)].filter(Boolean);
   return parts.length ? `/${parts.join('/')}/` : '/';
 };
 
 /** Every (locale, key) pair the site builds. */
 export const allRoutes = () =>
-  LOCALES.flatMap(({ code }) => PAGE_KEYS.map((key) => ({ locale: code, key, path: pathFor(key, code) })));
+  LOCALES.flatMap(({ code }) =>
+    PAGE_KEYS.filter((key) => isBuilt(key, code)).map((key) => ({ locale: code, key, path: pathFor(key, code) })));

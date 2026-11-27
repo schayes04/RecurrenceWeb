@@ -6,7 +6,7 @@ import type { ToolsContent } from '../types';
 const tools: ToolsContent = {
   howOften: {
     meta: {
-      title: '¿Cada cuánto hay que limpiar, cambiar o revisar? | Recurrence',
+      title: '¿Cada cuánto hay que limpiar, cambiar o revisar? | Tareas',
       description: 'Cada cuánto cambiar el filtro de aire, lavar las sábanas, cambiar el cepillo de dientes o dar el antipulgas. Las frecuencias habituales, en un solo lugar.',
     },
     name: '¿Cada cuánto hay que…?',
@@ -83,11 +83,11 @@ const tools: ToolsContent = {
     nextDate: 'Próxima fecha',
     disclaimer: 'Son frecuencias habituales, no reglas. Si el fabricante, tu veterinario, tu dentista o tu médico dicen otra cosa, hazles caso.',
     ctaTitle: 'Deja de adivinar cuándo fue la última vez',
-    ctaBody: 'Agrega cualquiera de estas tareas a Recurrence. Te avisa cuando toca cada una y guarda el historial de cada vez que la hiciste.',
+    ctaBody: 'Agrega cualquiera de estas tareas a la app Tareas. Te avisa cuando toca cada una y guarda el historial de cada vez que la hiciste.',
   },
   nextDue: {
     meta: {
-      title: 'Calculadora de fechas: ¿cuándo toca otra vez? | Recurrence',
+      title: 'Calculadora de fechas: ¿cuándo toca otra vez? | Tareas',
       description: 'Indica cuándo lo hiciste por última vez y cada cuánto se repite para ver la próxima fecha y las siguientes. Gratis, privada y sin registrarte.',
     },
     name: 'Calculadora de próxima fecha',
@@ -123,8 +123,8 @@ const tools: ToolsContent = {
     popularTitle: 'Lo más común',
     popularBody: 'Toca una para poner su frecuencia habitual.',
     guideLink: 'Ver la guía completa “¿Cada cuánto?”',
-    ctaTitle: 'Deja que Recurrence haga las cuentas',
-    ctaBody: 'Marca una tarea como hecha y Recurrence calcula la próxima fecha, te avisa cuando toca y recuerda cada vez que la hiciste.',
+    ctaTitle: 'Deja que la app Tareas haga las cuentas',
+    ctaBody: 'Marca una tarea como hecha y la app Tareas calcula la próxima fecha, te avisa cuando toca y recuerda cada vez que la hiciste.',
     howTitle: 'Cómo se calcula la próxima fecha',
     howSteps: [
       'Se parte del día en que lo hiciste por última vez.',
@@ -132,13 +132,13 @@ const tools: ToolsContent = {
       'Si ese día no existe, como el 30 de febrero, la fecha pasa al último día del mes.',
       'Las fechas siguientes se cuentan desde la primera, así que algo hecho el día 31 se queda a fin de mes.',
     ],
-    howNote: 'Recurrence puede repetir una tarea así, “Desde la última vez”, o con un calendario fijo, como todos los jueves o el día 1 de cada mes. Cada tarea usa lo que mejor le va.',
+    howNote: 'La app Tareas puede repetir una tarea así, “Desde la última vez”, o con un calendario fijo, como todos los jueves o el día 1 de cada mes. Cada tarea usa lo que mejor le va.',
     faqTitle: 'Sobre la calculadora',
     faq: [
       { q: '¿Pongo el día en que tocaba o el día en que lo hice?', a: 'El día en que de verdad lo hiciste. Contar desde ahí mantiene igual el tiempo entre una vez y otra, que es lo que importa con filtros, medicinas y revisiones.' },
       { q: '¿Qué pasa con los días 29, 30 o 31?', a: 'Si el mes siguiente es más corto, la fecha pasa a su último día. El 31 de enero más un mes es el 28 de febrero, o el 29 en año bisiesto. Las fechas siguientes vuelven al 31 cuando el mes lo tiene.' },
       { q: '¿Se guarda o se envía lo que escribo?', a: 'No. Las fechas se calculan en tu navegador. No se guarda ni se envía nada.' },
-      { q: '¿Cómo recibo un aviso cuando toque?', a: 'Agrega la tarea a Recurrence en tu iPhone, iPad o Mac. Márcala como hecha cada vez y la app calcula la próxima fecha, te avisa y guarda el historial.' },
+      { q: '¿Cómo recibo un aviso cuando toque?', a: 'Agrega la tarea a la app Tareas en tu iPhone, iPad o Mac. Márcala como hecha cada vez y la app calcula la próxima fecha, te avisa y guarda el historial.' },
     ],
   },
 };

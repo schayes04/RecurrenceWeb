@@ -8,13 +8,13 @@ import tools from './tools/es';
 const es: SiteContent = {
   home: {
     meta: {
-      title: 'Recurrence: tareas recurrentes para iPhone, iPad y Mac',
-      description: 'Quehaceres, pagos, mascotas y mantenimiento del hogar. Recurrence te recuerda cada tarea recurrente y registra cada vez que la hiciste. Gratis para empezar.',
+      title: 'Tareas: app de tareas recurrentes para iPhone, iPad y Mac',
+      description: 'Quehaceres, pagos, mascotas y mantenimiento del hogar. La app Tareas te recuerda cada tarea recurrente y registra cada vez que la hiciste. Gratis para empezar.',
     },
     heroAccentBefore: 'Mantente al día con cada ',
     heroAccent: 'tarea recurrente',
     heroAccentAfter: '',
-    intro: 'Quehaceres, pagos, medicinas de tu mascota y mantenimiento del hogar. Recurrence te avisa cuando algo toca y recuerda cada vez que lo hiciste.',
+    intro: 'Quehaceres, pagos, medicinas de tu mascota y mantenimiento del hogar. La app Tareas te avisa cuando algo toca y recuerda cada vez que lo hiciste.',
     useCasesTitle: 'Una app para todo lo que se repite',
     useCasesIntro: 'Desde el día de la basura hasta la visita anual al veterinario, cada tarea tiene su propio calendario e historial.',
     historyKicker: 'Historial',
@@ -33,7 +33,7 @@ const es: SiteContent = {
     freeBody: 'Registra hasta 5 tareas gratis. Recurrence Premium desbloquea tareas ilimitadas y compartidas, con una suscripción mensual o anual, o una compra única de por vida.',
     faqTitle: 'Preguntas',
     faq: [
-      { q: '¿En qué se diferencia Recurrence de una lista de pendientes?', a: 'Una lista de pendientes se olvida de una tarea en cuanto la marcas. Recurrence programa la próxima vez y guarda un registro de cada vez que la completas, con notas, para que siempre sepas cuándo la hiciste por última vez.' },
+      { q: '¿En qué se diferencia la app Tareas de una lista de pendientes?', a: 'Una lista de pendientes se olvida de una tarea en cuanto la marcas. La app Tareas programa la próxima vez y guarda un registro de cada vez que la completas, con notas, para que siempre sepas cuándo la hiciste por última vez.' },
       { q: '¿Puedo compartir tareas con mi familia?', a: 'Sí. Comparte cualquier tarea por iCloud y las personas que invites también podrán marcarla. El historial de cada tarea muestra quién la completó y cuándo.' },
       { q: '¿Qué pasa si se me pasa una tarea?', a: 'Pasa a “Atrasadas” y te lo sigue recordando. Para tareas que simplemente deben reiniciarse cuando las haces, elige “Desde la última vez”, así las semanas perdidas no se acumulan.' },
     ],
@@ -41,11 +41,11 @@ const es: SiteContent = {
 
   features: {
     meta: {
-      title: 'Funciones: calendarios, recordatorios e historial | Recurrence',
+      title: 'Funciones: calendarios, recordatorios e historial | Tareas',
       description: 'Repeticiones flexibles, recordatorios antes y después de la fecha, historial con notas, widgets y tareas compartidas por iCloud, en iPhone, iPad y Mac.',
     },
     h1: 'Todo lo que necesitas para estar al día con lo que se repite',
-    intro: 'Recurrence se basa en una idea: una tarea recurrente nunca está terminada del todo. Vuelve, y ayuda saber cuándo la hiciste por última vez.',
+    intro: 'La app Tareas se basa en una idea: una tarea recurrente nunca está terminada del todo. Vuelve, y ayuda saber cuándo la hiciste por última vez.',
     sections: [
       {
         title: 'Repite con cualquier calendario',
@@ -76,20 +76,20 @@ const es: SiteContent = {
 
   useCasesHub: {
     meta: {
-      title: 'Organiza quehaceres, pagos, mascotas y más | Recurrence',
-      description: 'Ideas para registrar con Recurrence: quehaceres, pagos, medicinas de mascotas, mantenimiento del hogar y del auto, plantas, cuidado personal y tareas en familia.',
+      title: 'Organiza quehaceres, pagos, mascotas y más | Tareas',
+      description: 'Ideas para la app Tareas: quehaceres, pagos, medicinas de mascotas, mantenimiento del hogar y del auto, plantas, cuidado personal y tareas en familia.',
     },
     h1: '¿Qué quieres tener al día?',
-    intro: 'Recurrence sirve para todo lo que se repite. Estas son las formas más populares de usarla, cada una con una lista preparada para empezar.',
+    intro: 'La app Tareas sirve para todo lo que se repite. Estas son las formas más populares de usarla, cada una con una lista preparada para empezar.',
   },
 
   useCases: {
     chores: {
-      meta: { title: 'App de quehaceres y limpieza del hogar | Recurrence', description: 'Lleva al día la basura, la ropa y la limpieza. Recurrence organiza tus quehaceres recurrentes, te avisa cuando tocan y muestra cuándo se hizo cada uno.' },
+      meta: { title: 'App de quehaceres y limpieza del hogar | Tareas', description: 'Lleva al día la basura, la ropa y la limpieza. La app Tareas organiza tus quehaceres recurrentes, te avisa cuando tocan y muestra cuándo se hizo cada uno.' },
       name: 'Quehaceres del hogar',
       blurb: 'Basura, ropa, limpieza',
       h1: 'Una lista de quehaceres que recuerda cuándo los hiciste',
-      intro: 'Algunos quehaceres tienen un día fijo, como sacar la basura. Otros solo hay que hacerlos de vez en cuando, como lavar las sábanas. Recurrence se encarga de ambos y guarda un historial para que nadie tenga que adivinar.',
+      intro: 'Algunos quehaceres tienen un día fijo, como sacar la basura. Otros solo hay que hacerlos de vez en cuando, como lavar las sábanas. La app Tareas se encarga de ambos y guarda un historial para que nadie tenga que adivinar.',
       sampleTitle: 'Una lista de quehaceres para empezar',
       sample: [
         { name: 'Sacar la basura', schedule: 'Todos los jueves' },
@@ -106,7 +106,7 @@ const es: SiteContent = {
       related: ['family', 'home-maintenance', 'plants'],
     },
     bills: {
-      meta: { title: 'App de recordatorio de pagos y suscripciones | Recurrence', description: 'No vuelvas a olvidar el alquiler, la tarjeta de crédito o una renovación. Recurrence te avisa antes de cada fecha de pago y guarda un registro de cada pago.' },
+      meta: { title: 'App de recordatorio de pagos y suscripciones | Tareas', description: 'No vuelvas a olvidar el alquiler, la tarjeta de crédito o una renovación. La app Tareas te avisa antes de cada fecha de pago y guarda un registro de cada pago.' },
       name: 'Pagos y suscripciones',
       blurb: 'Alquiler, tarjetas, renovaciones',
       h1: 'Recordatorios antes de cada pago, y un registro después',
@@ -126,11 +126,11 @@ const es: SiteContent = {
       related: ['family', 'home-maintenance', 'car-maintenance'],
     },
     pets: {
-      meta: { title: 'Recordatorio de medicinas y cuidado de mascotas | Recurrence', description: 'Recuerda la medicina contra el gusano del corazón, el antipulgas, el baño y el veterinario. Recurrence te avisa a tiempo y registra cada dosis y cada visita.' },
+      meta: { title: 'Recordatorio de medicinas y cuidado de mascotas | Tareas', description: 'Recuerda la medicina contra el gusano del corazón, el antipulgas, el baño y el veterinario. La app Tareas te avisa a tiempo y registra cada dosis y cada visita.' },
       name: 'Mascotas',
       blurb: 'Medicinas, baño, veterinario',
       h1: 'Recordatorios para tu mascota, con registro de cada dosis',
-      intro: 'Las medicinas mensuales, el baño cada pocas semanas y la revisión anual son fáciles de perder de vista. Recurrence te los recuerda y registra cada uno, para que le digas al veterinario exactamente cuándo fue la última dosis.',
+      intro: 'Las medicinas mensuales, el baño cada pocas semanas y la revisión anual son fáciles de perder de vista. La app Tareas te los recuerda y registra cada uno, para que le digas al veterinario exactamente cuándo fue la última dosis.',
       sampleTitle: 'Una lista para tu mascota',
       sample: [
         { name: 'Medicina contra el gusano del corazón', schedule: 'El día 1 de cada mes' },
@@ -147,11 +147,11 @@ const es: SiteContent = {
       related: ['family', 'chores', 'self-care'],
     },
     'home-maintenance': {
-      meta: { title: 'App de mantenimiento del hogar con recordatorios | Recurrence', description: 'Lleva el control de filtros de aire y agua, pruebas de detectores de humo y tareas de temporada. Recurrence te avisa cuando toca y guarda un registro completo.' },
+      meta: { title: 'App de mantenimiento del hogar con recordatorios | Tareas', description: 'Lleva el control de filtros de aire y agua, pruebas de detectores de humo y tareas de temporada. La app Tareas te avisa cuando toca y guarda un registro completo.' },
       name: 'Mantenimiento del hogar',
       blurb: 'Filtros, detectores de humo, temporada',
       h1: 'Recordatorios para el mantenimiento que solo haces unas veces al año',
-      intro: 'Los filtros, los detectores de humo y las tareas de temporada llegan tan de vez en cuando que se olvidan. Recurrence cuenta desde la última vez que hiciste cada una y te avisa cuando toca de nuevo.',
+      intro: 'Los filtros, los detectores de humo y las tareas de temporada llegan tan de vez en cuando que se olvidan. La app Tareas cuenta desde la última vez que hiciste cada una y te avisa cuando toca de nuevo.',
       sampleTitle: 'Una lista de mantenimiento para empezar',
       sample: [
         { name: 'Cambiar filtro de aire', schedule: '3 meses después de hacerla' },
@@ -167,11 +167,11 @@ const es: SiteContent = {
       related: ['chores', 'car-maintenance', 'bills'],
     },
     'car-maintenance': {
-      meta: { title: 'App de recordatorios de mantenimiento del auto | Recurrence', description: 'Recuerda el cambio de aceite, la presión de los neumáticos y los limpiaparabrisas. Recurrence te avisa cuando toca cada mantenimiento y guarda el kilometraje.' },
+      meta: { title: 'App de recordatorios de mantenimiento del auto | Tareas', description: 'Recuerda el cambio de aceite, la presión de los neumáticos y los limpiaparabrisas. La app Tareas te avisa cuando toca cada mantenimiento y guarda el kilometraje.' },
       name: 'Mantenimiento del auto',
       blurb: 'Aceite, neumáticos, limpiaparabrisas',
       h1: 'Recordatorios de mantenimiento del auto, con el kilometraje en las notas',
-      intro: 'El cambio de aceite, la revisión de neumáticos y los limpiaparabrisas nuevos tienen calendarios distintos. Recurrence los reúne en un solo lugar y recuerda lo que hiciste la última vez.',
+      intro: 'El cambio de aceite, la revisión de neumáticos y los limpiaparabrisas nuevos tienen calendarios distintos. La app Tareas los reúne en un solo lugar y recuerda lo que hiciste la última vez.',
       sampleTitle: 'Una lista para tu auto',
       sample: [
         { name: 'Cambio de aceite', schedule: '6 meses después de hacerla' },
@@ -188,11 +188,11 @@ const es: SiteContent = {
       related: ['home-maintenance', 'bills', 'family'],
     },
     plants: {
-      meta: { title: 'App para recordar regar las plantas | Recurrence', description: 'Riega cada planta a su ritmo. Recurrence te avisa cuando una planta necesita agua, cuenta desde el último riego y muestra quién la regó.' },
+      meta: { title: 'App para recordar regar las plantas | Tareas', description: 'Riega cada planta a su ritmo. La app Tareas te avisa cuando una planta necesita agua, cuenta desde el último riego y muestra quién la regó.' },
       name: 'Plantas y jardín',
       blurb: 'Riego, abono, trasplante',
       h1: 'Recordatorios de riego que cuentan desde el último riego',
-      intro: 'Las plantas no siguen el calendario. Recurrence te avisa un tiempo fijo después del último riego, así que si riegas tarde, el siguiente también se mueve.',
+      intro: 'Las plantas no siguen el calendario. La app Tareas te avisa un tiempo fijo después del último riego, así que si riegas tarde, el siguiente también se mueve.',
       sampleTitle: 'Una lista para tus plantas',
       sample: [
         { name: 'Regar las plantas', schedule: '1 semana después de hacerla' },
@@ -206,11 +206,11 @@ const es: SiteContent = {
       related: ['chores', 'family', 'home-maintenance'],
     },
     'self-care': {
-      meta: { title: 'Cuidado personal: recordatorios de dentista y más | Recurrence', description: 'Corte de pelo, dentista, cepillo de dientes nuevo y vitaminas: Recurrence te avisa a tiempo y recuerda cuándo fuiste por última vez.' },
+      meta: { title: 'Cuidado personal: recordatorios de dentista y más | Tareas', description: 'Corte de pelo, dentista, cepillo de dientes nuevo y vitaminas: la app Tareas te avisa a tiempo y recuerda cuándo fuiste por última vez.' },
       name: 'Cuidado personal',
       blurb: 'Pelo, dentista, vitaminas',
       h1: 'Recordatorios para las citas que es fácil posponer',
-      intro: 'Un corte de pelo cada seis semanas, el dentista dos veces al año y un cepillo de dientes nuevo cada tres meses. Recurrence recuerda las fechas por ti.',
+      intro: 'Un corte de pelo cada seis semanas, el dentista dos veces al año y un cepillo de dientes nuevo cada tres meses. La app Tareas recuerda las fechas por ti.',
       sampleTitle: 'Una lista de cuidado personal para empezar',
       sample: [
         { name: 'Cortarse el pelo', schedule: '6 semanas después de hacerla' },
@@ -227,7 +227,7 @@ const es: SiteContent = {
       related: ['pets', 'chores', 'bills'],
     },
     family: {
-      meta: { title: 'App de tareas compartidas en familia | Recurrence', description: 'Comparte tareas recurrentes con tu familia por iCloud. Todos pueden marcarlas, y el historial de cada tarea muestra quién la hizo y cuándo.' },
+      meta: { title: 'App de tareas compartidas en familia | Tareas', description: 'Comparte tareas recurrentes con tu familia por iCloud. Todos pueden marcarlas, y el historial de cada tarea muestra quién la hizo y cuándo.' },
       name: 'Tareas en familia',
       blurb: 'Ve quién lo hizo y cuándo',
       h1: 'Tareas recurrentes compartidas para todo el hogar',
@@ -239,7 +239,7 @@ const es: SiteContent = {
         { name: 'Medicina contra el gusano del corazón', schedule: 'El día 1 de cada mes' },
       ],
       points: [
-        { title: 'Compartidas por iCloud', body: 'Invita a tu familia a cualquier tarea con el uso compartido de iCloud. Solo necesitan Recurrence y una cuenta de iCloud.' },
+        { title: 'Compartidas por iCloud', body: 'Invita a tu familia a cualquier tarea con el uso compartido de iCloud. Solo necesitan la app Tareas y una cuenta de iCloud.' },
         { title: 'Ve quién lo hizo', body: 'Cada registro de una tarea compartida muestra quién la marcó.' },
         { title: 'Todos reciben recordatorios', body: 'Cada persona configura los recordatorios que le funcionan.' },
       ],
@@ -254,18 +254,18 @@ const es: SiteContent = {
 
   support: {
     meta: {
-      title: 'Soporte y ayuda | Recurrence',
-      description: 'Ayuda con Recurrence: sincronización, tareas compartidas, recordatorios, widgets y Premium. Respuestas a preguntas frecuentes y cómo contactarnos.',
+      title: 'Soporte y ayuda | Tareas',
+      description: 'Ayuda con la app Tareas: sincronización, tareas compartidas, recordatorios, widgets y Premium. Respuestas a preguntas frecuentes y cómo contactarnos.',
     },
     h1: '¿Cómo podemos ayudarte?',
-    intro: 'Respuestas a las preguntas más frecuentes sobre Recurrence.',
+    intro: 'Respuestas a las preguntas más frecuentes sobre la app Tareas.',
     contact: { q: '¿Tienes otra pregunta?', a: 'Escríbenos a support@shayesapps.com.' },
     faqTitle: 'Preguntas frecuentes',
     faq: [
-      { q: 'Mis tareas no se sincronizan entre dispositivos.', a: 'Recurrence se sincroniza mediante iCloud. En cada dispositivo, asegúrate de haber iniciado sesión en iCloud con la misma cuenta de Apple, de tener conexión y de que tu almacenamiento de iCloud no esté lleno. Comprueba también que Recurrence tenga permiso para usar iCloud en la app Configuración, en tu nombre > iCloud. En Recurrence, Configuración > iCloud muestra el estado de la sincronización. Si sigue sin sincronizar, toca “Compartir informe de sincronización” en esa pantalla y envíanos el informe.' },
-      { q: '¿Cómo comparto tareas con alguien?', a: 'Mantén presionada una tarea en tu lista y elige “Compartir”, o toca el botón de compartir en la parte superior de la tarea. Elige a quién invitar y si podrá hacer cambios o solo verla. Las personas que invites necesitan Recurrence y una cuenta de iCloud. Para dejar de compartir, abre el mismo menú. Si eliminas una tarea compartida, se elimina para todos.' },
-      { q: 'No me llegan los recordatorios.', a: 'Primero revisa que las notificaciones de Recurrence estén permitidas en la app Configuración, en Notificaciones, y que ningún modo de enfoque las silencie. En Recurrence, Configuración > Notificaciones muestra si el permiso está activado. Cada tarea tiene sus propios recordatorios en la sección Notificaciones al editarla: antes de la fecha, el mismo día o cuando ya está atrasada. Configuración > Valores predeterminados > Notificaciones define con qué recordatorios empiezan las tareas nuevas. iOS limita cuántos recordatorios puede programar una app por adelantado, así que abre Recurrence de vez en cuando para que sigan llegando.' },
-      { q: '¿Cómo restauro mi compra de Premium?', a: 'En Recurrence, ve a Configuración, toca “Explorar” en el banner de Recurrence Premium y luego toca “Restaurar” en la parte inferior de la pantalla. Asegúrate de haber iniciado sesión con la cuenta de Apple con la que compraste Premium.' },
+      { q: 'Mis tareas no se sincronizan entre dispositivos.', a: 'La app Tareas se sincroniza mediante iCloud. En cada dispositivo, asegúrate de haber iniciado sesión en iCloud con la misma cuenta de Apple, de tener conexión y de que tu almacenamiento de iCloud no esté lleno. Comprueba también que la app Tareas tenga permiso para usar iCloud en la app Configuración, en tu nombre > iCloud. En la app Tareas, Configuración > iCloud muestra el estado de la sincronización. Si sigue sin sincronizar, toca “Compartir informe de sincronización” en esa pantalla y envíanos el informe.' },
+      { q: '¿Cómo comparto tareas con alguien?', a: 'Mantén presionada una tarea en tu lista y elige “Compartir”, o toca el botón de compartir en la parte superior de la tarea. Elige a quién invitar y si podrá hacer cambios o solo verla. Las personas que invites necesitan la app Tareas y una cuenta de iCloud. Para dejar de compartir, abre el mismo menú. Si eliminas una tarea compartida, se elimina para todos.' },
+      { q: 'No me llegan los recordatorios.', a: 'Primero revisa que las notificaciones de la app Tareas estén permitidas en la app Configuración, en Notificaciones, y que ningún modo de enfoque las silencie. En la app Tareas, Configuración > Notificaciones muestra si el permiso está activado. Cada tarea tiene sus propios recordatorios en la sección Notificaciones al editarla: antes de la fecha, el mismo día o cuando ya está atrasada. Configuración > Valores predeterminados > Notificaciones define con qué recordatorios empiezan las tareas nuevas. iOS limita cuántos recordatorios puede programar una app por adelantado, así que abre la app Tareas de vez en cuando para que sigan llegando.' },
+      { q: '¿Cómo restauro mi compra de Premium?', a: 'En la app Tareas, ve a Configuración, toca “Explorar” en el banner de Recurrence Premium y luego toca “Restaurar” en la parte inferior de la pantalla. Asegúrate de haber iniciado sesión con la cuenta de Apple con la que compraste Premium.' },
       { q: '¿Puedo probar Premium primero?', a: 'Sí. Recurrence Premium incluye una prueba gratuita, que se muestra en el App Store antes de suscribirte.' },
       { q: '¿Premium funciona en todos mis dispositivos?', a: 'Sí. Una sola compra desbloquea Premium en iPhone, iPad y Mac, y se puede compartir con tu familia mediante Compartir en familia.' },
       { q: '¿Cómo cancelo mi suscripción?', a: 'Las suscripciones se administran en la configuración de tu cuenta de Apple y puedes cancelarlas en cualquier momento, al menos 24 horas antes de la siguiente renovación.' },
@@ -274,11 +274,11 @@ const es: SiteContent = {
 
   press: {
     meta: {
-      title: 'Kit de prensa | Recurrence',
-      description: 'Kit de prensa de Recurrence: descripción de la app, datos clave, capturas de pantalla, ícono y contacto para periodistas y reseñadores.',
+      title: 'Kit de prensa | Tareas',
+      description: 'Kit de prensa de la app Tareas: descripción de la app, datos clave, capturas de pantalla, ícono y contacto para periodistas y reseñadores.',
     },
     h1: 'Kit de prensa',
-    intro: 'Recurrence es una app para llevar el control de tareas recurrentes en iPhone, iPad y Mac, creada por Shayes Apps, un desarrollador independiente. Avisa cuándo toca cada tarea y guarda un historial de cada vez que se completa.',
+    intro: 'Tareas es una app para llevar el control de tareas recurrentes en iPhone, iPad y Mac, creada por Shayes Apps, un desarrollador independiente. Avisa cuándo toca cada tarea y guarda un historial de cada vez que se completa.',
     facts: [
       { label: 'Desarrollador', value: 'Shayes Apps' },
       { label: 'Plataformas', value: 'iPhone, iPad, Mac' },
@@ -293,39 +293,11 @@ const es: SiteContent = {
     contactBody: 'support@shayesapps.com',
   },
 
-  policies: {
-    meta: { title: 'Política de privacidad y términos de uso | Recurrence', description: 'Recurrence no te rastrea ni recopila información personal identificable. Tus tareas se sincronizan con iCloud. Además, los términos de las suscripciones Premium.' },
-    h1: 'Política de privacidad y términos de uso',
-    docs: [
-      {
-        id: 'privacy',
-        title: 'Política de privacidad',
-        updated: '26 de noviembre de 2026',
-        sections: [
-          { title: 'Breve y sencilla', body: ['Nuestra política es breve y sencilla porque valoramos tu información y tu privacidad. Recurrence no te rastrea ni recopila información personal identificable. Hacemos lo posible por limitar la cantidad de terceros de los que dependemos.'] },
-          { title: 'Pagos', body: ['Los pagos de compras dentro de la app y suscripciones se realizan a través del App Store, así que nunca tenemos acceso a los datos de tu tarjeta de crédito. Recurrence incluye el SDK de RevenueCat. Consulta sus políticas.'] },
-          { title: 'Sincronización y uso compartido', body: ['La sincronización de datos se realiza con iCloud (CloudKit de Apple). CloudKit está totalmente cifrado y todos los datos se guardan en la infraestructura de Apple. Nadie más que tú tiene acceso a tus datos, excepto las personas con las que decidas compartir tareas.'] },
-          { title: 'Solicitudes de reembolso', body: ['Al usar Recurrence y hacer compras dentro de la app, aceptas que compartamos con Apple datos sobre tu uso y consumo del contenido comprado, como parte de nuestros esfuerzos para resolver solicitudes de reembolso. Esta información puede incluir detalles sobre cómo accediste al contenido comprado e interactuaste con él. El propósito de compartir estos datos es ayudar a Apple a tomar una decisión informada sobre las solicitudes de reembolso. Nos aseguramos de que este intercambio de datos cumpla con las políticas de Apple y se haga solo en la medida necesaria para procesar tus solicitudes.'] },
-          { title: 'Preguntas', body: ['Si tienes preguntas o inquietudes sobre nuestra política de privacidad, escríbenos a support@shayesapps.com.'] },
-        ],
-      },
-      {
-        id: 'terms',
-        title: 'Términos de uso',
-        updated: '26 de noviembre de 2026',
-        sections: [
-          { title: 'Términos de la suscripción Premium', body: ['Las suscripciones se renuevan automáticamente a menos que se cancelen al menos 24 horas antes del final del periodo actual. Puedes cancelarlas en cualquier momento en la configuración de tu cuenta de Apple. Cualquier parte no utilizada de una prueba gratuita se perderá si compras una suscripción.'] },
-          { title: 'Preguntas', body: ['Si tienes preguntas o inquietudes sobre nuestros términos de uso, escríbenos a support@shayesapps.com.'] },
-        ],
-      },
-    ],
-  },
-
   tools,
   screenAlt: {
-    home: 'Lista de tareas de Recurrence en iPhone con tareas atrasadas, de hoy y próximas',
+    home: 'Lista de tareas de la app Tareas en iPhone con tareas atrasadas, de hoy y próximas',
     history: 'El historial de una tarea con fechas y notas',
-    widgets: 'Widgets de Recurrence en la pantalla de inicio del iPhone',
+    widgets: 'Widgets de la app Tareas en la pantalla de inicio del iPhone',
     add: 'Edición de una tarea que se repite 4 semanas después de la última vez',
   },
 

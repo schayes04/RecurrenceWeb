@@ -285,13 +285,6 @@ button.card { width: 100%; font: inherit; text-align: left; cursor: pointer; }
   .site-footer .brand-col { grid-column: 1 / -1; }
 }
 
-/* Language suggestion bar */
-.lang-bar { display: none; background: var(--gold); color: var(--ink); font-size: 15px; }
-.lang-bar.show { display: block; }
-.lang-bar .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 16px; padding-block: 10px; }
-.lang-bar a { color: var(--ink); font-weight: 700; }
-.lang-bar button { background: none; border: 0; font: inherit; color: var(--ink); text-decoration: underline; cursor: pointer; min-height: 32px; }
-
 .draft-note { background: #FBF0D6; color: #5C4300; font-size: 14px; text-align: center; padding: 8px var(--gutter); }
 
 @media (max-width: 640px) {

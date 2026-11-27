@@ -7,7 +7,7 @@ import type { ToolsContent } from '../types';
 const tools: ToolsContent = {
   howOften: {
     meta: {
-      title: 'À quelle fréquence nettoyer, changer, vérifier ? | Recurrence',
+      title: 'À quelle fréquence nettoyer, changer, vérifier ? | Tâches',
       description: 'Tous les combien changer un filtre à air, laver les draps, remplacer sa brosse à dents ou donner l’antipuces ? Les fréquences habituelles, au même endroit.',
     },
     name: 'À quelle fréquence faut-il… ?',
@@ -84,11 +84,11 @@ const tools: ToolsContent = {
     nextDate: 'Prochaine échéance',
     disclaimer: 'Ce sont des fréquences habituelles, pas des règles. Si le fabricant, votre vétérinaire, votre dentiste ou votre médecin dit autre chose, suivez son avis.',
     ctaTitle: 'Ne cherchez plus à quand remonte la dernière fois',
-    ctaBody: 'Ajoutez-les à Recurrence. L’app vous prévient quand chacun arrive à échéance et garde l’historique de chaque fois.',
+    ctaBody: 'Ajoutez-les à l’app Tâches. L’app vous prévient quand chacun arrive à échéance et garde l’historique de chaque fois.',
   },
   nextDue: {
     meta: {
-      title: 'Calculateur de date d’échéance en ligne | Recurrence',
+      title: 'Calculateur de date d’échéance en ligne | Tâches',
       description: 'Indiquez quand vous l’avez fait pour la dernière fois et à quelle fréquence, et obtenez la prochaine échéance et les dates suivantes. Gratuit, sans inscription.',
     },
     name: 'Calculateur de date d’échéance',
@@ -124,8 +124,8 @@ const tools: ToolsContent = {
     popularTitle: 'Les plus suivis',
     popularBody: 'Touchez-en un pour remplir sa fréquence habituelle.',
     guideLink: 'Voir tout le guide « À quelle fréquence »',
-    ctaTitle: 'Laissez Recurrence faire le calcul',
-    ctaBody: 'Cochez une tâche et Recurrence calcule la prochaine date, vous prévient à l’échéance et garde la trace de chaque fois.',
+    ctaTitle: 'Laissez l’app Tâches faire le calcul',
+    ctaBody: 'Cochez une tâche et l’app Tâches calcule la prochaine date, vous prévient à l’échéance et garde la trace de chaque fois.',
     howTitle: 'Comment la prochaine échéance est calculée',
     howSteps: [
       'On part du jour où vous l’avez fait pour la dernière fois.',
@@ -133,13 +133,13 @@ const tools: ToolsContent = {
       'Si ce jour n’existe pas, comme le 30 février, la date passe au dernier jour du mois.',
       'Les dates suivantes sont comptées à partir de la première : une tâche faite le 31 reste en fin de mois.',
     ],
-    howNote: 'Recurrence peut répéter une tâche de cette façon, à partir de la dernière réalisation, ou selon un calendrier fixe, comme tous les jeudis ou le 1er de chaque mois. Chaque tâche suit ce qui lui convient.',
+    howNote: 'L’app Tâches peut répéter une tâche de cette façon, à partir de la dernière réalisation, ou selon un calendrier fixe, comme tous les jeudis ou le 1er de chaque mois. Chaque tâche suit ce qui lui convient.',
     faqTitle: 'À propos du calculateur',
     faq: [
       { q: 'Faut-il saisir le jour de l’échéance ou le jour où je l’ai fait ?', a: 'Le jour où vous l’avez vraiment fait. Compter à partir de là garde le même écart entre deux fois, et c’est ce qui compte pour les filtres, les traitements et les contrôles.' },
       { q: 'Que se passe-t-il le 29, le 30 ou le 31 ?', a: 'Si le mois suivant est plus court, la date passe à son dernier jour. Le 31 janvier plus un mois donne le 28 février, ou le 29 les années bissextiles. Les dates suivantes reviennent au 31 quand le mois en compte un.' },
       { q: 'Ce que je saisis est-il enregistré ou envoyé ?', a: 'Non. Les dates sont calculées dans votre navigateur. Rien n’est enregistré ni envoyé.' },
-      { q: 'Comment être prévenu à l’échéance ?', a: 'Ajoutez la tâche à Recurrence sur votre iPhone, iPad ou Mac. Cochez-la à chaque fois et l’app calcule la prochaine date, vous prévient et garde l’historique.' },
+      { q: 'Comment être prévenu à l’échéance ?', a: 'Ajoutez la tâche à l’app Tâches sur votre iPhone, iPad ou Mac. Cochez-la à chaque fois et l’app calcule la prochaine date, vous prévient et garde l’historique.' },
     ],
   },
 };

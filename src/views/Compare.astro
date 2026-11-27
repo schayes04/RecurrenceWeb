@@ -18,7 +18,7 @@ const checked = new Intl.DateTimeFormat(localeInfo(locale).htmlLang, { dateStyle
     <h2>{c.labels.comparedOn}</h2>
     <div class="table-wrap">
       <table>
-        <thead><tr><th scope="col">{c.labels.feature}</th><th scope="col">Recurrence</th><th scope="col">{x.name}</th></tr></thead>
+        <thead><tr><th scope="col">{c.labels.feature}</th><th scope="col">{UI[locale].appName}</th><th scope="col">{x.name}</th></tr></thead>
         <tbody>{x.rows.map((r) => <tr><th scope="row" style="font-weight:500">{r.feature}</th><td>{r.recurrence}</td><td>{r.other}</td></tr>)}</tbody>
       </table>
     </div>

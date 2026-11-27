@@ -5,6 +5,8 @@
 import type { Locale } from './locales';
 
 export interface UiStrings {
+  /** The app's name in this language, as shown under its icon (CFBundleDisplayName). */
+  appName: string;
   skipToContent: string;
   nav: { features: string; useCases: string; compare: string; press: string; support: string };
   download: string;
@@ -13,7 +15,6 @@ export interface UiStrings {
   ratingLabel: string;
   language: string;
   footer: { press: string; policies: string; support: string; social: string; madeBy: string; track: string; tools: string };
-  langBanner: { prompt: string; switchTo: string; dismiss: string };
   notFound: { title: string; body: string; home: string };
   breadcrumbHome: string;
   /** Shown on /open/ while the app launches. */
@@ -21,6 +22,7 @@ export interface UiStrings {
 }
 
 const en: UiStrings = {
+  appName: 'Recurrence',
   skipToContent: 'Skip to content',
   nav: { features: 'Features', useCases: 'Ideas', compare: 'Compare', press: 'Press', support: 'Support' },
   download: 'Download on the App Store',
@@ -29,13 +31,13 @@ const en: UiStrings = {
   ratingLabel: 'App Store rating',
   language: 'Language',
   footer: { press: 'Press kit', policies: 'Privacy & terms', support: 'Support', social: 'Help & social', madeBy: 'Made by Shayes Apps', track: 'What you can track', tools: 'Free tools' },
-  langBanner: { prompt: 'This page is also available in', switchTo: 'Switch', dismiss: 'Dismiss' },
   notFound: { title: 'Page not found', body: 'The page you were looking for has moved or never existed.', home: 'Go to the home page' },
   breadcrumbHome: 'Home',
   opening: 'Opening Recurrence…',
 };
 
 const de: UiStrings = {
+  appName: 'Aufgaben',
   skipToContent: 'Zum Inhalt springen',
   nav: { features: 'Funktionen', useCases: 'Ideen', compare: 'Vergleich', press: 'Presse', support: 'Support' },
   download: 'Laden im App Store',
@@ -44,13 +46,13 @@ const de: UiStrings = {
   ratingLabel: 'Bewertung im App Store',
   language: 'Sprache',
   footer: { press: 'Pressematerial', policies: 'Datenschutz & Nutzungsbedingungen', support: 'Support', social: 'Hilfe & Social Media', madeBy: 'Von Shayes Apps', track: 'Was du im Blick behältst', tools: 'Kostenlose Tools' },
-  langBanner: { prompt: 'Diese Seite gibt es auch auf', switchTo: 'Wechseln', dismiss: 'Schließen' },
   notFound: { title: 'Seite nicht gefunden', body: 'Die gesuchte Seite wurde verschoben oder existiert nicht.', home: 'Zur Startseite' },
   breadcrumbHome: 'Start',
-  opening: 'Recurrence wird geöffnet …',
+  opening: '„Aufgaben“ wird geöffnet …',
 };
 
 const esMX: UiStrings = {
+  appName: 'Tareas',
   skipToContent: 'Ir al contenido',
   nav: { features: 'Funciones', useCases: 'Ideas', compare: 'Comparar', press: 'Prensa', support: 'Soporte' },
   download: 'Descargar en el App Store',
@@ -59,15 +61,15 @@ const esMX: UiStrings = {
   ratingLabel: 'Calificación en el App Store',
   language: 'Idioma',
   footer: { press: 'Kit de prensa', policies: 'Privacidad y términos', support: 'Soporte', social: 'Ayuda y redes', madeBy: 'Hecho por Shayes Apps', track: 'Qué puedes registrar', tools: 'Herramientas gratis' },
-  langBanner: { prompt: 'Esta página también está disponible en', switchTo: 'Cambiar', dismiss: 'Cerrar' },
   notFound: { title: 'Página no encontrada', body: 'La página que buscas se movió o no existe.', home: 'Ir a la página de inicio' },
   breadcrumbHome: 'Inicio',
-  opening: 'Abriendo Recurrence…',
+  opening: 'Abriendo la app Tareas…',
 };
 
-const esES: UiStrings = { ...esMX, langBanner: { ...esMX.langBanner, prompt: 'Esta página también está disponible en' } };
+const esES: UiStrings = esMX;
 
 const fr: UiStrings = {
+  appName: 'Tâches',
   skipToContent: 'Aller au contenu',
   nav: { features: 'Fonctionnalités', useCases: 'Idées', compare: 'Comparer', press: 'Presse', support: 'Assistance' },
   download: 'Télécharger dans l’App Store',
@@ -76,13 +78,13 @@ const fr: UiStrings = {
   ratingLabel: 'Note sur l’App Store',
   language: 'Langue',
   footer: { press: 'Kit presse', policies: 'Confidentialité et conditions', support: 'Assistance', social: 'Aide et réseaux', madeBy: 'Conçu par Shayes Apps', track: 'Ce que vous pouvez suivre', tools: 'Outils gratuits' },
-  langBanner: { prompt: 'Cette page existe aussi en', switchTo: 'Changer', dismiss: 'Fermer' },
   notFound: { title: 'Page introuvable', body: 'La page que vous cherchez a été déplacée ou n’existe pas.', home: 'Retour à l’accueil' },
   breadcrumbHome: 'Accueil',
-  opening: 'Ouverture de Recurrence…',
+  opening: 'Ouverture de l’app Tâches…',
 };
 
 const ja: UiStrings = {
+  appName: '繰り返しToDo',
   skipToContent: '本文へスキップ',
   nav: { features: '機能', useCases: 'アイデア', compare: '比較', press: 'プレス', support: 'サポート' },
   download: 'App Storeからダウンロード',
@@ -91,13 +93,13 @@ const ja: UiStrings = {
   ratingLabel: 'App Storeの評価',
   language: '言語',
   footer: { press: 'プレスキット', policies: 'プライバシーと利用規約', support: 'サポート', social: 'ヘルプとSNS', madeBy: '開発：Shayes Apps', track: '管理できること', tools: '無料ツール' },
-  langBanner: { prompt: 'このページは次の言語でもご覧いただけます：', switchTo: '切り替える', dismiss: '閉じる' },
   notFound: { title: 'ページが見つかりません', body: 'お探しのページは移動したか、存在しません。', home: 'ホームへ戻る' },
   breadcrumbHome: 'ホーム',
-  opening: 'Recurrenceを開いています…',
+  opening: '「繰り返しToDo」を開いています…',
 };
 
 const ko: UiStrings = {
+  appName: '반복 할일',
   skipToContent: '본문으로 건너뛰기',
   nav: { features: '기능', useCases: '아이디어', compare: '비교', press: '보도 자료', support: '지원' },
   download: 'App Store에서 다운로드',
@@ -106,13 +108,13 @@ const ko: UiStrings = {
   ratingLabel: 'App Store 평점',
   language: '언어',
   footer: { press: '보도 자료', policies: '개인정보 처리방침 및 이용약관', support: '지원', social: '도움말 및 소셜', madeBy: '제작: Shayes Apps', track: '관리할 수 있는 것', tools: '무료 도구' },
-  langBanner: { prompt: '이 페이지는 다음 언어로도 볼 수 있습니다:', switchTo: '전환', dismiss: '닫기' },
   notFound: { title: '페이지를 찾을 수 없습니다', body: '찾으시는 페이지가 이동되었거나 존재하지 않습니다.', home: '홈으로 이동' },
   breadcrumbHome: '홈',
-  opening: 'Recurrence 여는 중…',
+  opening: '반복 할일 앱을 여는 중…',
 };
 
 const ptBR: UiStrings = {
+  appName: 'Tarefas',
   skipToContent: 'Pular para o conteúdo',
   nav: { features: 'Recursos', useCases: 'Ideias', compare: 'Comparar', press: 'Imprensa', support: 'Suporte' },
   download: 'Baixar na App Store',
@@ -121,10 +123,9 @@ const ptBR: UiStrings = {
   ratingLabel: 'Avaliação na App Store',
   language: 'Idioma',
   footer: { press: 'Kit de imprensa', policies: 'Privacidade e termos', support: 'Suporte', social: 'Ajuda e redes sociais', madeBy: 'Feito por Shayes Apps', track: 'O que você pode acompanhar', tools: 'Ferramentas grátis' },
-  langBanner: { prompt: 'Esta página também está disponível em', switchTo: 'Mudar', dismiss: 'Fechar' },
   notFound: { title: 'Página não encontrada', body: 'A página que você procura mudou de lugar ou não existe.', home: 'Ir para a página inicial' },
   breadcrumbHome: 'Início',
-  opening: 'Abrindo o Recurrence…',
+  opening: 'Abrindo o app Tarefas…',
 };
 
 const ptPT: UiStrings = {
@@ -133,12 +134,12 @@ const ptPT: UiStrings = {
   download: 'Descarregar na App Store',
   downloadShort: 'Descarregar',
   footer: { ...ptBR.footer, support: 'Apoio', track: 'O que pode acompanhar', tools: 'Ferramentas gratuitas' },
-  langBanner: { prompt: 'Esta página também está disponível em', switchTo: 'Mudar', dismiss: 'Fechar' },
   notFound: { title: 'Página não encontrada', body: 'A página que procura mudou de sítio ou não existe.', home: 'Ir para a página inicial' },
-  opening: 'A abrir a Recurrence…',
+  opening: 'A abrir a app Tarefas…',
 };
 
 const ru: UiStrings = {
+  appName: 'Дела',
   skipToContent: 'Перейти к содержанию',
   nav: { features: 'Возможности', useCases: 'Идеи', compare: 'Сравнение', press: 'Пресса', support: 'Поддержка' },
   download: 'Загрузите в App Store',
@@ -147,13 +148,13 @@ const ru: UiStrings = {
   ratingLabel: 'Оценка в App Store',
   language: 'Язык',
   footer: { press: 'Пресс-кит', policies: 'Конфиденциальность и условия', support: 'Поддержка', social: 'Помощь и соцсети', madeBy: 'Разработчик: Shayes Apps', track: 'Что можно отслеживать', tools: 'Бесплатные инструменты' },
-  langBanner: { prompt: 'Эта страница доступна также на языке:', switchTo: 'Перейти', dismiss: 'Закрыть' },
   notFound: { title: 'Страница не найдена', body: 'Страница, которую вы ищете, перемещена или не существует.', home: 'На главную' },
   breadcrumbHome: 'Главная',
-  opening: 'Открываем Recurrence…',
+  opening: 'Открываем приложение «Дела»…',
 };
 
 const zhHans: UiStrings = {
+  appName: '重复待办',
   skipToContent: '跳到正文',
   nav: { features: '功能', useCases: '灵感', compare: '对比', press: '媒体', support: '支持' },
   download: '在 App Store 下载',
@@ -162,13 +163,13 @@ const zhHans: UiStrings = {
   ratingLabel: 'App Store 评分',
   language: '语言',
   footer: { press: '媒体资料', policies: '隐私政策与使用条款', support: '支持', social: '帮助与社交', madeBy: '开发者：Shayes Apps', track: '可以追踪什么', tools: '免费工具' },
-  langBanner: { prompt: '此页面还提供以下语言版本：', switchTo: '切换', dismiss: '关闭' },
   notFound: { title: '找不到页面', body: '你要找的页面已移动或不存在。', home: '返回首页' },
   breadcrumbHome: '首页',
-  opening: '正在打开 Recurrence…',
+  opening: '正在打开“重复待办”…',
 };
 
 const zhHant: UiStrings = {
+  appName: '重複待辦',
   skipToContent: '跳至主要內容',
   nav: { features: '功能', useCases: '靈感', compare: '比較', press: '媒體', support: '支援' },
   download: '在 App Store 下載',
@@ -177,10 +178,9 @@ const zhHant: UiStrings = {
   ratingLabel: 'App Store 評分',
   language: '語言',
   footer: { press: '媒體資料', policies: '隱私權政策與使用條款', support: '支援', social: '說明與社群', madeBy: '開發者：Shayes Apps', track: '可以追蹤什麼', tools: '免費工具' },
-  langBanner: { prompt: '此頁面也提供以下語言版本：', switchTo: '切換', dismiss: '關閉' },
   notFound: { title: '找不到頁面', body: '你要找的頁面已移動或不存在。', home: '返回首頁' },
   breadcrumbHome: '首頁',
-  opening: '正在開啟 Recurrence…',
+  opening: '正在開啟「重複待辦」…',
 };
 
 export const UI: Record<Locale, UiStrings> = {
