@@ -1,0 +1,20 @@
+---
+import PageHead from '../components/PageHead.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { USE_CASES, pathFor } from '../i18n/routes';
+import { UI } from '../i18n/ui';
+import type { Locale } from '../i18n/locales';
+import type { SiteContent } from '../content/types';
+
+interface Props { locale: Locale; c: SiteContent }
+const { locale, c } = Astro.props;
+---
+<PageHead locale={locale} title={c.useCasesHub.h1} lead={c.useCasesHub.intro} crumbs={[{ name: UI[locale].nav.useCases, path: pathFor('use-cases', locale) }]} />
+<section class="section soft">
+  <div class="container">
+    <div class="cards" style="margin-top:0">
+      {USE_CASES.map((id) => <a class="card" href={pathFor(`use-case/${id}`, locale)}><strong>{c.useCases[id].name}</strong><span>{c.useCases[id].blurb}</span></a>)}
+    </div>
+  </div>
+</section>
+<CtaBand locale={locale} title={c.home.heroAccentBefore + c.home.heroAccent + c.home.heroAccentAfter} body={c.home.freeBody} />

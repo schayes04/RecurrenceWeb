@@ -1,0 +1,47 @@
+---
+// Suggests the visitor's language when it differs from the page's. Never redirects:
+// Google crawls from the US and must be able to reach every locale.
+import { LOCALES, type Locale } from '../i18n/locales';
+import { pathFor, type PageKey } from '../i18n/routes';
+import { UI } from '../i18n/ui';
+import { hasContent } from '../content';
+
+interface Props { locale: Locale; pageKey: PageKey }
+const { locale, pageKey } = Astro.props;
+const options = LOCALES.filter((l) => l.code !== locale && hasContent(l.code)).map((l) => ({
+  codes: [l.htmlLang.toLowerCase(), ...l.hreflang.map((c) => c.toLowerCase())],
+  href: pathFor(pageKey, l.code),
+  name: l.name,
+  prompt: UI[l.code].langBanner.prompt,
+  switchTo: UI[l.code].langBanner.switchTo,
+  dismiss: UI[l.code].langBanner.dismiss,
+}));
+---
+{options.length > 0 && (
+  <div class="lang-bar" id="lang-bar" role="region" aria-label="Language" data-options={JSON.stringify(options)} data-current={locale}>
+    <div class="container"><span id="lang-bar-text"></span><a id="lang-bar-link" href="#"></a><button type="button" id="lang-bar-dismiss"></button></div>
+  </div>
+  <script is:inline>
+    (() => {
+      const bar = document.getElementById('lang-bar');
+      if (!bar) return;
+      try { if (localStorage.getItem('lang-bar-dismissed') === bar.dataset.current) return; } catch (e) {}
+      const options = JSON.parse(bar.dataset.options || '[]');
+      const wanted = (navigator.languages || [navigator.language]).map((l) => l.toLowerCase());
+      let match = null;
+      for (const w of wanted) {
+        match = options.find((o) => o.codes.includes(w)) || options.find((o) => o.codes.some((c) => c.split('-')[0] === w.split('-')[0] && w.split('-')[0] !== 'en'));
+        if (match) break;
+      }
+      const pageLang = document.documentElement.lang.toLowerCase();
+      if (!match || wanted[0] === pageLang || wanted[0].split('-')[0] === pageLang.split('-')[0]) return;
+      document.getElementById('lang-bar-text').textContent = match.prompt;
+      const link = document.getElementById('lang-bar-link');
+      link.textContent = match.name; link.href = match.href;
+      const btn = document.getElementById('lang-bar-dismiss');
+      btn.textContent = match.dismiss;
+      btn.addEventListener('click', () => { bar.classList.remove('show'); try { localStorage.setItem('lang-bar-dismissed', bar.dataset.current); } catch (e) {} });
+      bar.classList.add('show');
+    })();
+  </script>
+)}

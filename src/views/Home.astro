@@ -1,0 +1,78 @@
+---
+import AppStoreButton from '../components/AppStoreButton.astro';
+import Faq from '../components/Faq.astro';
+import { USE_CASES, pathFor } from '../i18n/routes';
+import { UI } from '../i18n/ui';
+import type { Locale } from '../i18n/locales';
+import type { SiteContent } from '../content/types';
+import Phone from '../components/Phone.astro';
+
+interface Props { locale: Locale; c: SiteContent }
+const { locale, c } = Astro.props;
+const h = c.home;
+const ui = UI[locale];
+---
+<section class="dark hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{ui.platforms}</p>
+      <h1>{h.heroAccentBefore}<em>{h.heroAccent}</em>{h.heroAccentAfter}</h1>
+      <p class="lead">{h.intro}</p>
+      <div class="cta-row">
+        <AppStoreButton locale={locale} />
+        <p class="rating"><strong>★ 4.7+</strong> {ui.ratingLabel}</p>
+      </div>
+    </div>
+    <div class="hero-shot">
+      <Phone screen="home" locale={locale} width={340} eager />
+    </div>
+  </div>
+</section>
+
+<section class="section soft after-hero">
+  <div class="container">
+    <h2>{h.useCasesTitle}</h2>
+    <p class="sub">{h.useCasesIntro}</p>
+    <div class="cards">
+      {USE_CASES.map((id) => <a class="card" href={pathFor(`use-case/${id}`, locale)}><strong>{c.useCases[id].name}</strong><span>{c.useCases[id].blurb}</span></a>)}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div class="shot"><Phone screen="history" locale={locale} width={300} /></div>
+    <div>
+      <p class="kicker">{h.historyKicker}</p>
+      <h2>{h.historyTitle}</h2>
+      <p class="prose">{h.historyBody}</p>
+      <ul class="dots">{h.bullets.map((b) => <li>{b}</li>)}</ul>
+      <p style="margin-top:24px"><a href={pathFor('features', locale)}>{c.labels.readMore} →</a></p>
+    </div>
+  </div>
+</section>
+
+{h.reviews.length > 0 && (
+<section class="section navy">
+  <div class="container">
+    <h2>{h.reviewsTitle}</h2>
+    <div class="reviews">
+      {h.reviews.map((r) => <figure class="review"><div class="stars" role="img" aria-label={c.labels.fiveStars}>★★★★★</div><blockquote>“{r.quote}”</blockquote><figcaption>{r.author}</figcaption></figure>)}
+    </div>
+  </div>
+</section>
+)}
+
+<section class="section">
+  <div class="container split top">
+    <div>
+      <h2>{h.freeTitle}</h2>
+      <p class="prose">{h.freeBody}</p>
+      <div class="cta-row"><AppStoreButton locale={locale} variant="dark" /></div>
+    </div>
+    <div>
+      <h3 style="font-size:22px">{h.faqTitle}</h3>
+      <Faq items={h.faq} />
+    </div>
+  </div>
+</section>

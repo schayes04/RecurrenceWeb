@@ -1,0 +1,8 @@
+---
+// Renders text with any email address turned into a mailto link.
+interface Props { text: string }
+const { text } = Astro.props;
+const EMAIL = /([\w.+-]+@[\w-]+\.[\w.]*\w)/;
+const parts = text.split(EMAIL).map((value, i) => ({ value, email: i % 2 === 1 }));
+---
+{parts.map((p) => p.email ? <a href={`mailto:${p.value}`}>{p.value}</a> : p.value)}

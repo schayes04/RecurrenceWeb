@@ -1,0 +1,19 @@
+---
+// Apple's official "Download on the App Store" badge for the page's language,
+// unmodified (from Apple's marketing tools, via the Countdowns site).
+// variant 'light' = white badge for dark backgrounds, 'dark' = black badge for light ones.
+import type { ImageMetadata } from 'astro';
+import { appStoreUrl, localeInfo, type Locale } from '../i18n/locales';
+import { UI } from '../i18n/ui';
+
+interface Props { locale: Locale; variant?: 'light' | 'dark'; height?: number }
+const { locale, variant = 'light', height = 54 } = Astro.props;
+const badges = import.meta.glob<ImageMetadata>('../assets/app-store-badges/*/*.svg', { eager: true, import: 'default' });
+const color = variant === 'light' ? 'white' : 'black';
+const badge = badges[`../assets/app-store-badges/${color}/${localeInfo(locale).badge}.svg`];
+if (!badge) throw new Error(`Missing App Store badge for ${locale}`);
+const width = Math.round((badge.width / badge.height) * height);
+---
+<a class="store-badge" href={appStoreUrl(locale)} rel="noopener">
+  <img src={badge.src} width={width} height={height} alt={UI[locale].download} />
+</a>

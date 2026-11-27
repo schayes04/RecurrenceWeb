@@ -1,0 +1,18 @@
+---
+// A screenshot inside the iPhone bezel. The bezel image is 1350x2760 with a
+// transparent 1206x2622 screen inset 72px left/right and 69px top/bottom.
+import { Image } from 'astro:assets';
+import bezel from '../assets/screens/bezel-iphone.png';
+import { screenFor } from '../lib/screens';
+import { contentFor } from '../content';
+import type { Locale } from '../i18n/locales';
+import type { ScreenKey } from '../content/types';
+
+interface Props { screen: ScreenKey; locale: Locale; width: number; eager?: boolean }
+const { screen, locale, width, eager = false } = Astro.props;
+const loading = eager ? 'eager' : 'lazy';
+---
+<div class="phone" style={`--phone-w:${width}px`}>
+  <Image class="phone-screen" src={screenFor(screen, locale)} alt={contentFor(locale).screenAlt[screen]} widths={[width, width * 2]} sizes={`${width}px`} loading={loading} fetchpriority={eager ? 'high' : undefined} />
+  <Image class="phone-bezel" src={bezel} alt="" widths={[width, width * 2]} sizes={`${width}px`} loading={loading} />
+</div>

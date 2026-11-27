@@ -1,0 +1,41 @@
+---
+import { Image } from 'astro:assets';
+import icon from '../assets/brand/icon.png';
+import { LOCALES, localeInfo, appStoreUrl, type Locale } from '../i18n/locales';
+import { pathFor, type PageKey } from '../i18n/routes';
+import { UI } from '../i18n/ui';
+
+interface Props { locale: Locale; pageKey?: PageKey; variant: 'dark' | 'light' }
+const { locale, pageKey, variant } = Astro.props;
+const ui = UI[locale];
+const current = (key: PageKey) => (pageKey === key ? 'page' : undefined);
+// Kept to what a first-time visitor looks for, like the Countdowns site. Ideas is the
+// use-case hub; comparison pages are search landing pages, reached from the footer.
+const links: { key: PageKey; label: string }[] = [
+  { key: 'features', label: ui.nav.features },
+  { key: 'use-cases', label: ui.nav.useCases },
+  { key: 'press', label: ui.nav.press },
+];
+---
+<header class:list={['site-header', variant === 'dark' ? 'dark' : 'light']}>
+  <div class="container bar">
+    <a class="brand" href={pathFor('home', locale)}>
+      <Image src={icon} alt="" width={36} height={36} loading="eager" />Recurrence
+    </a>
+    <nav class="nav" aria-label="Main">
+      {links.map((l) => <a href={pathFor(l.key, locale)} aria-current={current(l.key)}>{l.label}</a>)}
+      <details class="lang">
+        <summary aria-label={`${ui.language}: ${localeInfo(locale).name}`}>
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          {localeInfo(locale).name}
+        </summary>
+        <ul>
+          {LOCALES.map((l) => (
+            <li><a href={pathFor(pageKey ?? 'home', l.code)} hreflang={l.hreflang[0]} lang={l.htmlLang} aria-current={l.code === locale ? 'true' : undefined}>{l.name}</a></li>
+          ))}
+        </ul>
+      </details>
+      <a class="nav-cta" href={appStoreUrl(locale)} rel="noopener">{ui.downloadShort}</a>
+    </nav>
+  </div>
+</header>

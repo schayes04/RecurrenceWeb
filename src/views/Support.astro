@@ -1,0 +1,21 @@
+---
+import PageHead from '../components/PageHead.astro';
+import Faq from '../components/Faq.astro';
+import { pathFor } from '../i18n/routes';
+import { UI } from '../i18n/ui';
+import type { Locale } from '../i18n/locales';
+import type { SiteContent } from '../content/types';
+
+interface Props { locale: Locale; c: SiteContent }
+const { locale, c } = Astro.props;
+const s = c.support;
+const ui = UI[locale];
+---
+<PageHead locale={locale} title={s.h1} lead={s.intro} crumbs={[{ name: ui.nav.support, path: pathFor('support', locale) }]} />
+<section class="section">
+  <div class="container support">
+    <h2>{s.faqTitle}</h2>
+    <Faq items={[...s.faq, s.contact]} />
+    <p class="policy-links"><a href={pathFor('policies', locale)}>{ui.footer.policies}</a></p>
+  </div>
+</section>
