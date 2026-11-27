@@ -164,7 +164,6 @@ export interface SiteContent {
   compare: Record<CompetitorId, CompareContent>;
   support: SupportContent;
   press: PressContent;
-  policies: PoliciesContent;
   /** Free tools. Locales without their own copy show the English tools, noindex. */
   tools?: ToolsContent;
   /** Alt text for each screenshot. */

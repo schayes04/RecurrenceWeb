@@ -1,6 +1,5 @@
-// Korean copy, written from en-US. Friendly 해요체 like the app; the policies use
-// formal 합니다체, as Korean legal text does. Task names, tabs and settings use
-// the app's own Korean strings.
+// Korean copy, written from en-US. Friendly 해요체 like the app. Task names,
+// tabs and settings use the app's own Korean strings.
 
 import type { SiteContent } from './types';
 import enUS from './en-US';
@@ -9,13 +8,13 @@ import tools from './tools/ko';
 const ko: SiteContent = {
   home: {
     meta: {
-      title: 'Recurrence: 반복 작업 관리와 리마인더 (iPhone, iPad, Mac)',
-      description: '집안일, 공과금, 반려동물 약, 집 관리까지. Recurrence는 반복 작업의 기한을 알려 주고, 할 때마다 기록을 남겨요. 무료로 시작할 수 있어요.',
+      title: '반복 할일: 반복 작업 관리와 리마인더 (iPhone, iPad, Mac)',
+      description: '집안일, 공과금, 반려동물 약, 집 관리까지. 반복 할일 앱은 반복 작업의 기한을 알려 주고, 할 때마다 기록을 남겨요. 무료로 시작할 수 있어요.',
     },
     heroAccentBefore: '',
     heroAccent: '반복되는 할 일',
     heroAccentAfter: '을 놓치지 마세요',
-    intro: '집안일, 공과금, 반려동물 약, 집 관리. Recurrence는 할 때가 되면 알려 주고, 언제 했는지 모두 기억해요.',
+    intro: '집안일, 공과금, 반려동물 약, 집 관리. 반복 할일 앱은 할 때가 되면 알려 주고, 언제 했는지 모두 기억해요.',
     useCasesTitle: '반복되는 모든 일을 하나의 앱에서',
     useCasesIntro: '쓰레기 버리는 날부터 1년에 한 번 동물병원 검진까지, 작업마다 자체 일정과 기록이 있어요.',
     historyKicker: '기록',
@@ -34,7 +33,7 @@ const ko: SiteContent = {
     freeBody: '작업 5개까지는 무료예요. Recurrence Premium을 이용하면 작업을 무제한으로 만들고 공유할 수 있어요. 월간 또는 연간 구독, 또는 한 번 구입으로 평생 이용하는 방식 중에서 고를 수 있어요.',
     faqTitle: '자주 묻는 질문',
     faq: [
-      { q: 'Recurrence는 할 일 목록과 무엇이 다른가요?', a: '할 일 목록은 체크하는 순간 그 일을 잊어버려요. Recurrence는 다음 일정을 잡고 완료할 때마다 메모와 함께 기록을 남기므로, 마지막으로 언제 했는지 항상 알 수 있어요.' },
+      { q: '반복 할일 앱은 할 일 목록과 무엇이 다른가요?', a: '할 일 목록은 체크하는 순간 그 일을 잊어버려요. 반복 할일 앱은 다음 일정을 잡고 완료할 때마다 메모와 함께 기록을 남기므로, 마지막으로 언제 했는지 항상 알 수 있어요.' },
       { q: '가족과 작업을 공유할 수 있나요?', a: '네. 어떤 작업이든 iCloud로 공유할 수 있고, 초대받은 사람도 완료 표시를 할 수 있어요. 각 작업의 기록에서 누가 언제 완료했는지 볼 수 있어요.' },
       { q: '작업을 놓치면 어떻게 되나요?', a: '‘기한 지남’으로 옮겨지고 계속 알려 드려요. 할 때 다시 시작하면 되는 작업은 ‘마지막 완료부터’를 선택하면 놓친 주가 쌓이지 않아요.' },
     ],
@@ -42,11 +41,11 @@ const ko: SiteContent = {
 
   features: {
     meta: {
-      title: '기능: 반복 일정, 알림, 기록 | Recurrence',
-      description: '유연한 반복 일정, 마감 전후 알림, 메모가 포함된 완료 기록, 위젯, iCloud 공유, iPhone·iPad·Mac 동기화까지. Recurrence의 기능을 소개해요.',
+      title: '기능: 반복 일정, 알림, 기록 | 반복 할일',
+      description: '유연한 반복 일정, 마감 전후 알림, 메모가 포함된 완료 기록, 위젯, iCloud 공유, iPhone·iPad·Mac 동기화까지. 반복 할일 앱의 기능을 소개해요.',
     },
     h1: '반복되는 일을 챙기는 데 필요한 모든 것',
-    intro: 'Recurrence는 한 가지 생각에서 시작했어요. 반복 작업은 결코 완전히 끝나지 않아요. 다시 돌아오기 때문에, 마지막으로 언제 했는지 아는 것이 도움이 돼요.',
+    intro: '반복 할일 앱은 한 가지 생각에서 시작했어요. 반복 작업은 결코 완전히 끝나지 않아요. 다시 돌아오기 때문에, 마지막으로 언제 했는지 아는 것이 도움이 돼요.',
     sections: [
       {
         title: '원하는 일정으로 반복',
@@ -77,20 +76,20 @@ const ko: SiteContent = {
 
   useCasesHub: {
     meta: {
-      title: '집안일, 공과금, 반려동물 관리까지 | Recurrence',
-      description: 'Recurrence로 관리할 수 있는 것들: 집안일, 공과금, 반려동물 약, 집과 자동차 관리, 식물, 셀프 케어, 가족 작업을 바로 쓸 수 있는 목록과 함께 소개해요.',
+      title: '집안일, 공과금, 반려동물 관리까지 | 반복 할일',
+      description: '반복 할일 앱으로 관리할 수 있는 것들: 집안일, 공과금, 반려동물 약, 집과 자동차 관리, 식물, 셀프 케어, 가족 작업을 바로 쓸 수 있는 목록과 함께 소개해요.',
     },
     h1: '무엇을 챙기고 싶으세요?',
-    intro: 'Recurrence는 반복되는 일이라면 무엇이든 관리할 수 있어요. 가장 많이 쓰는 방법을 바로 시작할 수 있는 목록과 함께 소개해요.',
+    intro: '반복 할일 앱은 반복되는 일이라면 무엇이든 관리할 수 있어요. 가장 많이 쓰는 방법을 바로 시작할 수 있는 목록과 함께 소개해요.',
   },
 
   useCases: {
     chores: {
-      meta: { title: '집안일 관리 앱과 청소 루틴 리마인더 | Recurrence', description: '쓰레기 버리기, 빨래, 청소를 챙기세요. Recurrence는 반복되는 집안일을 관리하고, 할 때가 되면 알려 주며, 각각 마지막으로 언제 했는지 보여 줘요.' },
+      meta: { title: '집안일 관리 앱과 청소 루틴 리마인더 | 반복 할일', description: '쓰레기 버리기, 빨래, 청소를 챙기세요. 반복 할일 앱은 반복되는 집안일을 관리하고, 할 때가 되면 알려 주며, 각각 마지막으로 언제 했는지 보여 줘요.' },
       name: '집안일',
       blurb: '쓰레기, 빨래, 청소',
       h1: '마지막으로 언제 했는지 기억하는 집안일 관리',
-      intro: '쓰레기 버리는 날처럼 정해진 요일에 하는 집안일도 있고, 침구 세탁처럼 가끔씩 하면 되는 일도 있어요. Recurrence는 둘 다 관리하고 기록을 남기므로 아무도 추측할 필요가 없어요.',
+      intro: '쓰레기 버리는 날처럼 정해진 요일에 하는 집안일도 있고, 침구 세탁처럼 가끔씩 하면 되는 일도 있어요. 반복 할일 앱은 둘 다 관리하고 기록을 남기므로 아무도 추측할 필요가 없어요.',
       sampleTitle: '집안일 시작 목록',
       sample: [
         { name: '쓰레기 버리기', schedule: '매주 목요일' },
@@ -107,7 +106,7 @@ const ko: SiteContent = {
       related: ['family', 'home-maintenance', 'plants'],
     },
     bills: {
-      meta: { title: '공과금·구독 결제일 알림 앱 | Recurrence', description: '월세, 카드 대금, 갱신일을 놓치지 마세요. Recurrence는 납부일 전에 알려 주고, 결제할 때마다 기록을 남겨요. 금액이나 승인 번호도 메모할 수 있어요.' },
+      meta: { title: '공과금·구독 결제일 알림 앱 | 반복 할일', description: '월세, 카드 대금, 갱신일을 놓치지 마세요. 반복 할일 앱은 납부일 전에 알려 주고, 결제할 때마다 기록을 남겨요. 금액이나 승인 번호도 메모할 수 있어요.' },
       name: '공과금과 구독',
       blurb: '월세, 카드 대금, 갱신',
       h1: '납부일 전에 알림, 낸 후에는 기록',
@@ -127,11 +126,11 @@ const ko: SiteContent = {
       related: ['family', 'home-maintenance', 'car-maintenance'],
     },
     pets: {
-      meta: { title: '반려동물 약 알림과 케어 관리 | Recurrence', description: '심장사상충 약, 벼룩·진드기 약, 미용, 동물병원 검진을 잊지 마세요. Recurrence는 일정에 맞춰 알려 주고, 투약과 검진을 메모와 함께 기록해요.' },
+      meta: { title: '반려동물 약 알림과 케어 관리 | 반복 할일', description: '심장사상충 약, 벼룩·진드기 약, 미용, 동물병원 검진을 잊지 마세요. 반복 할일 앱은 일정에 맞춰 알려 주고, 투약과 검진을 메모와 함께 기록해요.' },
       name: '반려동물 케어',
       blurb: '약, 미용, 동물병원',
       h1: '반려동물 케어 알림, 투약 기록까지',
-      intro: '매달 먹이는 약, 몇 주마다 하는 미용, 1년에 한 번 하는 검진은 놓치기 쉬워요. Recurrence가 알려 주고 하나하나 기록하므로, 마지막 투약일을 수의사에게 정확히 말할 수 있어요.',
+      intro: '매달 먹이는 약, 몇 주마다 하는 미용, 1년에 한 번 하는 검진은 놓치기 쉬워요. 반복 할일 앱이 알려 주고 하나하나 기록하므로, 마지막 투약일을 수의사에게 정확히 말할 수 있어요.',
       sampleTitle: '반려동물 케어 시작 목록',
       sample: [
         { name: '심장사상충 약', schedule: '매월 1일' },
@@ -148,11 +147,11 @@ const ko: SiteContent = {
       related: ['family', 'chores', 'self-care'],
     },
     'home-maintenance': {
-      meta: { title: '집 관리 앱과 유지보수 알림 | Recurrence', description: '에어 필터, 정수기 필터, 화재경보기 점검, 계절별 작업을 관리하세요. Recurrence는 집 관리할 때가 되면 알려 주고, 모든 작업을 기록해 둬요.' },
+      meta: { title: '집 관리 앱과 유지보수 알림 | 반복 할일', description: '에어 필터, 정수기 필터, 화재경보기 점검, 계절별 작업을 관리하세요. 반복 할일 앱은 집 관리할 때가 되면 알려 주고, 모든 작업을 기록해 둬요.' },
       name: '집 관리',
       blurb: '필터, 화재경보기, 계절 작업',
       h1: '1년에 몇 번만 하는 집 관리 작업을 위한 알림',
-      intro: '필터, 화재경보기, 계절별 작업은 잊어버릴 만큼 가끔 돌아와요. Recurrence는 마지막으로 한 날부터 세어서 다시 할 때가 되면 알려 줘요.',
+      intro: '필터, 화재경보기, 계절별 작업은 잊어버릴 만큼 가끔 돌아와요. 반복 할일 앱은 마지막으로 한 날부터 세어서 다시 할 때가 되면 알려 줘요.',
       sampleTitle: '집 관리 시작 목록',
       sample: [
         { name: '에어 필터 교체', schedule: '할 때마다 3개월 후' },
@@ -168,11 +167,11 @@ const ko: SiteContent = {
       related: ['chores', 'car-maintenance', 'bills'],
     },
     'car-maintenance': {
-      meta: { title: '자동차 정비 알림 앱 | Recurrence', description: '엔진 오일 교체, 타이어 공기압 점검, 와이퍼 교체를 잊지 마세요. Recurrence는 정비할 때가 되면 알려 주고, 주행 거리와 메모를 기록해요. 세차 일정도 함께요.' },
+      meta: { title: '자동차 정비 알림 앱 | 반복 할일', description: '엔진 오일 교체, 타이어 공기압 점검, 와이퍼 교체를 잊지 마세요. 반복 할일 앱은 정비할 때가 되면 알려 주고, 주행 거리와 메모를 기록해요. 세차 일정도 함께요.' },
       name: '자동차 정비',
       blurb: '엔진 오일, 타이어, 와이퍼',
       h1: '자동차 정비 알림, 주행 거리는 메모로',
-      intro: '엔진 오일 교체, 타이어 점검, 와이퍼 교체는 주기가 제각각이에요. Recurrence는 한곳에서 관리하고 지난번에 무엇을 했는지 기억해요.',
+      intro: '엔진 오일 교체, 타이어 점검, 와이퍼 교체는 주기가 제각각이에요. 반복 할일 앱은 한곳에서 관리하고 지난번에 무엇을 했는지 기억해요.',
       sampleTitle: '자동차 정비 시작 목록',
       sample: [
         { name: '엔진 오일 교체', schedule: '할 때마다 6개월 후' },
@@ -189,11 +188,11 @@ const ko: SiteContent = {
       related: ['home-maintenance', 'bills', 'family'],
     },
     plants: {
-      meta: { title: '식물 물 주기 알림 앱 | Recurrence', description: '식물마다 각자의 일정으로 물을 주세요. Recurrence는 물 줄 때가 되면 알려 주고, 마지막으로 물 준 날부터 세며, 누가 물을 줬는지도 보여 줘요.' },
+      meta: { title: '식물 물 주기 알림 앱 | 반복 할일', description: '식물마다 각자의 일정으로 물을 주세요. 반복 할일 앱은 물 줄 때가 되면 알려 주고, 마지막으로 물 준 날부터 세며, 누가 물을 줬는지도 보여 줘요.' },
       name: '식물과 정원',
       blurb: '물 주기, 비료, 분갈이',
       h1: '마지막으로 물 준 날부터 세는 물 주기 알림',
-      intro: '식물은 달력대로 자라지 않아요. Recurrence는 마지막으로 물을 준 날로부터 정해진 기간 후에 알려 주므로, 물을 늦게 주면 다음 일정도 그만큼 미뤄져요.',
+      intro: '식물은 달력대로 자라지 않아요. 반복 할일 앱은 마지막으로 물을 준 날로부터 정해진 기간 후에 알려 주므로, 물을 늦게 주면 다음 일정도 그만큼 미뤄져요.',
       sampleTitle: '식물 시작 목록',
       sample: [
         { name: '화분에 물 주기', schedule: '할 때마다 1주 후' },
@@ -207,11 +206,11 @@ const ko: SiteContent = {
       related: ['chores', 'family', 'home-maintenance'],
     },
     'self-care': {
-      meta: { title: '셀프 케어 알림: 머리 자르기, 치과 검진 등 | Recurrence', description: '머리 자르기, 치과 검진, 칫솔 교체, 매일 먹는 비타민을 잊지 마세요. Recurrence는 일정에 맞춰 알려 주고, 마지막으로 언제 갔는지 기록해요.' },
+      meta: { title: '셀프 케어 알림: 머리 자르기, 치과 검진 등 | 반복 할일', description: '머리 자르기, 치과 검진, 칫솔 교체, 매일 먹는 비타민을 잊지 마세요. 반복 할일 앱은 일정에 맞춰 알려 주고, 마지막으로 언제 갔는지 기록해요.' },
       name: '셀프 케어',
       blurb: '머리, 치과, 비타민',
       h1: '미루기 쉬운 일정을 위한 셀프 케어 알림',
-      intro: '6주마다 머리 자르기, 1년에 두 번 치과, 3개월마다 칫솔 교체. Recurrence가 날짜를 기억하니 따로 기억할 필요가 없어요.',
+      intro: '6주마다 머리 자르기, 1년에 두 번 치과, 3개월마다 칫솔 교체. 반복 할일 앱이 날짜를 기억하니 따로 기억할 필요가 없어요.',
       sampleTitle: '셀프 케어 시작 목록',
       sample: [
         { name: '머리 자르기', schedule: '할 때마다 6주 후' },
@@ -228,7 +227,7 @@ const ko: SiteContent = {
       related: ['pets', 'chores', 'bills'],
     },
     family: {
-      meta: { title: '가족과 함께 쓰는 할 일·집안일 공유 앱 | Recurrence', description: 'iCloud로 가족과 반복 작업을 공유하세요. 누구나 완료 표시를 할 수 있고, 각 작업의 기록에서 누가 언제 했는지 볼 수 있어요. 집안일 분담에도 좋아요.' },
+      meta: { title: '가족과 함께 쓰는 할 일·집안일 공유 앱 | 반복 할일', description: 'iCloud로 가족과 반복 작업을 공유하세요. 누구나 완료 표시를 할 수 있고, 각 작업의 기록에서 누가 언제 했는지 볼 수 있어요. 집안일 분담에도 좋아요.' },
       name: '가족 공유 작업',
       blurb: '누가 언제 했는지 확인',
       h1: '온 가족이 함께 쓰는 반복 작업',
@@ -240,7 +239,7 @@ const ko: SiteContent = {
         { name: '심장사상충 약', schedule: '매월 1일' },
       ],
       points: [
-        { title: 'iCloud로 공유', body: 'iCloud 공유로 가족을 어떤 작업에든 초대하세요. Recurrence와 iCloud 계정만 있으면 돼요.' },
+        { title: 'iCloud로 공유', body: 'iCloud 공유로 가족을 어떤 작업에든 초대하세요. 반복 할일 앱과 iCloud 계정만 있으면 돼요.' },
         { title: '누가 했는지 확인', body: '공유 작업의 완료 기록마다 누가 완료 표시를 했는지 보여 줘요.' },
         { title: '모두에게 알림', body: '각자 자신에게 맞는 알림을 설정해요.' },
       ],
@@ -255,18 +254,18 @@ const ko: SiteContent = {
 
   support: {
     meta: {
-      title: '지원 및 도움말 | Recurrence',
-      description: 'Recurrence 사용 중 궁금한 점이 있나요? 동기화, 공유, 알림, 위젯, Premium에 관한 자주 묻는 질문의 답변과 문의 방법을 안내해요.',
+      title: '지원 및 도움말 | 반복 할일',
+      description: '반복 할일 앱 사용 중 궁금한 점이 있나요? 동기화, 공유, 알림, 위젯, Premium에 관한 자주 묻는 질문의 답변과 문의 방법을 안내해요.',
     },
     h1: '무엇을 도와드릴까요?',
-    intro: 'Recurrence에 관해 자주 묻는 질문의 답변이에요.',
+    intro: '반복 할일 앱에 관해 자주 묻는 질문의 답변이에요.',
     contact: { q: '다른 질문이 있으신가요?', a: 'support@shayesapps.com으로 이메일을 보내 주세요.' },
     faqTitle: '자주 묻는 질문',
     faq: [
-      { q: '기기 간에 작업이 동기화되지 않아요.', a: 'Recurrence는 iCloud로 동기화돼요. 각 기기에서 같은 Apple 계정으로 iCloud에 로그인했는지, 인터넷에 연결되어 있는지, iCloud 저장 공간이 가득 차지 않았는지 확인하세요. 또한 설정 앱의 사용자 이름 > iCloud에서 Recurrence가 iCloud를 사용할 수 있는지도 확인하세요. Recurrence의 설정 > iCloud에서 동기화 상태를 볼 수 있어요. 그래도 동기화되지 않으면 그 화면에서 ‘Share Sync Report’를 탭해 보고서를 보내 주세요.' },
-      { q: '다른 사람과 작업을 공유하려면 어떻게 하나요?', a: '목록에서 작업을 길게 누르고 ‘공유’를 선택하거나, 작업 상단의 공유 버튼을 탭하세요. 초대할 사람과, 변경할 수 있게 할지 보기만 하게 할지 선택하세요. 초대받은 사람에게는 Recurrence와 iCloud 계정이 필요해요. 공유를 중단하려면 같은 메뉴를 다시 여세요. 공유된 작업을 삭제하면 모든 사람에게서 삭제돼요.' },
-      { q: '알림이 오지 않아요.', a: '먼저 설정 앱의 ‘알림’에서 Recurrence 알림이 허용되어 있는지, 집중 모드가 알림을 막고 있지 않은지 확인하세요. Recurrence의 설정 > 알림에서 권한이 켜져 있는지 볼 수 있어요. 각 작업은 편집 화면의 알림 섹션에서 자체 알림(마감 전, 당일, 기한 지남)을 설정할 수 있어요. 설정 > 기본값 > 알림에서는 새 작업에 기본으로 적용할 알림을 정해요. iOS는 앱이 미리 예약할 수 있는 알림 수를 제한하므로, 알림이 계속 오도록 가끔 Recurrence를 열어 주세요.' },
-      { q: 'Premium 구입을 복원하려면 어떻게 하나요?', a: 'Recurrence에서 설정으로 이동해 Recurrence Premium 배너의 ‘살펴보기’를 탭한 다음, 화면 하단의 ‘복원’을 탭하세요. Premium을 구입한 Apple 계정으로 로그인되어 있는지 확인하세요.' },
+      { q: '기기 간에 작업이 동기화되지 않아요.', a: '반복 할일 앱은 iCloud로 동기화돼요. 각 기기에서 같은 Apple 계정으로 iCloud에 로그인했는지, 인터넷에 연결되어 있는지, iCloud 저장 공간이 가득 차지 않았는지 확인하세요. 또한 설정 앱의 사용자 이름 > iCloud에서 반복 할일 앱이 iCloud를 사용할 수 있는지도 확인하세요. 반복 할일 앱의 설정 > iCloud에서 동기화 상태를 볼 수 있어요. 그래도 동기화되지 않으면 그 화면에서 ‘Share Sync Report’를 탭해 보고서를 보내 주세요.' },
+      { q: '다른 사람과 작업을 공유하려면 어떻게 하나요?', a: '목록에서 작업을 길게 누르고 ‘공유’를 선택하거나, 작업 상단의 공유 버튼을 탭하세요. 초대할 사람과, 변경할 수 있게 할지 보기만 하게 할지 선택하세요. 초대받은 사람에게는 반복 할일 앱과 iCloud 계정이 필요해요. 공유를 중단하려면 같은 메뉴를 다시 여세요. 공유된 작업을 삭제하면 모든 사람에게서 삭제돼요.' },
+      { q: '알림이 오지 않아요.', a: '먼저 설정 앱의 ‘알림’에서 반복 할일 앱 알림이 허용되어 있는지, 집중 모드가 알림을 막고 있지 않은지 확인하세요. 반복 할일 앱의 설정 > 알림에서 권한이 켜져 있는지 볼 수 있어요. 각 작업은 편집 화면의 알림 섹션에서 자체 알림(마감 전, 당일, 기한 지남)을 설정할 수 있어요. 설정 > 기본값 > 알림에서는 새 작업에 기본으로 적용할 알림을 정해요. iOS는 앱이 미리 예약할 수 있는 알림 수를 제한하므로, 알림이 계속 오도록 가끔 반복 할일 앱을 열어 주세요.' },
+      { q: 'Premium 구입을 복원하려면 어떻게 하나요?', a: '반복 할일 앱에서 설정으로 이동해 Recurrence Premium 배너의 ‘살펴보기’를 탭한 다음, 화면 하단의 ‘복원’을 탭하세요. Premium을 구입한 Apple 계정으로 로그인되어 있는지 확인하세요.' },
       { q: 'Premium을 먼저 체험해 볼 수 있나요?', a: '네. Recurrence Premium에는 무료 체험이 포함되어 있으며, 구독하기 전에 App Store에 표시돼요.' },
       { q: 'Premium은 내 모든 기기에서 사용할 수 있나요?', a: '네. 한 번 구입하면 iPhone, iPad, Mac에서 Premium을 사용할 수 있고, 가족 공유로 가족과도 함께 쓸 수 있어요.' },
       { q: '구독은 어떻게 취소하나요?', a: '구독은 Apple 계정 설정에서 관리하며, 다음 갱신 최소 24시간 전까지 언제든지 취소할 수 있어요.' },
@@ -275,11 +274,11 @@ const ko: SiteContent = {
 
   press: {
     meta: {
-      title: '보도 자료 | Recurrence',
-      description: 'Recurrence 보도 자료 키트: 앱 소개, 주요 정보, 스크린샷, 앱 아이콘, 그리고 기자와 리뷰어를 위한 연락처를 한곳에 모았어요.',
+      title: '보도 자료 | 반복 할일',
+      description: '반복 할일 앱 보도 자료 키트: 앱 소개, 주요 정보, 스크린샷, 앱 아이콘, 그리고 기자와 리뷰어를 위한 연락처를 한곳에 모았어요.',
     },
     h1: '보도 자료',
-    intro: 'Recurrence는 독립 개발사 Shayes Apps가 만든 iPhone, iPad, Mac용 반복 작업 관리 앱이에요. 반복되는 작업의 기한을 알려 주고 완료할 때마다 기록을 남겨요.',
+    intro: '반복 할일 앱은 독립 개발사 Shayes Apps가 만든 iPhone, iPad, Mac용 반복 작업 관리 앱이에요. 반복되는 작업의 기한을 알려 주고 완료할 때마다 기록을 남겨요.',
     facts: [
       { label: '개발사', value: 'Shayes Apps' },
       { label: '플랫폼', value: 'iPhone, iPad, Mac' },
@@ -294,39 +293,11 @@ const ko: SiteContent = {
     contactBody: 'support@shayesapps.com',
   },
 
-  policies: {
-    meta: { title: '개인정보 처리방침 및 이용약관 | Recurrence', description: 'Recurrence는 사용자를 추적하지 않으며 개인을 식별할 수 있는 정보를 수집하지 않아요. 작업은 iCloud로 동기화돼요. Premium 구독 약관도 확인하세요.' },
-    h1: '개인정보 처리방침 및 이용약관',
-    docs: [
-      {
-        id: 'privacy',
-        title: '개인정보 처리방침',
-        updated: '2026년 11월 26일',
-        sections: [
-          { title: '간단명료하게', body: ['저희는 여러분의 정보와 개인정보를 소중히 여기기 때문에 처리방침을 간단명료하게 작성했습니다. Recurrence는 사용자를 추적하지 않으며 개인을 식별할 수 있는 정보를 수집하지 않습니다. 저희는 의존하는 제3자 서비스의 수를 최소화하기 위해 최선을 다합니다.'] },
-          { title: '결제', body: ['앱 내 구입 및 구독 결제는 App Store를 통해 이루어지므로 저희는 여러분의 신용카드 정보에 접근할 수 없습니다. Recurrence에는 RevenueCat SDK가 포함되어 있습니다. RevenueCat의 정책을 참고해 주십시오.'] },
-          { title: '동기화 및 공유', body: ['데이터 동기화에는 iCloud(Apple의 CloudKit)를 사용합니다. CloudKit은 완전히 암호화되며 모든 데이터는 Apple의 인프라에 저장됩니다. 여러분이 작업을 공유하기로 선택한 사람을 제외하고는 여러분 외에 누구도 데이터에 접근할 수 없습니다.'] },
-          { title: '환불 요청', body: ['Recurrence를 사용하고 앱 내 구입을 하는 경우, 환불 요청 처리의 일환으로 저희가 구입한 콘텐츠의 사용 및 이용에 관한 데이터를 Apple과 공유하는 데 동의하는 것으로 간주됩니다. 이 정보에는 구입한 콘텐츠에 접근하고 이를 이용한 방식에 관한 세부 정보가 포함될 수 있습니다. 이 데이터를 공유하는 목적은 Apple이 환불 요청에 대해 충분한 정보를 바탕으로 결정을 내릴 수 있도록 돕기 위함입니다. 저희는 이러한 데이터 공유가 Apple의 정책을 준수하고 요청 처리에 필요한 범위 내에서만 이루어지도록 합니다.'] },
-          { title: '문의', body: ['개인정보 처리방침에 관한 질문이나 우려 사항이 있으시면 support@shayesapps.com으로 문의해 주십시오.'] },
-        ],
-      },
-      {
-        id: 'terms',
-        title: '이용약관',
-        updated: '2026년 11월 26일',
-        sections: [
-          { title: 'Premium 구독 약관', body: ['구독은 현재 기간이 끝나기 최소 24시간 전에 취소하지 않으면 자동으로 갱신됩니다. Apple 계정 설정에서 언제든지 취소할 수 있습니다. 구독을 구입하면 무료 체험 기간 중 사용하지 않은 부분은 소멸됩니다.'] },
-          { title: '문의', body: ['이용약관에 관한 질문이나 우려 사항이 있으시면 support@shayesapps.com으로 문의해 주십시오.'] },
-        ],
-      },
-    ],
-  },
-
   tools,
   screenAlt: {
-    home: 'iPhone의 Recurrence 작업 목록(기한 지남, 오늘, 예정된 작업)',
+    home: 'iPhone의 반복 할일 앱 작업 목록(기한 지남, 오늘, 예정된 작업)',
     history: '날짜와 메모가 표시된 작업의 완료 기록',
-    widgets: 'iPhone 홈 화면의 Recurrence 위젯',
+    widgets: 'iPhone 홈 화면의 반복 할일 위젯',
     add: '마지막 완료 후 4주마다 반복하는 작업을 편집하는 화면',
   },
 

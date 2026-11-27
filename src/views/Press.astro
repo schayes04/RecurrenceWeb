@@ -5,6 +5,7 @@ import { pathFor } from '../i18n/routes';
 import type { Locale } from '../i18n/locales';
 import type { SiteContent } from '../content/types';
 import icon from '../assets/brand/icon.png';
+import { UI } from '../i18n/ui';
 
 interface Props { locale: Locale; c: SiteContent }
 const { locale, c } = Astro.props;
@@ -22,7 +23,7 @@ const p = c.press;
         <h2 style="margin-top:48px;font-size:24px">{p.contactTitle}</h2>
         <p class="prose"><a href="mailto:support@shayesapps.com">{p.contactBody}</a></p>
       </div>
-      <div class="shot"><Image src={icon} alt="Recurrence app icon" width={220} height={220} style="border-radius:48px" /></div>
+      <div class="shot"><Image src={icon} alt={UI[locale].appName} width={220} height={220} style="border-radius:48px" /></div>
     </div>
   </div>
 </section>

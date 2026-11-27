@@ -1,12 +1,12 @@
 // Brazilian Portuguese copy for the free tools, written from tools/en-US.ts.
-// "Você", and "o Recurrence" as in the rest of the pt-BR site.
+// "Você", and "o app Tarefas" as in the rest of the pt-BR site.
 
 import type { ToolsContent } from '../types';
 
 const tools: ToolsContent = {
   howOften: {
     meta: {
-      title: 'Com que frequência limpar, trocar ou revisar? | Recurrence',
+      title: 'Com que frequência limpar, trocar ou revisar? | Tarefas',
       description: 'Com que frequência trocar o filtro de ar, lavar a roupa de cama, trocar a escova de dentes ou dar o antipulgas. Os intervalos mais comuns, num só lugar.',
     },
     name: 'Com que frequência devo…?',
@@ -83,11 +83,11 @@ const tools: ToolsContent = {
     nextDate: 'Próxima data',
     disclaimer: 'São intervalos comuns, não regras. Se o fabricante, o veterinário, o dentista ou o médico disserem outra coisa, siga a orientação deles.',
     ctaTitle: 'Pare de tentar lembrar quando foi a última vez',
-    ctaBody: 'Adicione qualquer uma dessas tarefas ao Recurrence. Ele avisa quando cada uma vence e guarda o histórico de todas as vezes que você fez.',
+    ctaBody: 'Adicione qualquer uma dessas tarefas ao app Tarefas. Ele avisa quando cada uma vence e guarda o histórico de todas as vezes que você fez.',
   },
   nextDue: {
     meta: {
-      title: 'Calculadora de datas: quando vence de novo? | Recurrence',
+      title: 'Calculadora de datas: quando vence de novo? | Tarefas',
       description: 'Informe quando você fez algo pela última vez e de quanto em quanto tempo se repete para ver a próxima data e as seguintes. Grátis, privado, sem cadastro.',
     },
     name: 'Calculadora de próxima data',
@@ -123,8 +123,8 @@ const tools: ToolsContent = {
     popularTitle: 'O que mais se acompanha',
     popularBody: 'Toque em um item para preencher o intervalo comum.',
     guideLink: 'Ver o guia completo “Com que frequência”',
-    ctaTitle: 'Deixe o Recurrence fazer as contas',
-    ctaBody: 'Marque uma tarefa como feita e o Recurrence calcula a próxima data, avisa quando vence e lembra cada vez que você fez.',
+    ctaTitle: 'Deixe o app Tarefas fazer as contas',
+    ctaBody: 'Marque uma tarefa como feita e o app Tarefas calcula a próxima data, avisa quando vence e lembra cada vez que você fez.',
     howTitle: 'Como a próxima data é calculada',
     howSteps: [
       'Começa no dia em que você fez pela última vez.',
@@ -132,13 +132,13 @@ const tools: ToolsContent = {
       'Se esse dia não existir, como 30 de fevereiro, a data passa para o último dia do mês.',
       'As datas seguintes contam a partir da primeira, então algo feito no dia 31 fica sempre no fim do mês.',
     ],
-    howNote: 'O Recurrence pode repetir uma tarefa assim, a partir da última vez, ou num calendário fixo, como toda quinta-feira ou todo dia 1º. Cada tarefa usa o que combinar melhor.',
+    howNote: 'O app Tarefas pode repetir uma tarefa assim, a partir da última vez, ou num calendário fixo, como toda quinta-feira ou todo dia 1º. Cada tarefa usa o que combinar melhor.',
     faqTitle: 'Sobre a calculadora',
     faq: [
       { q: 'Coloco o dia em que vencia ou o dia em que fiz?', a: 'O dia em que você realmente fez. Contar a partir dele mantém o mesmo espaço entre uma vez e outra, que é o que importa para filtros, remédios e consultas.' },
       { q: 'O que acontece nos dias 29, 30 ou 31?', a: 'Se o mês seguinte for mais curto, a data passa para o último dia dele. 31 de janeiro mais um mês é 28 de fevereiro, ou 29 em ano bissexto. As datas seguintes voltam para o dia 31 quando o mês tiver.' },
       { q: 'O que eu digito fica salvo ou é enviado?', a: 'Não. As datas são calculadas no seu navegador. Nada é salvo nem enviado.' },
-      { q: 'Como recebo um lembrete quando vencer?', a: 'Adicione a tarefa ao Recurrence no iPhone, iPad ou Mac. Marque como feita a cada vez e o app calcula a próxima data, avisa você e guarda o histórico.' },
+      { q: 'Como recebo um lembrete quando vencer?', a: 'Adicione a tarefa ao app Tarefas no iPhone, iPad ou Mac. Marque como feita a cada vez e o app calcula a próxima data, avisa você e guarda o histórico.' },
     ],
   },
 };

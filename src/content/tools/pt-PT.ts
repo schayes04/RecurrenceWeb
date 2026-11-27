@@ -1,12 +1,12 @@
 // European Portuguese copy for the free tools, adapted from tools/pt-BR.ts.
-// Formal "a sua" without "você", and "a Recurrence", as in the rest of pt-PT.
+// Formal "a sua" without "você", and "a app Tarefas", as in the rest of pt-PT.
 
 import type { ToolsContent } from '../types';
 
 const tools: ToolsContent = {
   howOften: {
     meta: {
-      title: 'Com que frequência limpar, mudar ou verificar? | Recurrence',
+      title: 'Com que frequência limpar, mudar ou verificar? | Tarefas',
       description: 'Com que frequência mudar o filtro de ar, lavar a roupa de cama, trocar a escova de dentes ou dar o desparasitante. Os intervalos habituais, num só sítio.',
     },
     name: 'Com que frequência devo…?',
@@ -83,11 +83,11 @@ const tools: ToolsContent = {
     nextDate: 'Próxima data',
     disclaimer: 'São intervalos habituais, não regras. Se o fabricante, o veterinário, o dentista ou o médico disserem outra coisa, siga a indicação deles.',
     ctaTitle: 'Deixe de tentar lembrar-se da última vez',
-    ctaBody: 'Adicione qualquer uma destas tarefas à Recurrence. A app avisa quando cada uma vence e guarda o histórico de todas as vezes que a fez.',
+    ctaBody: 'Adicione qualquer uma destas tarefas à app Tarefas. A app avisa quando cada uma vence e guarda o histórico de todas as vezes que a fez.',
   },
   nextDue: {
     meta: {
-      title: 'Calculadora de datas: quando volta a vencer? | Recurrence',
+      title: 'Calculadora de datas: quando volta a vencer? | Tarefas',
       description: 'Indique quando fez algo pela última vez e de quanto em quanto tempo se repete para ver a próxima data e as seguintes. Grátis, privado e sem registo.',
     },
     name: 'Calculadora da próxima data',
@@ -123,8 +123,8 @@ const tools: ToolsContent = {
     popularTitle: 'O que mais se acompanha',
     popularBody: 'Toque num item para preencher o intervalo habitual.',
     guideLink: 'Ver o guia completo «Com que frequência»',
-    ctaTitle: 'Deixe a Recurrence fazer as contas',
-    ctaBody: 'Marque uma tarefa como concluída e a Recurrence calcula a próxima data, avisa quando vence e lembra-se de cada vez que a fez.',
+    ctaTitle: 'Deixe a app Tarefas fazer as contas',
+    ctaBody: 'Marque uma tarefa como concluída e a app Tarefas calcula a próxima data, avisa quando vence e lembra-se de cada vez que a fez.',
     howTitle: 'Como é calculada a próxima data',
     howSteps: [
       'Começa no dia em que a fez pela última vez.',
@@ -132,13 +132,13 @@ const tools: ToolsContent = {
       'Se esse dia não existir, como 30 de fevereiro, a data passa para o último dia do mês.',
       'As datas seguintes contam a partir da primeira, por isso algo feito no dia 31 fica sempre no fim do mês.',
     ],
-    howNote: 'A Recurrence pode repetir uma tarefa assim, a partir da última vez, ou num calendário fixo, como todas as quintas-feiras ou no dia 1 de cada mês. Cada tarefa usa o que lhe for mais adequado.',
+    howNote: 'A app Tarefas pode repetir uma tarefa assim, a partir da última vez, ou num calendário fixo, como todas as quintas-feiras ou no dia 1 de cada mês. Cada tarefa usa o que lhe for mais adequado.',
     faqTitle: 'Sobre a calculadora',
     faq: [
       { q: 'Indico o dia em que vencia ou o dia em que a fiz?', a: 'O dia em que a fez de facto. Contar a partir daí mantém o mesmo intervalo entre cada vez, que é o que importa para filtros, medicamentos e consultas.' },
       { q: 'O que acontece nos dias 29, 30 ou 31?', a: 'Se o mês seguinte for mais curto, a data passa para o último dia desse mês. 31 de janeiro mais um mês é 28 de fevereiro, ou 29 num ano bissexto. As datas seguintes voltam ao dia 31 quando o mês o tiver.' },
       { q: 'O que escrevo fica guardado ou é enviado?', a: 'Não. As datas são calculadas no seu navegador. Nada é guardado nem enviado.' },
-      { q: 'Como recebo um lembrete quando vencer?', a: 'Adicione a tarefa à Recurrence no iPhone, iPad ou Mac. Marque-a como concluída de cada vez e a app calcula a próxima data, avisa-o e guarda o histórico.' },
+      { q: 'Como recebo um lembrete quando vencer?', a: 'Adicione a tarefa à app Tarefas no iPhone, iPad ou Mac. Marque-a como concluída de cada vez e a app calcula a próxima data, avisa-o e guarda o histórico.' },
     ],
   },
 };

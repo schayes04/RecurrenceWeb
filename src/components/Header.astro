@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import icon from '../assets/brand/icon.png';
 import { LOCALES, localeInfo, appStoreUrl, type Locale } from '../i18n/locales';
-import { pathFor, type PageKey } from '../i18n/routes';
+import { pathFor, isBuilt, type PageKey } from '../i18n/routes';
 import { UI } from '../i18n/ui';
 
 interface Props { locale: Locale; pageKey?: PageKey; variant: 'dark' | 'light' }
@@ -20,7 +20,7 @@ const links: { key: PageKey; label: string }[] = [
 <header class:list={['site-header', variant === 'dark' ? 'dark' : 'light']}>
   <div class="container bar">
     <a class="brand" href={pathFor('home', locale)}>
-      <Image src={icon} alt="" width={36} height={36} loading="eager" />Recurrence
+      <Image src={icon} alt="" width={36} height={36} loading="eager" />{ui.appName}
     </a>
     <nav class="nav" aria-label="Main">
       {links.map((l) => <a href={pathFor(l.key, locale)} aria-current={current(l.key)}>{l.label}</a>)}
@@ -31,7 +31,7 @@ const links: { key: PageKey; label: string }[] = [
         </summary>
         <ul>
           {LOCALES.map((l) => (
-            <li><a href={pathFor(pageKey ?? 'home', l.code)} hreflang={l.hreflang[0]} lang={l.htmlLang} aria-current={l.code === locale ? 'true' : undefined}>{l.name}</a></li>
+            <li><a href={pathFor(pageKey && isBuilt(pageKey, l.code) ? pageKey : 'home', l.code)} hreflang={l.hreflang[0]} lang={l.htmlLang} aria-current={l.code === locale ? 'true' : undefined}>{l.name}</a></li>
           ))}
         </ul>
       </details>

@@ -8,13 +8,13 @@ import tools from './tools/de';
 const de: SiteContent = {
   home: {
     meta: {
-      title: 'Recurrence: Wiederkehrende Aufgaben für iPhone, iPad & Mac',
-      description: 'Behalte Haushalt, Rechnungen, Haustiere und Wartung im Blick. Recurrence erinnert dich an wiederkehrende Aufgaben und merkt sich jedes Erledigen. Kostenlos starten.',
+      title: 'Aufgaben: wiederkehrende Aufgaben für iPhone, iPad & Mac',
+      description: 'Behalte Haushalt, Rechnungen, Haustiere und Wartung im Blick. „Aufgaben“ erinnert dich an wiederkehrende Aufgaben und merkt sich jedes Erledigen. Kostenlos starten.',
     },
     heroAccentBefore: 'Jede ',
     heroAccent: 'wiederkehrende Aufgabe',
     heroAccentAfter: ' im Griff',
-    intro: 'Haushalt, Rechnungen, Medikamente fürs Haustier und Wartung. Recurrence erinnert dich, wenn etwas fällig ist, und merkt sich jedes Mal, wann du es erledigt hast.',
+    intro: 'Haushalt, Rechnungen, Medikamente fürs Haustier und Wartung. „Aufgaben“ erinnert dich, wenn etwas fällig ist, und merkt sich jedes Mal, wann du es erledigt hast.',
     useCasesTitle: 'Eine App für alles, was sich wiederholt',
     useCasesIntro: 'Vom Mülltag bis zum jährlichen Tierarztbesuch: Jede Aufgabe hat ihren eigenen Zeitplan und Verlauf.',
     historyKicker: 'Verlauf',
@@ -33,7 +33,7 @@ const de: SiteContent = {
     freeBody: 'Bis zu 5 Aufgaben sind kostenlos. Recurrence Premium schaltet unbegrenzte und geteilte Aufgaben frei, als Monats- oder Jahresabo oder als einmaliger Kauf auf Lebenszeit.',
     faqTitle: 'Fragen',
     faq: [
-      { q: 'Was unterscheidet Recurrence von einer To-do-Liste?', a: 'Eine To-do-Liste vergisst eine Aufgabe, sobald du sie abhakst. Recurrence plant das nächste Mal und speichert jedes Erledigen mit Notizen, damit du immer weißt, wann du etwas zuletzt gemacht hast.' },
+      { q: 'Was unterscheidet „Aufgaben“ von einer To-do-Liste?', a: 'Eine To-do-Liste vergisst eine Aufgabe, sobald du sie abhakst. „Aufgaben“ plant das nächste Mal und speichert jedes Erledigen mit Notizen, damit du immer weißt, wann du etwas zuletzt gemacht hast.' },
       { q: 'Kann ich Aufgaben mit meiner Familie teilen?', a: 'Ja. Teile eine beliebige Aufgabe über iCloud, und die eingeladenen Personen können sie ebenfalls abhaken. Der Verlauf jeder Aufgabe zeigt, wer sie wann erledigt hat.' },
       { q: 'Was passiert, wenn ich eine Aufgabe verpasse?', a: 'Sie landet unter „Überfällig“ und erinnert dich weiter. Für Aufgaben, die einfach neu starten sollen, sobald du sie erledigst, wähle „Ab letzter Erledigung“. Dann stauen sich verpasste Wochen nicht.' },
     ],
@@ -41,11 +41,11 @@ const de: SiteContent = {
 
   features: {
     meta: {
-      title: 'Funktionen: Zeitpläne, Erinnerungen & Verlauf | Recurrence',
+      title: 'Funktionen: Zeitpläne, Erinnerungen & Verlauf | Aufgaben',
       description: 'Flexible Wiederholungen, Erinnerungen vor und nach der Fälligkeit, Verlauf mit Notizen, Widgets, Teilen per iCloud und Sync auf iPhone, iPad und Mac.',
     },
     h1: 'Alles, was du brauchst, um bei Wiederkehrendem den Überblick zu behalten',
-    intro: 'Recurrence beruht auf einer Idee: Eine wiederkehrende Aufgabe ist nie wirklich erledigt. Sie kommt wieder, und es hilft zu wissen, wann du sie zuletzt gemacht hast.',
+    intro: '„Aufgaben“ beruht auf einer Idee: Eine wiederkehrende Aufgabe ist nie wirklich erledigt. Sie kommt wieder, und es hilft zu wissen, wann du sie zuletzt gemacht hast.',
     sections: [
       {
         title: 'Wiederholen nach jedem Zeitplan',
@@ -76,20 +76,20 @@ const de: SiteContent = {
 
   useCasesHub: {
     meta: {
-      title: 'Haushalt, Rechnungen, Haustiere & mehr planen | Recurrence',
-      description: 'Ideen für Recurrence: Haushalt, Rechnungen, Medikamente fürs Haustier, Haus- und Autowartung, Pflanzen, Selbstfürsorge und Familienaufgaben, jeweils mit Startliste.',
+      title: 'Haushalt, Rechnungen, Haustiere & mehr planen | Aufgaben',
+      description: 'Ideen für „Aufgaben“: Haushalt, Rechnungen, Medikamente fürs Haustier, Haus- und Autowartung, Pflanzen, Selbstfürsorge und Familienaufgaben, jeweils mit Startliste.',
     },
     h1: 'Was willst du im Blick behalten?',
-    intro: 'Recurrence passt zu allem, was sich wiederholt. Hier sind die beliebtesten Einsatzbereiche, jeweils mit einer fertigen Liste zum Loslegen.',
+    intro: '„Aufgaben“ passt zu allem, was sich wiederholt. Hier sind die beliebtesten Einsatzbereiche, jeweils mit einer fertigen Liste zum Loslegen.',
   },
 
   useCases: {
     chores: {
-      meta: { title: 'Putzplan-App für wiederkehrende Hausarbeit | Recurrence', description: 'Behalte Mülltag, Wäsche und Putzen im Blick. Recurrence plant wiederkehrende Hausarbeit, erinnert dich bei Fälligkeit und zeigt, wann sie zuletzt erledigt wurde.' },
+      meta: { title: 'Putzplan-App für wiederkehrende Hausarbeit | Aufgaben', description: 'Behalte Mülltag, Wäsche und Putzen im Blick. „Aufgaben“ plant wiederkehrende Hausarbeit, erinnert dich bei Fälligkeit und zeigt, wann sie zuletzt erledigt wurde.' },
       name: 'Haushalt',
       blurb: 'Mülltag, Wäsche, Putzen',
       h1: 'Ein Putzplan, der sich merkt, wann du es zuletzt gemacht hast',
-      intro: 'Manche Hausarbeit hat einen festen Tag, wie der Müll am Donnerstag. Anderes muss einfach ab und zu sein, wie das Bettwäschewaschen. Recurrence kann beides und führt einen Verlauf, damit niemand raten muss.',
+      intro: 'Manche Hausarbeit hat einen festen Tag, wie der Müll am Donnerstag. Anderes muss einfach ab und zu sein, wie das Bettwäschewaschen. „Aufgaben“ kann beides und führt einen Verlauf, damit niemand raten muss.',
       sampleTitle: 'Eine Startliste für den Haushalt',
       sample: [
         { name: 'Müll rausbringen', schedule: 'Jeden Donnerstag' },
@@ -106,7 +106,7 @@ const de: SiteContent = {
       related: ['family', 'home-maintenance', 'plants'],
     },
     bills: {
-      meta: { title: 'Rechnungs-Erinnerung: App für Zahlungen & Abos | Recurrence', description: 'Verpasse keine Miete, Kreditkartenabrechnung oder Verlängerung. Recurrence erinnert dich vor der Fälligkeit und speichert jede Zahlung.' },
+      meta: { title: 'Rechnungs-Erinnerung: App für Zahlungen & Abos | Aufgaben', description: 'Verpasse keine Miete, Kreditkartenabrechnung oder Verlängerung. „Aufgaben“ erinnert dich vor der Fälligkeit und speichert jede Zahlung.' },
       name: 'Rechnungen und Abos',
       blurb: 'Miete, Kreditkarte, Verlängerungen',
       h1: 'Erinnerungen vor jeder Rechnung und ein Nachweis danach',
@@ -126,11 +126,11 @@ const de: SiteContent = {
       related: ['family', 'home-maintenance', 'car-maintenance'],
     },
     pets: {
-      meta: { title: 'Haustier-App: Erinnerung an Medikamente & Pflege | Recurrence', description: 'Denk an Herzwurm-Prophylaxe, Floh- und Zeckenmittel, Fellpflege und Tierarzt. Recurrence erinnert dich pünktlich und speichert jede Gabe mit Notizen.' },
+      meta: { title: 'Haustier-App: Erinnerung an Medikamente & Pflege | Aufgaben', description: 'Denk an Herzwurm-Prophylaxe, Floh- und Zeckenmittel, Fellpflege und Tierarzt. „Aufgaben“ erinnert dich pünktlich und speichert jede Gabe mit Notizen.' },
       name: 'Haustiere',
       blurb: 'Medikamente, Fellpflege, Tierarzt',
       h1: 'Erinnerungen fürs Haustier, mit einem Nachweis jeder Gabe',
-      intro: 'Monatliche Mittel, Fellpflege alle paar Wochen und die jährliche Kontrolle geraten leicht durcheinander. Recurrence erinnert dich und speichert jede Gabe, damit du dem Tierarzt genau sagen kannst, wann die letzte war.',
+      intro: 'Monatliche Mittel, Fellpflege alle paar Wochen und die jährliche Kontrolle geraten leicht durcheinander. „Aufgaben“ erinnert dich und speichert jede Gabe, damit du dem Tierarzt genau sagen kannst, wann die letzte war.',
       sampleTitle: 'Eine Startliste fürs Haustier',
       sample: [
         { name: 'Herzwurm-Prophylaxe', schedule: 'Monatlich am 1.' },
@@ -147,11 +147,11 @@ const de: SiteContent = {
       related: ['family', 'chores', 'self-care'],
     },
     'home-maintenance': {
-      meta: { title: 'Wartungsplan fürs Haus: App mit Erinnerungen | Recurrence', description: 'Behalte Luftfilter, Wasserfilter, Rauchmeldertests und saisonale Arbeiten im Blick. Recurrence erinnert dich bei Fälligkeit und führt ein vollständiges Protokoll.' },
+      meta: { title: 'Wartungsplan fürs Haus: App mit Erinnerungen | Aufgaben', description: 'Behalte Luftfilter, Wasserfilter, Rauchmeldertests und saisonale Arbeiten im Blick. „Aufgaben“ erinnert dich bei Fälligkeit und führt ein vollständiges Protokoll.' },
       name: 'Hauswartung',
       blurb: 'Filter, Rauchmelder, Saisonarbeiten',
       h1: 'Erinnerungen für Arbeiten am Haus, die nur ein paar Mal im Jahr anfallen',
-      intro: 'Filter, Rauchmelder und Saisonarbeiten kommen so selten, dass man sie vergisst. Recurrence zählt ab dem letzten Mal und sagt dir, wann es wieder so weit ist.',
+      intro: 'Filter, Rauchmelder und Saisonarbeiten kommen so selten, dass man sie vergisst. „Aufgaben“ zählt ab dem letzten Mal und sagt dir, wann es wieder so weit ist.',
       sampleTitle: 'Eine Startliste für die Hauswartung',
       sample: [
         { name: 'Luftfilter wechseln', schedule: '3 Monate nach dem Erledigen' },
@@ -167,11 +167,11 @@ const de: SiteContent = {
       related: ['chores', 'car-maintenance', 'bills'],
     },
     'car-maintenance': {
-      meta: { title: 'Auto-Wartung: App mit Erinnerungen | Recurrence', description: 'Denk an Ölwechsel, Reifendruck und neue Scheibenwischer. Recurrence erinnert dich, wenn die Autowartung fällig ist, und speichert Kilometerstand und Notizen.' },
+      meta: { title: 'Auto-Wartung: App mit Erinnerungen | Aufgaben', description: 'Denk an Ölwechsel, Reifendruck und neue Scheibenwischer. „Aufgaben“ erinnert dich, wenn die Autowartung fällig ist, und speichert Kilometerstand und Notizen.' },
       name: 'Autowartung',
       blurb: 'Ölwechsel, Reifen, Scheibenwischer',
       h1: 'Erinnerungen für die Autowartung, mit Kilometerstand in der Notiz',
-      intro: 'Ölwechsel, Reifendruck und neue Scheibenwischer haben unterschiedliche Abstände. Recurrence hält sie an einem Ort zusammen und merkt sich, was du zuletzt gemacht hast.',
+      intro: 'Ölwechsel, Reifendruck und neue Scheibenwischer haben unterschiedliche Abstände. „Aufgaben“ hält sie an einem Ort zusammen und merkt sich, was du zuletzt gemacht hast.',
       sampleTitle: 'Eine Startliste fürs Auto',
       sample: [
         { name: 'Ölwechsel', schedule: '6 Monate nach dem Erledigen' },
@@ -188,11 +188,11 @@ const de: SiteContent = {
       related: ['home-maintenance', 'bills', 'family'],
     },
     plants: {
-      meta: { title: 'Gieß-Erinnerung: App für Zimmerpflanzen | Recurrence', description: 'Gieße jede Pflanze nach ihrem eigenen Plan. Recurrence erinnert dich, wenn Pflanzen Wasser brauchen, zählt ab dem letzten Gießen und zeigt, wer gegossen hat.' },
+      meta: { title: 'Gieß-Erinnerung: App für Zimmerpflanzen | Aufgaben', description: 'Gieße jede Pflanze nach ihrem eigenen Plan. „Aufgaben“ erinnert dich, wenn Pflanzen Wasser brauchen, zählt ab dem letzten Gießen und zeigt, wer gegossen hat.' },
       name: 'Pflanzen und Garten',
       blurb: 'Gießen, Düngen, Umtopfen',
       h1: 'Gieß-Erinnerungen, die ab dem letzten Gießen zählen',
-      intro: 'Pflanzen halten sich nicht an den Kalender. Recurrence erinnert dich eine feste Zeit nach dem letzten Gießen, also verschiebt spätes Gießen auch das nächste Mal.',
+      intro: 'Pflanzen halten sich nicht an den Kalender. „Aufgaben“ erinnert dich eine feste Zeit nach dem letzten Gießen, also verschiebt spätes Gießen auch das nächste Mal.',
       sampleTitle: 'Eine Startliste für Pflanzen',
       sample: [
         { name: 'Pflanzen gießen', schedule: '1 Woche nach dem Erledigen' },
@@ -206,11 +206,11 @@ const de: SiteContent = {
       related: ['chores', 'family', 'home-maintenance'],
     },
     'self-care': {
-      meta: { title: 'Erinnerungen für Friseur, Zahnarzt & mehr | Recurrence', description: 'Denk an Friseur, Zahnarztkontrolle, eine neue Zahnbürste und tägliche Vitamine. Recurrence erinnert dich pünktlich und merkt sich, wann du zuletzt dort warst.' },
+      meta: { title: 'Erinnerungen für Friseur, Zahnarzt & mehr | Aufgaben', description: 'Denk an Friseur, Zahnarztkontrolle, eine neue Zahnbürste und tägliche Vitamine. „Aufgaben“ erinnert dich pünktlich und merkt sich, wann du zuletzt dort warst.' },
       name: 'Selbstfürsorge',
       blurb: 'Friseur, Zahnarzt, Vitamine',
       h1: 'Erinnerungen an Termine, die man gern aufschiebt',
-      intro: 'Alle sechs Wochen zum Friseur, zweimal im Jahr zum Zahnarzt und alle drei Monate eine neue Zahnbürste. Recurrence merkt sich die Termine, damit du es nicht musst.',
+      intro: 'Alle sechs Wochen zum Friseur, zweimal im Jahr zum Zahnarzt und alle drei Monate eine neue Zahnbürste. „Aufgaben“ merkt sich die Termine, damit du es nicht musst.',
       sampleTitle: 'Eine Startliste für die Selbstfürsorge',
       sample: [
         { name: 'Zum Friseur gehen', schedule: '6 Wochen nach dem Erledigen' },
@@ -227,7 +227,7 @@ const de: SiteContent = {
       related: ['pets', 'chores', 'bills'],
     },
     family: {
-      meta: { title: 'Familien-App für geteilte Aufgaben im Haushalt | Recurrence', description: 'Teile wiederkehrende Aufgaben per iCloud mit deiner Familie. Alle können abhaken, und der Verlauf jeder Aufgabe zeigt, wer sie wann erledigt hat.' },
+      meta: { title: 'Familien-App für geteilte Aufgaben im Haushalt | Aufgaben', description: 'Teile wiederkehrende Aufgaben per iCloud mit deiner Familie. Alle können abhaken, und der Verlauf jeder Aufgabe zeigt, wer sie wann erledigt hat.' },
       name: 'Geteilte Familienaufgaben',
       blurb: 'Sieh, wer es wann erledigt hat',
       h1: 'Geteilte wiederkehrende Aufgaben für den ganzen Haushalt',
@@ -239,7 +239,7 @@ const de: SiteContent = {
         { name: 'Herzwurm-Prophylaxe', schedule: 'Monatlich am 1.' },
       ],
       points: [
-        { title: 'Geteilt per iCloud', body: 'Lade Familienmitglieder per iCloud-Freigabe zu jeder Aufgabe ein. Sie brauchen nur Recurrence und ein iCloud-Konto.' },
+        { title: 'Geteilt per iCloud', body: 'Lade Familienmitglieder per iCloud-Freigabe zu jeder Aufgabe ein. Sie brauchen nur „Aufgaben“ und ein iCloud-Konto.' },
         { title: 'Sieh, wer es war', body: 'Jedes Erledigen in einer geteilten Aufgabe zeigt, wer sie abgehakt hat.' },
         { title: 'Alle werden erinnert', body: 'Jede Person stellt die Erinnerungen ein, die zu ihr passen.' },
       ],
@@ -254,18 +254,18 @@ const de: SiteContent = {
 
   support: {
     meta: {
-      title: 'Hilfe & Support | Recurrence',
-      description: 'Hilfe zu Recurrence: Synchronisierung, Teilen, Erinnerungen, Widgets und Premium. Antworten auf häufige Fragen und wie du uns erreichst.',
+      title: 'Hilfe & Support | Aufgaben',
+      description: 'Hilfe zu „Aufgaben“: Synchronisierung, Teilen, Erinnerungen, Widgets und Premium. Antworten auf häufige Fragen und wie du uns erreichst.',
     },
     h1: 'Wie können wir helfen?',
-    intro: 'Antworten auf die häufigsten Fragen zu Recurrence.',
+    intro: 'Antworten auf die häufigsten Fragen zu „Aufgaben“.',
     contact: { q: 'Noch eine Frage?', a: 'Schreib uns an support@shayesapps.com.' },
     faqTitle: 'Häufige Fragen',
     faq: [
-      { q: 'Meine Aufgaben werden nicht zwischen Geräten synchronisiert.', a: 'Recurrence synchronisiert über iCloud. Prüfe auf jedem Gerät, dass du mit demselben Apple Account bei iCloud angemeldet bist, online bist und dein iCloud-Speicher nicht voll ist. Prüfe außerdem in der App „Einstellungen“ unter deinem Namen > iCloud, dass Recurrence iCloud verwenden darf. In Recurrence zeigt Einstellungen > iCloud den Synchronisierungsstatus. Klappt es immer noch nicht, tippe dort auf „Synchronisierungsbericht teilen“ und schick uns den Bericht.' },
-      { q: 'Wie teile ich Aufgaben mit jemandem?', a: 'Drücke in deiner Liste lange auf eine Aufgabe und wähle „Teilen“, oder tippe oben in der Aufgabe auf die Teilen-Taste. Wähle, wen du einlädst und ob die Person Änderungen machen oder nur ansehen darf. Eingeladene brauchen Recurrence und ein iCloud-Konto. Um das Teilen zu beenden, öffne dasselbe Menü erneut. Wenn du eine geteilte Aufgabe löschst, wird sie für alle gelöscht.' },
-      { q: 'Ich bekomme keine Erinnerungen.', a: 'Prüfe zuerst in der App „Einstellungen“ unter „Mitteilungen“, dass Recurrence Mitteilungen senden darf und kein Fokus sie stummschaltet. In Recurrence zeigt Einstellungen > Mitteilungen, ob die Berechtigung aktiv ist. Jede Aufgabe hat beim Bearbeiten eigene Erinnerungen im Bereich „Mitteilungen“: vorher, am Tag selbst oder bei Überfälligkeit. Unter Einstellungen > Standardwerte > Mitteilungen legst du fest, mit welchen Erinnerungen neue Aufgaben starten. iOS begrenzt, wie viele Erinnerungen eine App im Voraus planen kann. Öffne Recurrence also ab und zu, damit sie weiter kommen.' },
-      { q: 'Wie stelle ich meinen Premium-Kauf wieder her?', a: 'Öffne in Recurrence die Einstellungen, tippe im Banner „Recurrence Premium“ auf „Entdecken“ und dann unten auf „Wiederherstellen“. Achte darauf, mit dem Apple Account angemeldet zu sein, mit dem du Premium gekauft hast.' },
+      { q: 'Meine Aufgaben werden nicht zwischen Geräten synchronisiert.', a: '„Aufgaben“ synchronisiert über iCloud. Prüfe auf jedem Gerät, dass du mit demselben Apple Account bei iCloud angemeldet bist, online bist und dein iCloud-Speicher nicht voll ist. Prüfe außerdem in der App „Einstellungen“ unter deinem Namen > iCloud, dass „Aufgaben“ iCloud verwenden darf. In „Aufgaben“ zeigt Einstellungen > iCloud den Synchronisierungsstatus. Klappt es immer noch nicht, tippe dort auf „Synchronisierungsbericht teilen“ und schick uns den Bericht.' },
+      { q: 'Wie teile ich Aufgaben mit jemandem?', a: 'Drücke in deiner Liste lange auf eine Aufgabe und wähle „Teilen“, oder tippe oben in der Aufgabe auf die Teilen-Taste. Wähle, wen du einlädst und ob die Person Änderungen machen oder nur ansehen darf. Eingeladene brauchen „Aufgaben“ und ein iCloud-Konto. Um das Teilen zu beenden, öffne dasselbe Menü erneut. Wenn du eine geteilte Aufgabe löschst, wird sie für alle gelöscht.' },
+      { q: 'Ich bekomme keine Erinnerungen.', a: 'Prüfe zuerst in der App „Einstellungen“ unter „Mitteilungen“, dass „Aufgaben“ Mitteilungen senden darf und kein Fokus sie stummschaltet. In „Aufgaben“ zeigt Einstellungen > Mitteilungen, ob die Berechtigung aktiv ist. Jede Aufgabe hat beim Bearbeiten eigene Erinnerungen im Bereich „Mitteilungen“: vorher, am Tag selbst oder bei Überfälligkeit. Unter Einstellungen > Standardwerte > Mitteilungen legst du fest, mit welchen Erinnerungen neue Aufgaben starten. iOS begrenzt, wie viele Erinnerungen eine App im Voraus planen kann. Öffne „Aufgaben“ also ab und zu, damit sie weiter kommen.' },
+      { q: 'Wie stelle ich meinen Premium-Kauf wieder her?', a: 'Öffne in „Aufgaben“ die Einstellungen, tippe im Banner „Recurrence Premium“ auf „Entdecken“ und dann unten auf „Wiederherstellen“. Achte darauf, mit dem Apple Account angemeldet zu sein, mit dem du Premium gekauft hast.' },
       { q: 'Kann ich Premium zuerst testen?', a: 'Ja. Recurrence Premium enthält einen kostenlosen Testzeitraum, der dir im App Store vor dem Abschluss angezeigt wird.' },
       { q: 'Funktioniert Premium auf allen meinen Geräten?', a: 'Ja. Ein Kauf schaltet Premium auf iPhone, iPad und Mac frei und lässt sich über die Familienfreigabe mit deiner Familie teilen.' },
       { q: 'Wie kündige ich mein Abo?', a: 'Abos verwaltest du in den Einstellungen deines Apple Accounts. Du kannst jederzeit kündigen, spätestens 24 Stunden vor der nächsten Verlängerung.' },
@@ -274,11 +274,11 @@ const de: SiteContent = {
 
   press: {
     meta: {
-      title: 'Pressematerial | Recurrence',
-      description: 'Pressematerial zu Recurrence: App-Beschreibung, wichtige Fakten, Screenshots, App-Symbol und Kontakt für Journalisten und Tester.',
+      title: 'Pressematerial | Aufgaben',
+      description: 'Pressematerial zu „Aufgaben“: App-Beschreibung, wichtige Fakten, Screenshots, App-Symbol und Kontakt für Journalisten und Tester.',
     },
     h1: 'Pressematerial',
-    intro: 'Recurrence ist eine App für wiederkehrende Aufgaben auf iPhone, iPad und Mac von Shayes Apps, einem unabhängigen Entwickler. Sie erinnert an fällige Aufgaben und speichert jedes Erledigen im Verlauf.',
+    intro: '„Aufgaben“ ist eine App für wiederkehrende Aufgaben auf iPhone, iPad und Mac von Shayes Apps, einem unabhängigen Entwickler. Sie erinnert an fällige Aufgaben und speichert jedes Erledigen im Verlauf.',
     facts: [
       { label: 'Entwickler', value: 'Shayes Apps' },
       { label: 'Plattformen', value: 'iPhone, iPad, Mac' },
@@ -293,39 +293,11 @@ const de: SiteContent = {
     contactBody: 'support@shayesapps.com',
   },
 
-  policies: {
-    meta: { title: 'Datenschutz & Nutzungsbedingungen | Recurrence', description: 'Recurrence erfasst keine personenbezogenen Daten und verfolgt dich nicht. Deine Aufgaben werden über iCloud synchronisiert. Dazu die Bedingungen für Premium-Abos.' },
-    h1: 'Datenschutz & Nutzungsbedingungen',
-    docs: [
-      {
-        id: 'privacy',
-        title: 'Datenschutzerklärung',
-        updated: '26. November 2026',
-        sections: [
-          { title: 'Kurz und knapp', body: ['Unsere Erklärung ist kurz und knapp, weil uns deine Daten und deine Privatsphäre wichtig sind. Recurrence verfolgt dich nicht und erfasst keine personenbezogenen Daten. Wir verlassen uns auf so wenige Drittanbieter wie möglich.'] },
-          { title: 'Zahlungen', body: ['Zahlungen für In-App-Käufe und Abos laufen über den App Store, daher haben wir nie Zugriff auf deine Kreditkartendaten. Recurrence enthält das RevenueCat SDK. Bitte beachte die Richtlinien von RevenueCat.'] },
-          { title: 'Synchronisierung und Teilen', body: ['Die Synchronisierung läuft über iCloud (Apples CloudKit). CloudKit ist vollständig verschlüsselt, und alle Daten liegen auf Apples Infrastruktur. Niemand außer dir hat Zugriff auf deine Daten, abgesehen von den Personen, mit denen du Aufgaben teilst.'] },
-          { title: 'Rückerstattungen', body: ['Indem du Recurrence nutzt und In-App-Käufe tätigst, stimmst du zu, dass wir Daten über deine Nutzung gekaufter Inhalte mit Apple teilen, um Anfragen zur Rückerstattung zu bearbeiten. Dazu können Angaben gehören, wie du auf die gekauften Inhalte zugegriffen und sie genutzt hast. Diese Daten helfen Apple, über Rückerstattungen fundiert zu entscheiden. Wir teilen sie nur im Einklang mit Apples Richtlinien und nur, soweit es für deine Anfrage nötig ist.'] },
-          { title: 'Fragen', body: ['Bei Fragen oder Bedenken zu unserer Datenschutzerklärung erreichst du uns unter support@shayesapps.com.'] },
-        ],
-      },
-      {
-        id: 'terms',
-        title: 'Nutzungsbedingungen',
-        updated: '26. November 2026',
-        sections: [
-          { title: 'Bedingungen für das Premium-Abo', body: ['Abos verlängern sich automatisch, wenn sie nicht spätestens 24 Stunden vor Ende des aktuellen Zeitraums gekündigt werden. Du kannst jederzeit in den Einstellungen deines Apple Accounts kündigen. Ein nicht genutzter Teil eines kostenlosen Testzeitraums verfällt, wenn du ein Abo abschließt.'] },
-          { title: 'Fragen', body: ['Bei Fragen oder Bedenken zu unseren Nutzungsbedingungen erreichst du uns unter support@shayesapps.com.'] },
-        ],
-      },
-    ],
-  },
-
   tools,
   screenAlt: {
-    home: 'Aufgabenliste von Recurrence auf dem iPhone mit überfälligen, heutigen und anstehenden Aufgaben',
+    home: 'Aufgabenliste in „Aufgaben“ auf dem iPhone mit überfälligen, heutigen und anstehenden Aufgaben',
     history: 'Der Verlauf einer Aufgabe mit Daten und Notizen',
-    widgets: 'Recurrence-Widgets auf dem Home-Bildschirm des iPhone',
+    widgets: 'Widgets von „Aufgaben“ auf dem Home-Bildschirm des iPhone',
     add: 'Eine Aufgabe, die 4 Wochen nach der letzten Erledigung wiederkehrt, wird bearbeitet',
   },
 

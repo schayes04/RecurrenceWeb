@@ -3,7 +3,6 @@ import '@fontsource-variable/inter';
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import LangBar from '../components/LangBar.astro';
 import { localeInfo, APP_STORE_ID, type Locale } from '../i18n/locales';
 import { pathFor, type PageKey } from '../i18n/routes';
 import { UI } from '../i18n/ui';
@@ -43,7 +42,7 @@ const alternates = pageKey ? alternatesFor(pageKey, locale) : [];
   {alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={a.href} />)}
 
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Recurrence" />
+  <meta property="og:site_name" content={ui.appName} />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
   {canonical && <meta property="og:url" content={canonical} />}
@@ -65,7 +64,6 @@ const alternates = pageKey ? alternatesFor(pageKey, locale) : [];
 </head>
 <body class={`script-${info.script}`}>
   <a class="skip" href="#main">{ui.skipToContent}</a>
-  {pageKey && <LangBar locale={locale} pageKey={pageKey} />}
   {!published && pageKey && <div class="draft-note">Preview: this page is a draft or awaiting translation, so search engines are told not to index it.</div>}
   <Header locale={locale} pageKey={pageKey} variant={header} />
   <main id="main">

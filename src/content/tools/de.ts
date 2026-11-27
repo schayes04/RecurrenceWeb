@@ -6,7 +6,7 @@ import type { ToolsContent } from '../types';
 const tools: ToolsContent = {
   howOften: {
     meta: {
-      title: 'Wie oft sollte man …? Putzen, wechseln, prüfen | Recurrence',
+      title: 'Wie oft sollte man …? Putzen, wechseln, prüfen | Aufgaben',
       description: 'Wie oft Bettwäsche waschen, die Zahnbürste wechseln, Rauchmelder testen oder Flohmittel geben? Übliche Abstände für Alltägliches, auf einen Blick.',
     },
     name: 'Wie oft sollte ich …?',
@@ -83,11 +83,11 @@ const tools: ToolsContent = {
     nextDate: 'Nächstes Fälligkeitsdatum',
     disclaimer: 'Das sind übliche Abstände, keine festen Regeln. Wenn Hersteller, Tierarzt, Zahnarzt oder Ärztin etwas anderes sagen, gilt das.',
     ctaTitle: 'Nie wieder raten, wann es zuletzt war',
-    ctaBody: 'Trag die Punkte in Recurrence ein. Die App erinnert dich, wenn etwas fällig ist, und merkt sich jedes Mal, wann du es erledigt hast.',
+    ctaBody: 'Trag die Punkte in „Aufgaben“ ein. Die App erinnert dich, wenn etwas fällig ist, und merkt sich jedes Mal, wann du es erledigt hast.',
   },
   nextDue: {
     meta: {
-      title: 'Fälligkeitsrechner: Wann ist es wieder dran? | Recurrence',
+      title: 'Fälligkeitsrechner: Wann ist es wieder dran? | Aufgaben',
       description: 'Gib ein, wann du etwas zuletzt erledigt hast und wie oft es ansteht, und sieh das nächste Fälligkeitsdatum und die Termine danach. Kostenlos, ohne Anmeldung.',
     },
     name: 'Fälligkeitsrechner',
@@ -123,8 +123,8 @@ const tools: ToolsContent = {
     popularTitle: 'Häufig im Blick behalten',
     popularBody: 'Tippe auf einen Eintrag, um seinen üblichen Abstand einzutragen.',
     guideLink: 'Zum ganzen „Wie oft“-Ratgeber',
-    ctaTitle: 'Lass Recurrence rechnen',
-    ctaBody: 'Hak eine Aufgabe ab, und Recurrence berechnet das nächste Datum, erinnert dich, wenn es fällig ist, und merkt sich jedes Mal.',
+    ctaTitle: 'Lass „Aufgaben“ rechnen',
+    ctaBody: 'Hak eine Aufgabe ab, und „Aufgaben“ berechnet das nächste Datum, erinnert dich, wenn es fällig ist, und merkt sich jedes Mal.',
     howTitle: 'So wird das nächste Fälligkeitsdatum berechnet',
     howSteps: [
       'Ausgangspunkt ist der Tag, an dem du es zuletzt erledigt hast.',
@@ -132,13 +132,13 @@ const tools: ToolsContent = {
       'Gibt es diesen Tag nicht, etwa den 30. Februar, rückt das Datum auf den letzten Tag des Monats.',
       'Spätere Termine zählen vom ersten aus, sodass etwas vom 31. jeweils am Monatsende bleibt.',
     ],
-    howNote: 'Recurrence kann Aufgaben so wiederholen, ab der letzten Erledigung, oder nach festem Kalender, etwa jeden Donnerstag oder am 1. jedes Monats. Jede Aufgabe bekommt, was zu ihr passt.',
+    howNote: '„Aufgaben“ kann Aufgaben so wiederholen, ab der letzten Erledigung, oder nach festem Kalender, etwa jeden Donnerstag oder am 1. jedes Monats. Jede Aufgabe bekommt, was zu ihr passt.',
     faqTitle: 'Fragen zum Rechner',
     faq: [
       { q: 'Soll ich den Tag eingeben, an dem es fällig war, oder den, an dem ich es erledigt habe?', a: 'Den Tag, an dem du es wirklich erledigt hast. So bleibt der Abstand zwischen den Malen gleich, und darauf kommt es bei Filtern, Medikamenten und Kontrollterminen an.' },
       { q: 'Was passiert am 29., 30. oder 31.?', a: 'Ist der nächste Monat kürzer, rückt das Datum auf dessen letzten Tag. Der 31. Januar plus ein Monat ist der 28. Februar, im Schaltjahr der 29. Spätere Termine springen wieder auf den 31., wenn der Monat einen hat.' },
       { q: 'Wird etwas gespeichert oder gesendet?', a: 'Nein. Die Daten werden in deinem Browser berechnet. Nichts wird gespeichert oder gesendet.' },
-      { q: 'Wie werde ich erinnert, wenn es fällig ist?', a: 'Trag es in Recurrence auf deinem iPhone, iPad oder Mac ein. Hak es jedes Mal ab, dann berechnet die App das nächste Datum, erinnert dich und merkt sich jedes Mal.' },
+      { q: 'Wie werde ich erinnert, wenn es fällig ist?', a: 'Trag es in „Aufgaben“ auf deinem iPhone, iPad oder Mac ein. Hak es jedes Mal ab, dann berechnet die App das nächste Datum, erinnert dich und merkt sich jedes Mal.' },
     ],
   },
 };

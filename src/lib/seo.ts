@@ -1,6 +1,7 @@
 import { LOCALES, DEFAULT_LOCALE, localeInfo, appStoreUrl, type Locale } from '../i18n/locales';
 import { pathFor, type PageKey } from '../i18n/routes';
 import { isPublished } from '../content';
+import { UI } from '../i18n/ui';
 
 export const SITE = 'https://recurrence-app.com';
 
@@ -30,7 +31,8 @@ export const alternatesFor = (key: PageKey, locale: Locale): Alternate[] => {
 export const appJsonLd = (locale: Locale, description: string) => ({
   '@context': 'https://schema.org',
   '@type': 'MobileApplication',
-  name: 'Recurrence',
+  name: UI[locale].appName,
+  ...(UI[locale].appName !== 'Recurrence' && { alternateName: 'Recurrence' }),
   operatingSystem: 'iOS, iPadOS, macOS',
   applicationCategory: 'ProductivityApplication',
   description,

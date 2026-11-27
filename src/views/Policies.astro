@@ -2,13 +2,15 @@
 import PageHead from '../components/PageHead.astro';
 import EmailText from '../components/EmailText.astro';
 import type { Locale } from '../i18n/locales';
-import type { SiteContent } from '../content/types';
+import policies from '../content/policies';
+import { contentFor } from '../content';
 import { pathFor } from '../i18n/routes';
 import { UI } from '../i18n/ui';
 
-interface Props { locale: Locale; c: SiteContent }
-const { locale, c } = Astro.props;
-const p = c.policies;
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const p = policies;
+const c = contentFor(locale);
 ---
 <PageHead locale={locale} title={p.h1} crumbs={[{ name: UI[locale].footer.policies, path: pathFor('policies', locale) }]} />
 <section class="section">

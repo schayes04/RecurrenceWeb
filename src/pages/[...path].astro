@@ -58,7 +58,7 @@ if (pageKey !== 'home') {
   {pageKey.startsWith('compare/') && <Compare locale={locale} c={c} id={pageKey.slice(8) as CompetitorId} />}
   {pageKey === 'support' && <Support locale={locale} c={c} />}
   {pageKey === 'press' && <Press locale={locale} c={c} />}
-  {pageKey === 'policies' && <Policies locale={locale} c={c} />}
+  {pageKey === 'policies' && <Policies locale={locale} />}
   {pageKey === 'tool/how-often' && <HowOften locale={locale} t={tools} />}
   {pageKey === 'tool/next-due' && <NextDue locale={locale} t={tools} />}
 </Base>

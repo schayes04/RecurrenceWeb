@@ -49,6 +49,6 @@ export default derive(es, [
   ['recordatorio de pagos y suscripciones', 'recordatorio de facturas y suscripciones'],
   ['Quehaceres del hogar', 'Tareas domésticas'],
 ], (c) => {
-  c.useCases.chores.meta.title = 'App de tareas domésticas y limpieza de casa | Recurrence';
+  c.useCases.chores.meta.title = 'App de tareas domésticas y limpieza de casa | Tareas';
   if (c.tools) c.tools.howOften.areas.car = 'Coche';
 });

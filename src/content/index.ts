@@ -3,10 +3,11 @@
 // out of sitemaps and hreflang so search engines never see untranslated pages.
 
 import type { Locale } from '../i18n/locales';
-import type { PageKey, UseCaseId, CompetitorId } from '../i18n/routes';
+import { isBuilt, type PageKey, type UseCaseId, type CompetitorId } from '../i18n/routes';
 import type { Meta, SiteContent, ToolsContent } from './types';
 import enTools from './tools/en-US';
 import enUS from './en-US';
+import policies from './policies';
 import { enGB, enAU, enCA } from './en-variants';
 import de from './de';
 import fr from './fr';
@@ -61,7 +62,7 @@ export const metaFor = (content: SiteContent, key: PageKey): Meta => {
     case 'compare': return content.compareHub.meta;
     case 'support': return content.support.meta;
     case 'press': return content.press.meta;
-    case 'policies': return content.policies.meta;
+    case 'policies': return policies.meta;
   }
   throw new Error(`No meta for ${key}`);
 };
@@ -70,6 +71,7 @@ export const metaFor = (content: SiteContent, key: PageKey): Meta => {
 export const isPublished = (locale: Locale, key: PageKey): boolean => {
   const content = CONTENT[locale];
   if (!content) return false;
+  if (!isBuilt(key, locale)) return false;
   if (key.startsWith('tool/') && !content.tools) return false;
   return !metaFor(content, key).draft;
 };

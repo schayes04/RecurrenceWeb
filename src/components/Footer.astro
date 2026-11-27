@@ -28,7 +28,7 @@ const toolLinks = TOOLS.every((id) => isPublished(locale, `tool/${id}`))
   <div class="container">
     <div class:list={['cols', competitors.length > 0 && 'four']}>
       <div class="col brand-col">
-        <a class="brand" href={pathFor('home', locale)}><Image src={icon} alt="" width={40} height={40} />Recurrence</a>
+        <a class="brand" href={pathFor('home', locale)}><Image src={icon} alt="" width={40} height={40} />{ui.appName}</a>
         <p class="made-by">{madeByBefore}<a href="https://shayesapps.com/" target="_blank" rel="noopener">Shayes Apps</a>{madeByAfter}</p>
       </div>
       {toolLinks ? (
