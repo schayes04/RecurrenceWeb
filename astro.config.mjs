@@ -6,6 +6,8 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   site: 'https://recurrence-app.com',
   trailingSlash: 'always',
-  build: { format: 'directory' },
   compressHTML: true,
+  // The whole stylesheet is ~5 KB compressed, so inlining it saves a
+  // render-blocking round trip on every first visit.
+  build: { format: 'directory', inlineStylesheets: 'always' },
 });

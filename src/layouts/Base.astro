@@ -1,6 +1,8 @@
 ---
 import '@fontsource-variable/inter';
 import '../styles/global.css';
+import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
+import interCyrillic from '@fontsource-variable/inter/files/inter-cyrillic-wght-normal.woff2?url';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { localeInfo, APP_STORE_ID, type Locale } from '../i18n/locales';
@@ -29,6 +31,19 @@ const published = pageKey ? isPublished(locale, pageKey) : false;
 const noindex = Astro.props.noindex ?? !published;
 const canonical = pageKey ? absolute(pathFor(pageKey, locale)) : undefined;
 const alternates = pageKey ? alternatesFor(pageKey, locale) : [];
+// Preload the font file each script needs so text doesn't wait for the CSS to
+// discover it. Latin covers headings and the app name in every locale.
+const fontPreloads = info.script === 'cyrillic' ? [interLatin, interCyrillic] : [interLatin];
+// Fetch same-site pages when a link is hovered or pressed, so clicks feel
+// instant. Browsers without Speculation Rules ignore this. Only page URLs
+// (ending in /) qualify, so the press kit zip is never prefetched, and /open/
+// is skipped because it launches the app.
+const speculationRules = JSON.stringify({
+  prefetch: [{
+    where: { and: [{ href_matches: '/*/' }, { not: { href_matches: '/open/' } }] },
+    eagerness: 'moderate',
+  }],
+});
 ---
 <!doctype html>
 <html lang={info.htmlLang} dir="ltr">
@@ -36,6 +51,7 @@ const alternates = pageKey ? alternatesFor(pageKey, locale) : [];
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
+  {fontPreloads.map((href) => <link rel="preload" href={href} as="font" type="font/woff2" crossorigin />)}
   <meta name="description" content={description} />
   {noindex ? <meta name="robots" content="noindex, follow" /> : <meta name="robots" content="index, follow, max-image-preview:large" />}
   {canonical && !noindex && <link rel="canonical" href={canonical} />}
@@ -60,6 +76,7 @@ const alternates = pageKey ? alternatesFor(pageKey, locale) : [];
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+  <script type="speculationrules" set:html={speculationRules} />
   {jsonLd.map((data) => <script type="application/ld+json" set:html={JSON.stringify(data)} />)}
 </head>
 <body class={`script-${info.script}`}>
