@@ -31,6 +31,8 @@ const published = pageKey ? isPublished(locale, pageKey) : false;
 const noindex = Astro.props.noindex ?? !published;
 const canonical = pageKey ? absolute(pathFor(pageKey, locale)) : undefined;
 const alternates = pageKey ? alternatesFor(pageKey, locale) : [];
+// Support and policies are mostly opened from inside the app, so skip Safari's "Get the app" banner there.
+const showAppBanner = pageKey !== 'support' && pageKey !== 'policies';
 // Preload the font file each script needs so text doesn't wait for the CSS to
 // discover it. Latin covers headings and the app name in every locale.
 const fontPreloads = info.script === 'cyrillic' ? [interLatin, interCyrillic] : [interLatin];
@@ -71,7 +73,7 @@ const speculationRules = JSON.stringify({
   <meta name="twitter:description" content={description} />
   <meta name="twitter:image" content={absolute(ogImage)} />
 
-  <meta name="apple-itunes-app" content={`app-id=${APP_STORE_ID}`} />
+  {showAppBanner && <meta name="apple-itunes-app" content={`app-id=${APP_STORE_ID}`} />}
   <meta name="theme-color" content="#14222D" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
